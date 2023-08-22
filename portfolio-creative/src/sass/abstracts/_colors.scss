@@ -5,7 +5,15 @@ $color-lightpink: rgb(255, 216, 230);
 $color-lightblue: rgb(122, 161, 212);
 $color-darkblue: rgb(105, 173, 244);
 $color-background: rgb(253, 253, 253);
+$color-backgroundApp: rgb(204, 204, 204);
 
-body {
-    background-color: $color-darkblue;
+.gradient-pink {
+    width: 100px;
+    height: 100px;
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+*/
+background: rgba(255, 216, 231, 1.0);
+background: linear-gradient(0deg, rgba(255, 216, 231, 1.0), rgba(255, 162, 192, 1.0));
 }

@@ -1,7 +1,12 @@
-
-
-.root {}
-
-.footer {
-
+.root {
+    height: 90%;
+    width: 95%;
+    position: relative;
+   
 }
+
+header {
+  background-color: rgb(105, 173, 244);
+}
+
+/*# sourceMappingURL=styles.module.css.map */
