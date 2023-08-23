@@ -2,7 +2,9 @@ import './App.css';
 import './sass/main.scss';
 import Header from './components/Header/Header'
 import SquareDiv from './components/SquareDiv/SquareDiv';
-import Typography from './components/Typography/Typography'
+import Typography from './components/Typography/Typography';
+import Image from './components/Image/Image';
+import logo from '../src/assets/face.jpg'
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
           className={'square'}
           gradient={'gradient-pink'}
           extraClass={'div-first'}
-          positionTop={0}
-          positionLeft={90}
+          // positionTop={0}
+          // positionLeft={90}
         >
           <Typography
             variant={'h2'}
@@ -25,6 +27,14 @@ function App() {
             className={'portfolio-text second'}>
             PORTFOLIO
           </Typography>
+          <Image
+            className={'image first'}
+            url={logo}
+            name={logo}
+          >
+
+          </Image>
+        
         </SquareDiv>
       </Header>
       <main>

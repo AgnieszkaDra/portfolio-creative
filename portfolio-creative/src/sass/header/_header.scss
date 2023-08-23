@@ -53,10 +53,16 @@ header {
 
  .portfolio-text.second {
     color: $color-white;
-    transform: rotate(270deg) translateY(-158%) translateX(-70%);
-    font-size: 3rem;
+    transform: rotate(270deg) translateY(-135%) translateX(-70%);
+    font-size: 3.5rem;
     letter-spacing: 0.2em;
     font-weight: 800;
+ }
+
+ .image.first {
+    width: 50%;
+    height: 60%;
+    transform: translateY(-40%) translateX(70%);
  }
 
 // @media(max-height: $layout-breakpoint-medium) {
@@ -78,6 +84,11 @@ header {
     .portfolio-text.second {
         display: none;
     }
+    .image.first {
+        width: 50%;
+        height: 40%;
+        transform: translateY(-20%) translateX(70%);
+     }
 }
 
 
@@ -124,8 +135,16 @@ header {
         font-weight: 1200;
     }
     .portfolio-text.second {
-        display: none;
+        transform: rotate(270deg) translateY(-150%) translateX(-70%);
+        font-size: 3.5rem;
+        letter-spacing: 0.3em;
+        font-weight: 1200;
     }
+    .image.first {
+        width: 50%;
+        height: 60%;
+        transform: translateY(-20%) translateX(70%);
+     }
 }
 
 @media(min-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ){
@@ -154,14 +173,14 @@ header {
 
 @media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ){
     .portfolio-text.first {
-        transform: rotate(270deg) translateY(-250%) translateX(-50%);
-        font-size: 4.5rem;
+        transform: rotate(270deg) translateY(-205%) translateX(-75%);
+        font-size: 6rem;
         letter-spacing: 0.3em;
         font-weight: 1200;
     }
     .portfolio-text.second {
-        transform: rotate(270deg) translateY(-280%) translateX(-50%);
-        font-size: 3.5rem;
+        transform: rotate(270deg) translateY(-260%) translateX(-40%);
+        font-size: 4rem;
         letter-spacing: 0.3em;
         font-weight: 1200;
     }
