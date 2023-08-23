@@ -16,8 +16,13 @@ function App() {
           positionLeft={90}
         >
           <Typography
-            variant={'h1'}
+            variant={'h2'}
             className={'portfolio-text first'}>
+            PORTFOLIO
+          </Typography>
+          <Typography
+            variant={'h2'}
+            className={'portfolio-text second'}>
             PORTFOLIO
           </Typography>
         </SquareDiv>

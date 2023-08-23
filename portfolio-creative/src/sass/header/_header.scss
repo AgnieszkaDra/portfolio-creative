@@ -43,44 +43,61 @@ header {
     }
     }
 
-.portfolio-text {
+.portfolio-text.first{
     color: $color-darkpink;
-    transform: rotate(270deg) translateY(-160%) translateX(-100%);
-    font-size: 4rem;
+    transform: rotate(270deg) translateY(-135%) translateX(-110%);
+    font-size: 4.5rem;
     letter-spacing: 0.2em;
     font-weight: 800;
  }
 
-@media(max-height: $layout-breakpoint-medium) {
-    .portfolio-text {
-        transform: rotate(270deg) translateY(-120%) translateX(-100%);
-        font-size: 5rem;
-        letter-spacing: 0.1em;
-        font-weight: 1200;
-      }
-}
+ .portfolio-text.second {
+    color: $color-white;
+    transform: rotate(270deg) translateY(-158%) translateX(-70%);
+    font-size: 3rem;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+ }
 
-@media((max-width: $layout-breakpoint-xxsmall) and (max-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
+// @media(max-height: $layout-breakpoint-medium) {
+//     .portfolio-text {
+//         transform: rotate(270deg) translateY(-120%) translateX(-100%);
+//         font-size: 5rem;
+//         letter-spacing: 0.1em;
+//         font-weight: 1200;
+//       }
+// }
+
+@media (max-width: $layout-breakpoint-xxsmall) and (max-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
         transform: rotate(270deg) translateY(-120%) translateX(-120%);
         font-size: 4rem;
         letter-spacing: 0.1em;
         font-weight: 1200;
     }
+    .portfolio-text.second {
+        display: none;
+    }
 }
 
 
-@media((min-width: $layout-breakpoint-small) and (max-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
+@media(min-width: $layout-breakpoint-small) and (max-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
         transform: rotate(270deg) translateY(-220%) translateX(-50%);
         font-size: 3rem;
         letter-spacing: 0.1em;
         font-weight: 1200;
     }
+    .portfolio-text.second {
+        transform: rotate(270deg) translateY(-280%) translateX(-20%);
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+        font-weight: 1200;
+    }
 }
 
-@media((min-width: $layout-breakpoint-large) and (max-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
+@media(min-width: $layout-breakpoint-large) and (max-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
         transform: rotate(270deg) translateY(-200%) translateX(-50%);
         font-size: 3rem;
         letter-spacing: 0.1em;
@@ -89,57 +106,77 @@ header {
 }
 
 @media(min-height: $layout-breakpoint-medium) {
-    .portfolio-text {
+    .portfolio-text.first {
         color: $color-darkpink;
         transform: rotate(270deg) translateY(-180%) translateX(-50%);
         font-size: 4rem;
         letter-spacing: 0.2em;
         font-weight: 1000;
-    
-     
-    }
+  
+}
 }
 
-@media((max-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
+@media(max-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
         transform: rotate(270deg) translateY(-140%) translateX(-120%);
-        font-size: 4,8rem;
+        font-size: 4.8rem;
         letter-spacing: 0.3em;
         font-weight: 1200;
     }
-}
-
-@media((min-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
-        transform: rotate(270deg) translateY(-140%) translateX(-120%);
-        font-size: 4rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
+    .portfolio-text.second {
+        display: none;
     }
 }
 
-@media((min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-large ) ){
-    .portfolio-text {
-        transform: rotate(270deg) translateY(-230%) translateX(-50%);
-        font-size: 4rem;
-        letter-spacing: 0.2em;
-        font-weight: 1200;
-    }
-}
-
-@media((min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ) ){
-    .portfolio-text {
-        transform: rotate(270deg) translateY(-230%) translateX(-50%);
+@media(min-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
+        transform: rotate(270deg) translateY(-160%) translateX(-120%);
         font-size: 4.5rem;
         letter-spacing: 0.3em;
         font-weight: 1200;
     }
 }
 
-@media((min-width: $layout-breakpoint-xlarge) and (min-height:$layout-breakpoint-medium ) ){
-    .portfolio-text {
+@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-large ){
+    .portfolio-text.first {
+        transform: rotate(270deg) translateY(-200%) translateX(-60%);
+        font-size: 5rem;
+        letter-spacing: 0.2em;
+        font-weight: 1200;
+    }
+    .portfolio-text.second {
+        transform: rotate(270deg) translateY(-270%) translateX(-30%);
+        font-size: 3rem;
+        letter-spacing: 0.2em;
+        font-weight: 1200;
+    }
+}
+
+@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ){
+    .portfolio-text.first {
+        transform: rotate(270deg) translateY(-250%) translateX(-50%);
+        font-size: 4.5rem;
+        letter-spacing: 0.3em;
+        font-weight: 1200;
+    }
+    .portfolio-text.second {
+        transform: rotate(270deg) translateY(-280%) translateX(-50%);
+        font-size: 3.5rem;
+        letter-spacing: 0.3em;
+        font-weight: 1200;
+    }
+}
+
+@media(min-width: $layout-breakpoint-xlarge) and (min-height:$layout-breakpoint-medium ){
+    .portfolio-text.first {
         transform: rotate(270deg) translateY(-220%) translateX(-50%);
         font-size: 3rem;
+        letter-spacing: 0.2em;
+        font-weight: 900;
+    }
+    .portfolio-text.second{
+        transform: rotate(270deg) translateY(-280%) translateX(-30%);
+        font-size: 2rem;
         letter-spacing: 0.2em;
         font-weight: 900;
     }
