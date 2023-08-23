@@ -2,14 +2,29 @@ import './App.css';
 import './sass/main.scss';
 import Header from './components/Header/Header'
 import SquareDiv from './components/SquareDiv/SquareDiv';
+import Typography from './components/Typography/Typography'
 
 function App() {
   return (
     <div className="App">
       <Header>
-        <SquareDiv variantGradient={'gradient-pink'} width={80} height={60} positionTop={0} positionLeft={8} >lood</SquareDiv>
-
+        <SquareDiv
+          className={'square'}
+          gradient={'gradient-pink'}
+          extraClass={'div-first'}
+          positionTop={0}
+          positionLeft={90}
+        >
+          <Typography
+            variant={'h1'}
+            className={'portfolio-text first'}>
+            PORTFOLIO
+          </Typography>
+        </SquareDiv>
       </Header>
+      <main>
+        <section></section>
+      </main>
     </div>
   );
 }

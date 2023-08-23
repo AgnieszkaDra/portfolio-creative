@@ -1,12 +1,17 @@
 .root {
-    height: 90%;
-    width: 95%;
-    position: relative;
-   
+  
 }
 
+
 header {
-  background-color: rgb(105, 173, 244);
+  background-color: rgb(253, 253, 253);
+  border: 2px solid blue;
+}
+
+@media (min-width: 1000px) {
+  header {
+    height: 80vh;
+  }
 }
 
 /*# sourceMappingURL=styles.module.css.map */

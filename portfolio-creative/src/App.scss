@@ -1,5 +1,35 @@
 @import '../src/sass/main.scss';
 
 .App {
+    height: 100vh;
+  
+    border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $color-backgroundApp;
 }
+
+.App > * {
+    width: 45%;
+ 
+}
+
+main {
+    display: block;
+    background-color: $color-background;
+    border: 2px solid red;
+    height: 80vh;
+}
+
+@media(max-width: $layout-breakpoint-large) {
+    main {
+        display: none;
+        border: 2px solid pink;
+    }
+    .App > * {
+    width: 100%;
+}
+
+}
+

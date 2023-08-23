@@ -1,27 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classes from './styles.module.css'
-import './styles.module.scss'
 
-export const Header = (props) => {
+import classes from './styles.module.css'
+
+export const Section = (props) => {
   const {
     className,
     ...otherProps
   } = props
 
   return (
-    <header
+    <div
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
 
-
-    </header>
+    </div>
   )
 }
 
-Header.propTypes = {
+Section.propTypes = {
   className: PropTypes.string
 }
 
-export default Header
+export default Section
