@@ -1,12 +1,15 @@
-.root {
-  
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
 }
-
 
 header {
   background-color: rgb(253, 253, 253);
   border: 2px solid blue;
 }
-
 
 /*# sourceMappingURL=styles.module.css.map */

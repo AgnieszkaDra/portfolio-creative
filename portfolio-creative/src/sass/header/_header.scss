@@ -42,40 +42,117 @@ header>* {
 
 
 .portfolio-text.first {
-    color: $color-darkblue;
+    color: $color-darkpink;
     position: absolute;
     transform: rotate(270deg);
     top: 280px;
     left: -220px;
     font-size: 60px;
-  
     font-weight: 800;
-    margin: 0; 
+    margin: 0;
 }
+
+.portfolio-text.second {
+    color: $color-white;
+    position: absolute;
+    transform: rotate(270deg);
+    top: 280px;
+    left: -120px;
+    font-size: 50px;
+    letter-spacing: 0.2em;
+    font-weight: 800;
+}
+@media screen and (max-width: $layout-breakpoint-large) and (min-height: $layout-breakpoint-medium ) {
+    .portfolio-text.first {
+        font-size: 80px;
+        top: 300px;
+        left: -180px;
+    }
+}
+
+
+
+
 
 @media screen and (max-width: $layout-breakpoint-medium) and (min-height: $layout-breakpoint-small ) {
     .portfolio-text.first {
         font-size: 60px;
         letter-spacing: 0.1em;
         top: 220px;
-
         left: -150px;
     }
 }
+
+@media screen and (max-width: $layout-breakpoint-small) and (max-height: $layout-breakpoint-large ) {
+    .portfolio-text.first {
+        font-size: 60px;
+        letter-spacing: 0.1em;
+        top: 280px;
+        left: -220px;
+    }
+    .portfolio-text.second {
+        top: 250px;
+        left: -140px;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: $layout-breakpoint-xsmall) and (min-height: $layout-breakpoint-small ) {
+    .portfolio-text.first {
+        font-size: 60px;
+        letter-spacing: 0.1em;
+        top: 250px;
+        left: -180px;
+    }
+    .portfolio-text.second {
+        top: 250px;
+        left: -140px;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: $layout-breakpoint-xsmall) and (min-height: $layout-breakpoint-xmedium ) {
+    .portfolio-text.first {
+        font-size: 60px;
+        letter-spacing: 0.2em;
+        font-weight: 1200;
+        top: 350px;
+        left: -220px;
+    }
+    .portfolio-text.second {
+        font-size: 50px;
+        top: 350px;
+        left: -160px;
+        font-size: 50px;
+    }
+}
+
+
 
 @media screen and (max-width: $layout-breakpoint-small) and (min-height: $layout-breakpoint-medium ) {
     .portfolio-text.first {
         font-size: 70px;
         top: 350px;
-        left: -300px;
+        left: -200px;
+    }
+    .portfolio-text.second {
+        top: 250px;
+        left: -120px;
+        font-size: 50px;
     }
 }
-
-@media screen and (max-width: $layout-breakpoint-large) and (min-height: $layout-breakpoint-medium ) {
+@media screen and (min-width: $layout-breakpoint-medium) and (min-height: $layout-breakpoint-large ) {
     .portfolio-text.first {
-        font-size: 80px;
+        font-size: 70px;
+        letter-spacing: 0.2em;
         top: 300px;
-        left: -180px;
+        left: -240px;
+    }
+    .portfolio-text.second {
+        font-size: 50px;
+        letter-spacing: 0.2em;
+        top: 300px;
+        left: -120px;
     }
 }
 
@@ -97,13 +174,15 @@ header>* {
     }
 }
 
-.portfolio-text.second {
-    color: $color-white;
-    transform: rotate(270deg) translateY(-135%) translateX(-70%);
-    font-size: 3.5rem;
-    letter-spacing: 0.2em;
-    font-weight: 800;
-}
+
+
+// .portfolio-text.second {
+//     color: $color-white;
+//     transform: rotate(270deg) translateY(-135%) translateX(-70%);
+//     font-size: 3.5rem;
+//     letter-spacing: 0.2em;
+//     font-weight: 800;
+// }
 
 .image.first {
     width: 50%;
@@ -150,12 +229,12 @@ header>* {
     //     letter-spacing: 0.1em;
     //     font-weight: 1200;
     // }
-    .portfolio-text.second {
-        transform: rotate(270deg) translateY(-280%) translateX(-20%);
-        font-size: 2rem;
-        letter-spacing: 0.1em;
-        font-weight: 1200;
-    }
+    // .portfolio-text.second {
+    //     transform: rotate(270deg) translateY(-280%) translateX(-20%);
+    //     font-size: 2rem;
+    //     letter-spacing: 0.1em;
+    //     font-weight: 1200;
+    // }
 }
 
 @media(min-width: $layout-breakpoint-large) and (max-height:$layout-breakpoint-medium ) {
@@ -186,12 +265,12 @@ header>* {
     //     letter-spacing: 0.3em;
     //     font-weight: 1200;
     // }
-    .portfolio-text.second {
-        transform: rotate(270deg) translateY(-150%) translateX(-70%);
-        font-size: 3.5rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
-    }
+    // .portfolio-text.second {
+    //     transform: rotate(270deg) translateY(-150%) translateX(-70%);
+    //     font-size: 3.5rem;
+    //     letter-spacing: 0.3em;
+    //     font-weight: 1200;
+    // }
 
     .image.first {
         width: 50%;
@@ -217,12 +296,12 @@ header>* {
     //     letter-spacing: 0.2em;
     //     font-weight: 1200;
     // }
-    .portfolio-text.second {
-        transform: rotate(270deg) translateY(-270%) translateX(-30%);
-        font-size: 3rem;
-        letter-spacing: 0.2em;
-        font-weight: 1200;
-    }
+    // .portfolio-text.second {
+    //     transform: rotate(270deg) translateY(-270%) translateX(-30%);
+    //     font-size: 3rem;
+    //     letter-spacing: 0.2em;
+    //     font-weight: 1200;
+    // }
 }
 
 @media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ) {
@@ -233,12 +312,12 @@ header>* {
     //     letter-spacing: 0.3em;
     //     font-weight: 1200;
     // }
-    .portfolio-text.second {
-        transform: rotate(270deg) translateY(-260%) translateX(-40%);
-        font-size: 4rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
-    }
+    // .portfolio-text.second {
+    //     transform: rotate(270deg) translateY(-260%) translateX(-40%);
+    //     font-size: 4rem;
+    //     letter-spacing: 0.3em;
+    //     font-weight: 1200;
+    // }
 }
 
 @media(min-width: $layout-breakpoint-xlarge) and (min-height:$layout-breakpoint-medium ) {
@@ -249,11 +328,11 @@ header>* {
     //     letter-spacing: 0.2em;
     //     font-weight: 900;
     // }
-    .portfolio-text.second {
-        transform: rotate(270deg) translateY(-280%) translateX(-30%);
-        font-size: 2rem;
-        letter-spacing: 0.2em;
-        font-weight: 900;
-    }
+    // .portfolio-text.second {
+    //     transform: rotate(270deg) translateY(-280%) translateX(-30%);
+    //     font-size: 2rem;
+    //     letter-spacing: 0.2em;
+    //     font-weight: 900;
+    // }
 
 }

@@ -24,12 +24,14 @@ function App() {
               PORTFOLIO
             </Typography>
           </div>
+          <div className={'text-container second'}>
+            <Typography
+              variant={'h2'}
+              className={'portfolio-text second'}>
+              PORTFOLIO
+            </Typography>
+          </div>
 
-          <Typography
-            variant={'h2'}
-            className={'portfolio-text second'}>
-            PORTFOLIO
-          </Typography>
 
           <Image
             className={'image first'}
