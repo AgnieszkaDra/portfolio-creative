@@ -5,9 +5,3 @@ header {
     background-color: colors.$color-background;
     border: 2px solid blue;
 }
-
-@media(min-width: media-query.$layout-breakpoint-large){
-    header {
-        height: 80vh;
-    }
-}

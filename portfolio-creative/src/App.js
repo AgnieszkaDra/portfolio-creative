@@ -11,30 +11,37 @@ function App() {
     <div className="App">
       <Header>
         <SquareDiv
-          className={'square'}
+          className={'square-first'}
           gradient={'gradient-pink'}
           extraClass={'div-first'}
-          // positionTop={0}
-          // positionLeft={90}
+        // positionTop={0}
+        // positionLeft={90}
         >
-          <Typography
-            variant={'h2'}
-            className={'portfolio-text first'}>
-            PORTFOLIO
-          </Typography>
+          <div className={'text-container first'}>
+            <Typography
+              variant={'h2'}
+              className={'portfolio-text first'}>
+              PORTFOLIO
+            </Typography>
+          </div>
+
           <Typography
             variant={'h2'}
             className={'portfolio-text second'}>
             PORTFOLIO
           </Typography>
+
           <Image
             className={'image first'}
             url={logo}
             name={logo}
           >
-
           </Image>
-        
+          <SquareDiv
+            extraClass={'div-second'}
+          >
+
+          </SquareDiv>
         </SquareDiv>
       </Header>
       <main>

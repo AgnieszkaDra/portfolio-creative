@@ -18,7 +18,7 @@ export const Typography = (props) => {
 
     if (variant === 'h1') {
       return (
-        <h1
+          <h1
           className={`${classes.root}${className ? ` ${className}` : ''}${variantClass ? ` ${variantClass}` : ''}`}
           style={{ color: colorFont }}
           {...otherProps}

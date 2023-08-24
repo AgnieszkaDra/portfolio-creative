@@ -5,65 +5,113 @@ header {
     width: 100%;
 }
 
-header > * {
+header>* {
     width: 100%;
     box-sizing: border-box;
 }
 
 @media(min-width: $layout-breakpoint-small) {
-    
-header {
-    height: 80vh;
-}
+
+    header {
+        height: 90vh;
+    }
+
+    main {
+        height: 90vh;
+    }
 }
 
 
 .div-first {
-      
-        width: 100%;
-        height: 100%;
-    }
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 
 
 @media(min-width: $layout-breakpoint-small) {
     .div-first {
         margin-left: 10%;
         margin-right: 20%;
-       width: 70%;
-       height: 80%;
+        width: 70%;
+        height: 80%;
     }
 }
 
-@media(min-width: $layout-breakpoint-small) {
-    
-    header > *{
-        height: 80vh;
-       
-        
-    }
-    }
 
-.portfolio-text.first{
-    color: $color-darkpink;
-    transform: rotate(270deg) translateY(-135%) translateX(-110%);
-    font-size: 4.5rem;
-    letter-spacing: 0.2em;
+
+.portfolio-text.first {
+    color: $color-darkblue;
+    position: absolute;
+    transform: rotate(270deg);
+    top: 280px;
+    left: -220px;
+    font-size: 60px;
+  
     font-weight: 800;
- }
+    margin: 0; 
+}
 
- .portfolio-text.second {
+@media screen and (max-width: $layout-breakpoint-medium) and (min-height: $layout-breakpoint-small ) {
+    .portfolio-text.first {
+        font-size: 60px;
+        letter-spacing: 0.1em;
+        top: 220px;
+
+        left: -150px;
+    }
+}
+
+@media screen and (max-width: $layout-breakpoint-small) and (min-height: $layout-breakpoint-medium ) {
+    .portfolio-text.first {
+        font-size: 70px;
+        top: 350px;
+        left: -300px;
+    }
+}
+
+@media screen and (max-width: $layout-breakpoint-large) and (min-height: $layout-breakpoint-medium ) {
+    .portfolio-text.first {
+        font-size: 80px;
+        top: 300px;
+        left: -180px;
+    }
+}
+
+@media screen and (min-width: $layout-breakpoint-large) and (max-height: $layout-breakpoint-medium ) {
+    .portfolio-text.first {
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        top: 180px;
+        left: -130px;
+    }
+}
+
+@media screen and (min-width: $layout-breakpoint-large) and (max-height: $layout-breakpoint-large ) {
+    .portfolio-text.first {
+        font-size: 50px;
+        letter-spacing: 0.1em;
+        top: 180px;
+        left: -130px;
+    }
+}
+
+.portfolio-text.second {
     color: $color-white;
     transform: rotate(270deg) translateY(-135%) translateX(-70%);
     font-size: 3.5rem;
     letter-spacing: 0.2em;
     font-weight: 800;
- }
+}
 
- .image.first {
+.image.first {
     width: 50%;
     height: 60%;
     transform: translateY(-40%) translateX(70%);
- }
+}
+
+.div-second {}
 
 // @media(max-height: $layout-breakpoint-medium) {
 //     .portfolio-text {
@@ -74,31 +122,34 @@ header {
 //       }
 // }
 
-@media (max-width: $layout-breakpoint-xxsmall) and (max-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-120%) translateX(-120%);
-        font-size: 4rem;
-        letter-spacing: 0.1em;
-        font-weight: 1200;
-    }
+@media (max-width: $layout-breakpoint-xxsmall) and (max-height:$layout-breakpoint-medium ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-120%) translateX(-120%);
+    //     font-size: 4rem;
+    //     letter-spacing: 0.1em;
+    //     font-weight: 1200;
+    // }
     .portfolio-text.second {
         display: none;
     }
+
     .image.first {
         width: 50%;
         height: 40%;
         transform: translateY(-20%) translateX(70%);
-     }
+    }
 }
 
 
-@media(min-width: $layout-breakpoint-small) and (max-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-220%) translateX(-50%);
-        font-size: 3rem;
-        letter-spacing: 0.1em;
-        font-weight: 1200;
-    }
+@media(min-width: $layout-breakpoint-small) and (max-height:$layout-breakpoint-medium ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-220%) translateX(-50%);
+    //     font-size: 3rem;
+    //     letter-spacing: 0.1em;
+    //     font-weight: 1200;
+    // }
     .portfolio-text.second {
         transform: rotate(270deg) translateY(-280%) translateX(-20%);
         font-size: 2rem;
@@ -107,62 +158,65 @@ header {
     }
 }
 
-@media(min-width: $layout-breakpoint-large) and (max-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-200%) translateX(-50%);
-        font-size: 3rem;
-        letter-spacing: 0.1em;
-        font-weight: 1200;
-    }
+@media(min-width: $layout-breakpoint-large) and (max-height:$layout-breakpoint-medium ) {
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-200%) translateX(-50%);
+    //     font-size: 3rem;
+    //     letter-spacing: 0.1em;
+    //     font-weight: 1200;
+    // }
 }
 
 @media(min-height: $layout-breakpoint-medium) {
-    .portfolio-text.first {
-        color: $color-darkpink;
-        transform: rotate(270deg) translateY(-180%) translateX(-50%);
-        font-size: 4rem;
-        letter-spacing: 0.2em;
-        font-weight: 1000;
-  
-}
+    // .portfolio-text.first {
+    //     color: $color-darkpink;
+    //     transform: rotate(270deg) translateY(-180%) translateX(-50%);
+    //     font-size: 4rem;
+    //     letter-spacing: 0.2em;
+    //     font-weight: 1000;
+
+    //}
 }
 
-@media(max-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-140%) translateX(-120%);
-        font-size: 4.8rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
-    }
+@media(max-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-140%) translateX(-120%);
+    //     font-size: 4.8rem;
+    //     letter-spacing: 0.3em;
+    //     font-weight: 1200;
+    // }
     .portfolio-text.second {
         transform: rotate(270deg) translateY(-150%) translateX(-70%);
         font-size: 3.5rem;
         letter-spacing: 0.3em;
         font-weight: 1200;
     }
+
     .image.first {
         width: 50%;
         height: 60%;
         transform: translateY(-20%) translateX(70%);
-     }
-}
-
-@media(min-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-160%) translateX(-120%);
-        font-size: 4.5rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
     }
 }
 
-@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-large ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-200%) translateX(-60%);
-        font-size: 5rem;
-        letter-spacing: 0.2em;
-        font-weight: 1200;
-    }
+@media(min-width: $layout-breakpoint-small) and (min-height:$layout-breakpoint-medium ) {
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-160%) translateX(-120%);
+    //     font-size: 4.5rem;
+    //     letter-spacing: 0.3em;
+    //     font-weight: 1200;
+    // }
+}
+
+@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-large ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-200%) translateX(-60%);
+    //     font-size: 5rem;
+    //     letter-spacing: 0.2em;
+    //     font-weight: 1200;
+    // }
     .portfolio-text.second {
         transform: rotate(270deg) translateY(-270%) translateX(-30%);
         font-size: 3rem;
@@ -171,13 +225,14 @@ header {
     }
 }
 
-@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-205%) translateX(-75%);
-        font-size: 6rem;
-        letter-spacing: 0.3em;
-        font-weight: 1200;
-    }
+@media(min-width: $layout-breakpoint-medium) and (min-height:$layout-breakpoint-xlarge ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-205%) translateX(-75%);
+    //     font-size: 6rem;
+    //     letter-spacing: 0.3em;
+    //     font-weight: 1200;
+    // }
     .portfolio-text.second {
         transform: rotate(270deg) translateY(-260%) translateX(-40%);
         font-size: 4rem;
@@ -186,14 +241,15 @@ header {
     }
 }
 
-@media(min-width: $layout-breakpoint-xlarge) and (min-height:$layout-breakpoint-medium ){
-    .portfolio-text.first {
-        transform: rotate(270deg) translateY(-220%) translateX(-50%);
-        font-size: 3rem;
-        letter-spacing: 0.2em;
-        font-weight: 900;
-    }
-    .portfolio-text.second{
+@media(min-width: $layout-breakpoint-xlarge) and (min-height:$layout-breakpoint-medium ) {
+
+    // .portfolio-text.first {
+    //     transform: rotate(270deg) translateY(-220%) translateX(-50%);
+    //     font-size: 3rem;
+    //     letter-spacing: 0.2em;
+    //     font-weight: 900;
+    // }
+    .portfolio-text.second {
         transform: rotate(270deg) translateY(-280%) translateX(-30%);
         font-size: 2rem;
         letter-spacing: 0.2em;

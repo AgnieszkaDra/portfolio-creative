@@ -33,3 +33,36 @@ main {
 
 }
 
+
+.text-container {
+    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    padding: 20px;   /* Adjust spacing as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-container.first {
+    // position: absolute;
+    // transform: rotate(270deg);
+    // top: 50px;
+    // left: -20px;
+  }
+  
+  p {
+    margin: 0; /* Remove default margin to avoid extra spacing */
+    font-size: 16px; /* Set an initial font size */
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 22px;
+    }
+  }
+  
+  /* Further adjustments for smaller screens */
+  @media screen and (max-width: 480px) {
+    p {
+      font-size: 12px;
+    }
+  }

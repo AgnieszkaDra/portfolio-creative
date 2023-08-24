@@ -8,10 +8,5 @@ header {
   border: 2px solid blue;
 }
 
-@media (min-width: 1000px) {
-  header {
-    height: 80vh;
-  }
-}
 
 /*# sourceMappingURL=styles.module.css.map */

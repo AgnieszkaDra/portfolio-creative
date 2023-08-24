@@ -28,12 +28,16 @@ header > * {
 
 @media (min-width: 500px) {
   header {
-    height: 80vh;
+    height: 90vh;
+  }
+  main {
+    height: 90vh;
   }
 }
 .div-first {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 @media (min-width: 500px) {
@@ -44,19 +48,55 @@ header > * {
     height: 80%;
   }
 }
-@media (min-width: 500px) {
-  header > * {
-    height: 80vh;
-  }
-}
 .portfolio-text.first {
-  color: rgb(255, 158, 185);
-  transform: rotate(270deg) translateY(-135%) translateX(-110%);
-  font-size: 4.5rem;
-  letter-spacing: 0.2em;
+  color: rgb(105, 173, 244);
+  position: absolute;
+  transform: rotate(270deg);
+  top: 280px;
+  left: -220px;
+  font-size: 60px;
   font-weight: 800;
+  margin: 0;
 }
 
+@media screen and (max-width: 768px) and (min-height: 500px) {
+  .portfolio-text.first {
+    font-size: 60px;
+    letter-spacing: 0.1em;
+    top: 220px;
+    left: -150px;
+  }
+}
+@media screen and (max-width: 500px) and (min-height: 768px) {
+  .portfolio-text.first {
+    font-size: 70px;
+    top: 350px;
+    left: -300px;
+  }
+}
+@media screen and (max-width: 1000px) and (min-height: 768px) {
+  .portfolio-text.first {
+    font-size: 80px;
+    top: 300px;
+    left: -180px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 768px) {
+  .portfolio-text.first {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    top: 180px;
+    left: -130px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 1000px) {
+  .portfolio-text.first {
+    font-size: 50px;
+    letter-spacing: 0.1em;
+    top: 180px;
+    left: -130px;
+  }
+}
 .portfolio-text.second {
   color: rgb(254, 255, 253);
   transform: rotate(270deg) translateY(-135%) translateX(-70%);
@@ -72,12 +112,6 @@ header > * {
 }
 
 @media (max-width: 300px) and (max-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-120%) translateX(-120%);
-    font-size: 4rem;
-    letter-spacing: 0.1em;
-    font-weight: 1200;
-  }
   .portfolio-text.second {
     display: none;
   }
@@ -88,12 +122,6 @@ header > * {
   }
 }
 @media (min-width: 500px) and (max-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-220%) translateX(-50%);
-    font-size: 3rem;
-    letter-spacing: 0.1em;
-    font-weight: 1200;
-  }
   .portfolio-text.second {
     transform: rotate(270deg) translateY(-280%) translateX(-20%);
     font-size: 2rem;
@@ -101,30 +129,7 @@ header > * {
     font-weight: 1200;
   }
 }
-@media (min-width: 1000px) and (max-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-200%) translateX(-50%);
-    font-size: 3rem;
-    letter-spacing: 0.1em;
-    font-weight: 1200;
-  }
-}
-@media (min-height: 768px) {
-  .portfolio-text.first {
-    color: rgb(255, 158, 185);
-    transform: rotate(270deg) translateY(-180%) translateX(-50%);
-    font-size: 4rem;
-    letter-spacing: 0.2em;
-    font-weight: 1000;
-  }
-}
 @media (max-width: 500px) and (min-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-140%) translateX(-120%);
-    font-size: 4.8rem;
-    letter-spacing: 0.3em;
-    font-weight: 1200;
-  }
   .portfolio-text.second {
     transform: rotate(270deg) translateY(-150%) translateX(-70%);
     font-size: 3.5rem;
@@ -137,21 +142,7 @@ header > * {
     transform: translateY(-20%) translateX(70%);
   }
 }
-@media (min-width: 500px) and (min-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-160%) translateX(-120%);
-    font-size: 4.5rem;
-    letter-spacing: 0.3em;
-    font-weight: 1200;
-  }
-}
 @media (min-width: 768px) and (min-height: 1000px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-200%) translateX(-60%);
-    font-size: 5rem;
-    letter-spacing: 0.2em;
-    font-weight: 1200;
-  }
   .portfolio-text.second {
     transform: rotate(270deg) translateY(-270%) translateX(-30%);
     font-size: 3rem;
@@ -160,12 +151,6 @@ header > * {
   }
 }
 @media (min-width: 768px) and (min-height: 1200px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-205%) translateX(-75%);
-    font-size: 6rem;
-    letter-spacing: 0.3em;
-    font-weight: 1200;
-  }
   .portfolio-text.second {
     transform: rotate(270deg) translateY(-260%) translateX(-40%);
     font-size: 4rem;
@@ -174,12 +159,6 @@ header > * {
   }
 }
 @media (min-width: 1200px) and (min-height: 768px) {
-  .portfolio-text.first {
-    transform: rotate(270deg) translateY(-220%) translateX(-50%);
-    font-size: 3rem;
-    letter-spacing: 0.2em;
-    font-weight: 900;
-  }
   .portfolio-text.second {
     transform: rotate(270deg) translateY(-280%) translateX(-30%);
     font-size: 2rem;
