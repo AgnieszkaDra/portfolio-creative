@@ -42,10 +42,10 @@ header > * {
 
 @media (min-width: 500px) {
   .div-first {
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 20%;
-    width: 70%;
-    height: 80%;
+    width: 60%;
+    height: 85%;
   }
 }
 .portfolio-text.first {
@@ -72,12 +72,23 @@ header > * {
 
 .image.first {
   position: absolute;
-  top: 200px;
-  right: 200px;
-  width: 60%;
-  border: 7px solid orange;
 }
 
+.div-second {
+  border: 2px solid rgb(105, 173, 244);
+  width: 60%;
+  height: 70%;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .div-second {
+    display: none;
+  }
+}
 @media screen and (max-width: 1000px) and (min-height: 768px) {
   .portfolio-text.first {
     font-size: 80px;
@@ -140,10 +151,10 @@ header > * {
   }
   .image.first {
     position: absolute;
-    top: 200px;
-    left: 3px;
+    top: 50px;
+    right: 3px;
     width: 60%;
-    height: 80%;
+    height: 65%;
   }
 }
 @media screen and (max-width: 500px) and (min-height: 768px) {
@@ -160,10 +171,9 @@ header > * {
   .image.first {
     position: absolute;
     top: 200px;
-    right: 200px;
+    left: 120px;
     width: 60%;
     height: 40%;
-    border: 7px solid orange;
   }
 }
 @media screen and (max-width: 400px) and (min-height: 768px) {
@@ -180,10 +190,9 @@ header > * {
   .image.first {
     position: absolute;
     top: 200px;
-    right: 200px;
+    right: -50px;
     width: 60%;
     height: 40%;
-    border: 7px solid orange;
   }
 }
 @media screen and (min-width: 500px) and (min-height: 600px) {
@@ -238,16 +247,30 @@ header > * {
 }
 @media screen and (min-width: 1000px) and (max-height: 1000px) {
   .portfolio-text.first {
-    font-size: 50px;
-    letter-spacing: 0.1em;
-    top: 180px;
-    left: -130px;
+    font-size: 80px;
+    letter-spacing: 0em;
+    top: 240px;
+    left: -220px;
+    font-weight: 900;
   }
   .portfolio-text.second {
-    font-size: 40px;
+    font-size: 60px;
     letter-spacing: 0.1em;
-    top: 180px;
-    left: -70px;
+    top: 240px;
+    left: -150px;
+    font-weight: 800;
+  }
+  .image.first {
+    top: 100px;
+    left: 210px;
+    width: 60%;
+    height: 70%;
+  }
+  .div-second {
+    top: 70px;
+    left: 250px;
+    width: 60%;
+    height: 70%;
   }
 }
 @media (max-width: 300px) and (max-height: 768px) {
@@ -257,7 +280,59 @@ header > * {
   .image.first {
     width: 50%;
     height: 70%;
-    transform: translateY(-20%) translateX(70%);
+  }
+}
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+}
+
+.dots-pattern {
+  width: 115px;
+  height: 115px;
+  background-color: #f0f0f0; /* Background color */
+  position: relative;
+}
+
+.dots-pattern::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.dots-pattern::before {
+  background-image: radial-gradient(circle, rgb(255, 158, 185) 20%, transparent 20%);
+  background-size: 30px 30px; /* Adjust the size of the dots */
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 115px solid transparent;
+  border-left: 115px solid rgb(254, 255, 253); /* Adjust color and size as needed */
+  position: relative;
+}
+
+.dots-container {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  right: -222px;
+  top: 10px;
+  z-index: 1;
+}
+
+@media (max-width: 500px) {
+  .dots-container {
+    display: none;
   }
 }
 

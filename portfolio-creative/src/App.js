@@ -31,8 +31,6 @@ function App() {
               PORTFOLIO
             </Typography>
           </div>
-
-
           <Image
             className={'image first'}
             url={logo}
@@ -44,6 +42,12 @@ function App() {
           >
 
           </SquareDiv>
+          <div className={'dots-container'}>
+          <div className={'dots-pattern'}>
+            <div className={'triangle'}></div>
+          </div>
+          </div>
+       
         </SquareDiv>
       </Header>
       <main>
