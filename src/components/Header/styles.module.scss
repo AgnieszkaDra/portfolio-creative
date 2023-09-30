@@ -1,7 +1,7 @@
 @use '../../sass/abstracts/colors';
 @use '../../sass/abstracts/media-query';
 
-header {
+.header {
     background-color: colors.$color-background;
     border: 2px solid blue;
 }

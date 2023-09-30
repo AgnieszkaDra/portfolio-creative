@@ -10,9 +10,8 @@ export const Header = (props) => {
   } = props
 
   return (
-    <header
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
-      {...otherProps}
+    <header 
+    className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
     >
 
 

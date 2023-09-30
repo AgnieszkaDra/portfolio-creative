@@ -9,7 +9,7 @@ import logo from '../src/assets/face.jpg'
 function App() {
   return (
     <div className="App">
-      <Header>
+      <Header className={'header'}>
         <SquareDiv
           className={'square-first'}
           gradient={'gradient-pink'}
@@ -17,20 +17,20 @@ function App() {
         // positionTop={0}
         // positionLeft={90}
         >
-          <div className={'text-container first'}>
+       
             <Typography
               variant={'h2'}
               className={'portfolio-text first'}>
               PORTFOLIO
             </Typography>
-          </div>
-          <div className={'text-container second'}>
+          
+         
             <Typography
               variant={'h2'}
               className={'portfolio-text second'}>
               PORTFOLIO
             </Typography>
-          </div>
+          
           <Image
             className={'image first'}
             url={logo}
