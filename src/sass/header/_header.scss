@@ -17,19 +17,25 @@
         display: block;
         width: 70%;
         height: 80%;
-        margin-left: 5%;
+        margin-left: 2%;
     }
 
     &__text.first {
         color: $color-darkpink;
         position: absolute;
         transform: rotate(270deg);
-        top: calc(45% - 5vh);
+        top: calc(45% - 2vh);
         left: calc(-35% - 2vh);
         text-shadow: $color-white 1px 0 10px;
 
         @include respond(tablet) {
-            top: calc(45% - 10vh);
+            top: calc(47% - 5vh);
+            left: calc(-30% - 8vh);
+        }
+
+        @include respond(desktop) {
+            top: calc(30% - 10vh);
+            left: calc(-35% - 2vh);
         }
 
     }
@@ -42,23 +48,40 @@
         left: -30%;
 
         @include respond(tablet) {
+            left: calc(-25% - 2vh);
+        }
+
+        @include respond(desktop) {
             left: calc(-30% - 2vh);
         }
+    }
+
+    &__text.third {
+        color: $color-white;
+        position: absolute;
+        width: 50%;
+        top: 65%;
+        left: 50%;
+        height:7%;
+        z-index: 2;
+        background: $color-lightblue;
+        background: linear-gradient(0deg, $color-lightblue, $color-darkblue);
+        padding-left: 2%;
     }
 
     &__image {
         position: absolute;
         left: 35%;
-        top: 8%;
+        top: 5%;
         width: 60%;
-        height: 70vh;
+        height: 45vh;
 
         @include respond(tablet) {
             width: 45%;
             left: 35%;
-            top: 22%;
-            height: 55vh;
-
+            top: 10%;
+            height: 45vh;
+        
             &::after {
                 content: '';
                 width: 100%;
@@ -67,9 +90,8 @@
                 position: absolute;
                 left: 25%;
                 top: -10%;
-                border: 3px solid $color-darkblue;
+                border: 4px dotted $color-darkblue;
                 border-radius: 5px;
-
                 z-index: 2;
 
             }
@@ -83,11 +105,11 @@
 
         @include respond(tablet) {
             position: absolute;
-            right: 5%;
-            top: 5%;
+            right: 2%;
+            top: 2%;
             display: grid;
-            width: 20%;
-            height: 10%;
+            width: 15%;
+            height: 7.5%;
             overflow: hidden;
 
             &::before {
@@ -109,11 +131,11 @@
                     align-items: flex-start;
                     width: 100%;
                     height: 100%;
-                    padding: 3px 3px;
+                    padding: 1px 1px;
 
                     span {
-                        width: 10px;
-                        height: 10px;
+                        width: 5px;
+                        height: 5px;
                         background-color: $color-darkpink;
                         display: block;
                         border-radius: 50%;
@@ -129,25 +151,28 @@
 
         @include respond(tablet) {
             position: absolute;
-            bottom: 5%;
-            left: 5%;
+            bottom: 2%;
+            left: 2%;
             display: block;
-          
             overflow: hidden;
+            width: 25%;
+            height: 7.5%;
 
             div {
-                  width: 30%;
-            height: 30%;
+                width: 100%;
+                height: 100%;
+
                 div {
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     width: 100%;
                     height: 100%;
-                    padding: 3px 3px;
+                    padding: 1px 1px;
+
                     span {
-                        width: 10px;
-                        height: 10px;
+                        width: 5px;
+                        height: 5px;
                         background-color: $color-darkpink;
                         display: block;
                         border-radius: 50%;

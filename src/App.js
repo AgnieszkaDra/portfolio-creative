@@ -41,7 +41,16 @@ function App() {
         
           <Dots className={'header__dots--up'} spanHorizontal={3} spanVertical={3}></Dots>
           <Dots className={'header__dots--down'} spanHorizontal={5} spanVertical={3}></Dots>
-          
+          <Typography
+              variant={'h3'}
+              className={'header__text third'}>
+              HI, I'M
+            </Typography>
+            <Typography
+              variant={'h3'}
+              className={'header__text fourth'}>
+              AGNIESZKA DRAGAŃCZYK
+            </Typography>
     
       </Header>
       <main>
