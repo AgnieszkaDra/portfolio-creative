@@ -39,7 +39,7 @@ function App() {
           >
           </Image>
         
-          <Dots className={'header__dots--up'} span={9}></Dots>
+          <Dots className={'header__dots--up'} spanHorizontal={3} spanVertical={3}></Dots>
           <Dots className={'header__dots--down'} spanHorizontal={5} spanVertical={3}></Dots>
           
     

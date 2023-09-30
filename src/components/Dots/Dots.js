@@ -7,28 +7,14 @@ export const Dots = (props) => {
     const {
     className,
 
-    span,
+  
     spanHorizontal,
     spanVertical,
     ...otherProps
   } = props
 
-  const normal = props.span
-  const unnormal = props.spanHorizontal && props.spanVertical
 
-  const spanElement = (spanElement) => {
-    const numberOfElements = spanElement;
-    const elements = [];
 
-    for (let i = 1; i <= numberOfElements; i++) {
-      elements.push(<div><span key={i}></span></div>);
-    }
-    return (
-      <>
-        {elements}
-      </>
-    );
-  }
 
   const dynamicStyle = (hor, vert) => {
     return {
@@ -59,19 +45,19 @@ export const Dots = (props) => {
     );
   }
 
-  if(normal) {
-    return (
-        <div
-        className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
-        >
+//   if(normal) {
+//     return (
+//         <div
+//         className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
+//         >
            
-          {spanElement(props.span)}
+//           {spanElement(props.span)}
          
-        </div>
-      )
-  }
+//         </div>
+//       )
+//   }
 
-  if(unnormal) {
+
      return (
     <div
     className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
@@ -83,7 +69,7 @@ export const Dots = (props) => {
   }
  
   
-}
+
 
 Dots.propTypes = {
   className: PropTypes.string
