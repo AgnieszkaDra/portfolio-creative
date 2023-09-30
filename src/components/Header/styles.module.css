@@ -1,6 +1,8 @@
 .root {
-  
+  position: relative;
 }
+
+
 
 
 .gradient-pink {
@@ -12,9 +14,6 @@
   background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
 }
 
-header {
-  background-color: rgb(253, 253, 253);
-  border: 2px solid blue;
-}
+
 
 /*# sourceMappingURL=styles.module.css.map */

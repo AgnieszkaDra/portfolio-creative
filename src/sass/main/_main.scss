@@ -1,0 +1,8 @@
+@import '../abstracts/index';
+
+main {
+    height: 100vh;
+    @include respond(tablet) {
+        height: 90vh;
+    }
+}
