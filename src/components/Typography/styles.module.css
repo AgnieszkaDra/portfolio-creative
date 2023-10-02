@@ -59,6 +59,31 @@
   }
 }
 
+.h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media(min-width:768px) {
+  .h5 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media(min-width:768px) {
+  .h5 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
 .button {
   font-family: Roboto;
   font-size: 13px;

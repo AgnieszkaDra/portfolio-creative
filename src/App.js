@@ -1,4 +1,4 @@
-import './App.css';
+
 import './sass/index.css';
 import Header from './components/Header/Header'
 import SquareDiv from './components/SquareDiv/SquareDiv';

@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation';
 import Typography from '../Typography/Typography';
 import Image from '../Image/Image';
 import Dots from '../Dots';
+import Controlls from '../Controlls/Controlls';
 import './styles.module.scss'
 import logo from '../../assets/face.jpg'
 
@@ -37,6 +38,7 @@ export const Header = (props) => {
         url={logo}
         name={logo}
       >
+        
       </Image>
       <Dots className={'header__dots--up'} spanHorizontal={3} spanVertical={3}></Dots>
       <Dots className={'header__dots--down'} spanHorizontal={5} spanVertical={3}></Dots>
@@ -50,6 +52,20 @@ export const Header = (props) => {
         className={'header__text fourth'}>
         AGNIESZKA DRAGAŃCZYK
       </Typography>
+      <Typography
+        variant={'h5'}
+        className={'header__text fifth'}>
+        FRONTEND DEVELOPER - STUDENT
+      </Typography>
+      <Typography
+        variant={'p'}
+        className={'header__text p'}>
+        I am learning frontend technologies HTML,CSS,SCSS,JS,React. 
+        <br></br>
+        Love to create beautiful and functional websites.
+      </Typography>
+    
+
 
     </header>
   )

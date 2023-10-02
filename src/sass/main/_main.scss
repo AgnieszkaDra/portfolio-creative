@@ -2,7 +2,11 @@
 
 main {
     height: 100vh;
-    @include respond(tablet) {
+    display: none;
+    @include respond(desktop) {
+        display: block;
+        width: 45%;
         height: 90vh;
+        background-color: $color-lightpink;
     }
 }
