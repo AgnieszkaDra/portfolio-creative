@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './styles.module.css'
+import Navigation from '../Navigation/Navigation';
+import Typography from '../Typography/Typography';
+import Image from '../Image/Image';
+import Dots from '../Dots';
 import './styles.module.scss'
+import logo from '../../assets/face.jpg'
+
 
 export const Header = (props) => {
   const {
@@ -10,10 +16,40 @@ export const Header = (props) => {
   } = props
 
   return (
-    <header 
-    className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
+    <header
+      className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
     >
-
+      <div className={'header__navigation'}>
+        <Navigation></Navigation>
+      </div>
+      <Typography
+        variant={'h1'}
+        className={'header__text first'}>
+        PORTFOLIO
+      </Typography>
+      <Typography
+        variant={'h2'}
+        className={'header__text second'}>
+        PORTFOLIO
+      </Typography>
+      <Image
+        className={'header__image'}
+        url={logo}
+        name={logo}
+      >
+      </Image>
+      <Dots className={'header__dots--up'} spanHorizontal={3} spanVertical={3}></Dots>
+      <Dots className={'header__dots--down'} spanHorizontal={5} spanVertical={3}></Dots>
+      <Typography
+        variant={'h3'}
+        className={'header__text third'}>
+        HI, I'M
+      </Typography>
+      <Typography
+        variant={'h4'}
+        className={'header__text fourth'}>
+        AGNIESZKA DRAGAŃCZYK
+      </Typography>
 
     </header>
   )

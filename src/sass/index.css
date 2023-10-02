@@ -78,24 +78,34 @@
   }
 }
 .header__text.third {
-  color: rgb(254, 255, 253);
+  color: rgb(169, 165, 165);
   position: absolute;
   width: 50%;
-  top: 65%;
-  left: 50%;
+  top: 55%;
+  right: 10%;
   height: 7%;
   z-index: 2;
+}
+
+.header__text.fourth {
+  color: rgb(169, 165, 165);
+  position: absolute;
+  width: 60%;
+  top: 62%;
+  right: 0;
+  padding: 10px;
+  z-index: 2;
   background: rgb(122, 161, 212);
-  background: linear-gradient(0deg, rgb(122, 161, 212), rgb(105, 173, 244));
+  background: linear-gradient(0deg, rgb(122, 161, 212), rgb(254, 255, 253));
   padding-left: 2%;
 }
 
 .header__image {
   position: absolute;
   left: 35%;
-  top: 5%;
+  top: 12%;
   width: 60%;
-  height: 45vh;
+  height: 40vh;
 }
 
 @media only screen and (min-width: 900px) {
@@ -193,6 +203,59 @@
     border-radius: 50%;
   }
 }
+.header__navigation {
+  width: 100%;
+  height: 10%;
+  color: rgb(254, 255, 253);
+  flex-basis: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media only screen and (max-width: 899px) {
+  .header__navigation .nav__menu.nav__block {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0vh;
+    left: 0;
+    z-index: 2;
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40%;
+    background: rgb(255, 158, 185) 40%;
+  }
+  .header__navigation .nav__menu.nav__block > li {
+    margin-bottom: 10px;
+  }
+  .header__navigation .nav__menu.nav__block > li a {
+    color: rgb(254, 255, 253);
+    font-weight: bold;
+  }
+}
+.header__navigation .nav__menu.nav__hide {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .header__navigation .hamburger {
+    display: none;
+  }
+  .header__navigation .nav__menu {
+    display: block;
+    display: flex;
+    flex-direction: row;
+  }
+  .header__navigation .nav__menu > li:not(:nth-child(3)) {
+    margin-right: 10px;
+  }
+  .header__navigation .nav__menu > li a {
+    color: rgb(254, 255, 253);
+  }
+}
 header > * {
   width: 100%;
   box-sizing: border-box;
@@ -210,6 +273,68 @@ header > * {
   top: 200px;
   left: 200px;
   z-index: 2;
+}
+
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+}
+
+.hamburger {
+  background-color: rgb(122, 161, 212);
+  border-radius: 5px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+.hamburger__icon-open, .hamburger__icon-close {
+  width: 30px;
+  height: 30px;
+  transition: 0.1s;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.hamburger__icon-open div, .hamburger__icon-close div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px 2px;
+}
+
+.hamburger__icon-open div span {
+  width: 5px;
+  height: 5px;
+  background-color: rgb(254, 255, 253);
+  display: block;
+  border-radius: 50%;
+}
+
+.hamburger__icon-close {
+  transform: rotate(180deg);
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+.hamburger__icon-close div:nth-child(odd) span {
+  width: 5px;
+  height: 5px;
+  background-color: rgb(254, 255, 253);
+  display: block;
+  border-radius: 50%;
+  transition-delay: 200ms;
+  transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 }
 
 .gradient-pink {
