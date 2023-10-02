@@ -415,6 +415,7 @@ header > * {
   position: absolute;
   top: 10%;
   right: -20%;
+  z-index: 5;
 }
 
 .control {

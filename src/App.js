@@ -1,6 +1,7 @@
 
 import './sass/index.css';
 import Header from './components/Header/Header'
+import Main from './components/Main/Main';
 import SquareDiv from './components/SquareDiv/SquareDiv';
 import Typography from './components/Typography/Typography';
 import Image from './components/Image/Image';
@@ -15,9 +16,7 @@ function App() {
  
     
       </Header>
-      <main>
-        <section></section>
-      </main>
+     <Main className={'main'}></Main>
     </div>
   );
 }
