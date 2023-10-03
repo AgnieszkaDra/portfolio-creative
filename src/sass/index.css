@@ -408,16 +408,21 @@ header > * {
 }
 
 .header__controlls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 10%;
-  right: -20%;
-  z-index: 5;
+  display: none;
 }
 
+@media only screen and (min-width: 1200px) {
+  .header__controlls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    z-index: 5;
+  }
+}
 .control {
   width: calc(5vh + 5px);
   height: calc(5vh + 5px);
@@ -459,6 +464,10 @@ main {
     background-color: rgb(255, 216, 230);
   }
 }
+.section.two {
+  display: none;
+}
+
 .App {
   display: flex;
   justify-content: center;

@@ -1,17 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import data from '../../data'
 
 import classes from './styles.module.css'
 
 export const About = (props) => {
   const {
     className,
+  elements,
     ...otherProps
   } = props
 
+  const forwardSection = (elements) => {
+    alert('handle')
+    console.log(elements.name)
+    // Toggle the state of the clicked element
+    // setElementStates((prevState) => ({
+    //   ...prevState,
+    //   [elementName]: !prevState[elementName],
+    // }));
+  }
+
   return (
-    <section
+    <div
       className={`${classes.root}${className ? ` ${className}` : ''}`}
+    
       {...otherProps}
     >
           <div class="about-container__title">
@@ -107,7 +120,7 @@ export const About = (props) => {
                     </div>
                 </div>
 
-    </section>
+    </div>
   )
 }
 

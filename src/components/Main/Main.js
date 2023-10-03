@@ -1,6 +1,7 @@
 import React from 'react'
-import About from '../About/About'
+import Section from '../Section/Section'
 import MyComponent from '../MyComponent/MyComponent'
+import data from '../../data'
 import PropTypes from 'prop-types'
 
 import classes from './styles.module.css'
@@ -16,7 +17,7 @@ export const Main = (props) => {
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
-<About className={'about'}></About>
+<Section className={'about section two'} data-id ={'about'}></Section>
 <MyComponent></MyComponent>
     </main>
   )

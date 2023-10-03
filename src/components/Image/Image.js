@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Controlls from '../Controlls/Controlls'
+import data from '../../data'
 import classes from './styles.module.css'
 
 export const Image = (props) => {
@@ -22,7 +23,7 @@ export const Image = (props) => {
       alt={props.name}
       >
       </img>
-    <Controlls className={'header__controlls'}></Controlls>
+    <Controlls className={'header__controlls'} {...data}></Controlls>
     </div>
   )
 }

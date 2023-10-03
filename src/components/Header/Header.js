@@ -38,7 +38,6 @@ export const Header = (props) => {
         url={logo}
         name={logo}
       >
-        
       </Image>
       <Dots className={'header__dots--up'} spanHorizontal={3} spanVertical={3}></Dots>
       <Dots className={'header__dots--down'} spanHorizontal={5} spanVertical={3}></Dots>
@@ -64,9 +63,6 @@ export const Header = (props) => {
         <br></br>
         Love to create beautiful and functional websites.
       </Typography>
-    
-
-
     </header>
   )
 }
