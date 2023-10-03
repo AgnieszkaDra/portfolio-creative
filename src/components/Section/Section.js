@@ -31,7 +31,7 @@ export const Section = (props) => {
       {...otherProps}
       onClick = {() => {forwardSection()}}
     >
-      <About onClick={sharedValue}></About>
+      {/* <About onClick={sharedValue}></About> */}
 
     </section> 
  

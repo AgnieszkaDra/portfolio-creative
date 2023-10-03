@@ -7,6 +7,8 @@ import data from '../../data';
 import PropTypes from 'prop-types'
 
 import classes from './styles.module.css'
+import Main from '../Main/Main';
+import About from '../About';
 
 export const ControllsContext = React.createContext();
 export const MyContextProvider = ({ children }) => {
@@ -27,7 +29,7 @@ export const Controlls = (props) => {
     ...otherProps
   } = props
 
-  const [elementStates, setElementStates] = useState({
+ const [elementStates, setElementStates] = useState({
     home: false,
     about: false,
     portfolio: false,
@@ -35,9 +37,29 @@ export const Controlls = (props) => {
     // Add more elements as needed
   });
 
+
+    const keysWithTrueValue = Object.keys(elementStates).filter(key => elementStates[key] === true);
+if(keysWithTrueValue[0] === 'about') {
+ return (
+<>
+
+
+    <About></About>
+
+</>
+
+
+ )
+}
+  
+
+
+
+
+
   const handleElementClick = (elementName) => {
     alert('handle')
-    // Toggle the state of the clicked element
+  
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],
@@ -62,14 +84,20 @@ export const Controlls = (props) => {
 
   const use = React.useContext(MyContextProvider);
 
-  return (
+
+
+    return (
  
     <div
       className={`${classes.root}${className ? ` ${className}` : ''}`}
       {...otherProps}
     >    
     
-     {sections.map((element) => (
+   
+    
+    <ControllsContext.Provider value={{elementStates, setElementStates}} >  
+
+  {sections.map((element) => (
     
                
     <div key={element.name}
@@ -82,11 +110,9 @@ export const Controlls = (props) => {
           ))
       
  }
-    
-    <ControllsContext.Provider value={{elementStates, setElementStates}} >  
 
 
-
+       
   
       </ControllsContext.Provider>  
      
@@ -103,7 +129,10 @@ export const Controlls = (props) => {
  
 </div>
   )
-}
+  }
+
+  
+
 export function useMyContext() {
   return React.useContext(Controlls);
 }
