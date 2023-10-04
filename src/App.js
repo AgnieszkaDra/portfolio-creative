@@ -13,7 +13,7 @@ import Dots from './components/Dots';
 function App() {
   return (
     <div className="App">
-      <Header className={'header'} >
+      <Header className={'header'} {...data}>
  
     
       </Header>

@@ -39,18 +39,16 @@ export const Controlls = (props) => {
 
 
     const keysWithTrueValue = Object.keys(elementStates).filter(key => elementStates[key] === true);
-if(keysWithTrueValue[0] === 'about') {
- return (
-<>
+// if(keysWithTrueValue[0] === 'about') {
+//  return (
+// <>
+// <About className={'about-container'}></About>
+
+// </>
 
 
-    <About></About>
-
-</>
-
-
- )
-}
+//  )
+// }
   
 
 
@@ -95,7 +93,7 @@ if(keysWithTrueValue[0] === 'about') {
     
    
     
-    <ControllsContext.Provider value={{elementStates, setElementStates}} >  
+    {/* <ControllsContext.Provider value={{elementStates, setElementStates}} >   */}
 
   {sections.map((element) => (
     
@@ -114,7 +112,7 @@ if(keysWithTrueValue[0] === 'about') {
 
        
   
-      </ControllsContext.Provider>  
+      {/* </ControllsContext.Provider>   */}
      
     
    

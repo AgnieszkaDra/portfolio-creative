@@ -23,7 +23,7 @@ export const Image = (props) => {
       alt={props.name}
       >
       </img>
-    <Controlls className={'header__controlls'} {...data}></Controlls>
+  
     </div>
   )
 }

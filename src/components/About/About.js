@@ -1,13 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
-import data from '../../data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import sections from '../../data/sections'
+import Controlls from '../Controlls/Controlls'
+import data from '../../data/sections'
 
 import classes from './styles.module.css'
+export const ControllsContext = React.createContext();
 
 export const About = (props) => {
   const {
     className,
   elements,
+  sections,
     ...otherProps
   } = props
 
@@ -21,12 +26,59 @@ export const About = (props) => {
     // }));
   }
 
+  const [elementStates, setElementStates] = useState({
+    home: false,
+    about: false,
+    portfolio: false,
+    contact: false,
+    // Add more elements as needed
+  });
+
+  const handleElementClick = (elementName) => {
+    alert('handle')
+  
+    setElementStates((prevState) => ({
+      ...prevState,
+      [elementName]: !prevState[elementName],
+    }));
+  }
+
+  const keysWithTrueValue = Object.keys(elementStates).filter(key => elementStates[key] === true);
+  if(keysWithTrueValue[0] === 'about') {
+    alert('about')
+   return (
+  <>
+  <About className={'about-container'} {...data}></About>
+  
+  </>
+  
+  
+   )
+  }
+
   return (
     <div
       className={`${classes.root}${className ? ` ${className}` : ''}`}
     
       {...otherProps}
     >
+
+<ControllsContext.Provider value={{elementStates, setElementStates}} > 
+              {sections.map((element) => (
+    
+               
+    <div key={element.name}
+        onClick={() => handleElementClick(element.name)}
+        className={elementStates[element.name] ? 'control active-btn' : 'control'}
+        data-id = {element.name}
+        >
+            <h1>{'dddddddd'}</h1>
+           <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>
+         </div>      
+          ))
+      
+ }
+ </ControllsContext.Provider>
           <div class="about-container__title">
                     <h2>About <span>me</span></h2><span class="bg-text">my stats</span>
                 </div>

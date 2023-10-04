@@ -468,6 +468,249 @@ main {
   display: none;
 }
 
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+}
+
+.about-container {
+  margin-top: 9rem;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.about-container .about-container__title {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.about-container .about-container__title h2 {
+  color: rgb(255, 216, 230);
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  font-size: calc(2rem + 1vh);
+  font-size: 700;
+  z-index: 2;
+}
+
+.about-container .about-container__title .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey5);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+  font-weight: 800;
+  font-size: calc(1rem + 1vh);
+  text-transform: uppercase;
+  text-shadow: var(--color-blue) 1px 0 10px;
+}
+
+.about-container .about-container__info {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-container .about-container__info .left-about h4 {
+  margin: 1rem 0;
+  font-size: calc(0.5rem + 1vh);
+  text-transform: uppercase;
+  color: var(--color-blue);
+  text-align: center;
+}
+
+.about-container .about-container__info .left-about p {
+  padding: 10px;
+  text-align: justify;
+  margin: 1rem 0;
+  line-height: 2rem;
+  width: 100%;
+  display: block;
+  color: var(--color-grey5);
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.about-container .about-container__info .left-about .btn-con {
+  color: var(--color-grey5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container .about-container__info .left-about .btn-con__link {
+  border-radius: 30px;
+  color: var(--color-white);
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-grey5);
+}
+
+.about-container .about-container__info .left-about .btn-con__link__text {
+  padding: 0 2rem;
+}
+
+.about-container .about-container__info .left-about .btn-con__link__icon {
+  background-color: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+  transform: translateX(10px);
+}
+
+.about-container .about-container__info .right-about {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.about-container .about-container__info .right-about .about-item {
+  border: 2px solid var(--color-blue);
+  margin: 0.5rem;
+}
+
+.about-container .about-container__info .right-about .about-item .abt-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem;
+  color: var(--color-grey4);
+}
+
+.about-container .about-container__info .right-about .about-item .abt-text .large-text {
+  color: var(--color-blue);
+  margin-right: 0.5rem;
+}
+
+.about-container .about-container__info .right-about .about-item .abt-text .small-text {
+  font-size: calc(0.4rem + 1vh);
+  overflow: hidden;
+}
+
+.about-container .about-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-container .about-stats .stat-title {
+  font-size: calc(0.5rem + 1vh);
+  color: var(--color-blue);
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-container .about-stats .about-stats-con {
+  display: grid;
+  grid-template-rows: repeat(5, 60px);
+  align-self: flex-start;
+  width: 90%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars {
+  margin: 1rem;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress-title {
+  font-weight: 500;
+  color: var(--color-grey5);
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress {
+  height: 1rem;
+  background-color: var(--color-sand);
+  margin-bottom: 1rem;
+  position: relative;
+  border: 2px solid black;
+  display: flex;
+  height: 10px;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.html {
+  width: 20%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.css {
+  width: 40%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.scss {
+  width: 40%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.javascript {
+  width: 60%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.api {
+  width: 70%;
+}
+
+.about-container .about-stats .about-stats-con .progress-bars .progress.react {
+  width: 75%;
+}
+
+.about-container .timeline {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.about-container .timeline .timeline-item {
+  position: relative;
+  padding-left: 5rem;
+  border-left: 1px solid var(--color-grey5);
+  margin-bottom: 1rem;
+}
+
+.about-container .timeline .timeline-item .tl-icon {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-blue);
+}
+
+.about-container .timeline .timeline-item .tl-icon i {
+  font-size: 1.3rem;
+}
+
+.about-container .timeline .timeline-item .tl-duration {
+  padding: 0.6rem 0.8rem;
+  background-color: var(--color-grey2);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-grey5);
+}
+
+.about-container .timeline .timeline-item h5 {
+  text-align: justify;
+  color: var(--color-blue);
+}
+
 .App {
   display: flex;
   justify-content: center;
