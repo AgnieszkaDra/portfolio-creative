@@ -62,24 +62,12 @@ export const About = (props) => {
     
       {...otherProps}
     >
-
-<ControllsContext.Provider value={{elementStates, setElementStates}} > 
-              {sections.map((element) => (
-    
-               
-    <div key={element.name}
-        onClick={() => handleElementClick(element.name)}
-        className={elementStates[element.name] ? 'control active-btn' : 'control'}
-        data-id = {element.name}
-        >
-            <h1>{'dddddddd'}</h1>
-           <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>
-         </div>      
-          ))
-      
- }
- </ControllsContext.Provider>
-          <div class="about-container__title">
+{/* 
+<ControllsContext.Provider value={{elementStates, setElementStates}} >  */}
+       
+ {/* </ControllsContext.Provider> */}
+        <div class="about-container__title">
+           
                     <h2>About <span>me</span></h2><span class="bg-text">my stats</span>
                 </div>
                 <div class="about-container__info">
@@ -99,7 +87,20 @@ export const About = (props) => {
                         </a>
                     </div>
                     </div>
-                    <div class="right-about">
+                    <div class="right-about">        {sections.map((element) => (
+
+               <div className={'difk'}>ooosos</div>
+    // <div key={element.name}
+    //     onClick={() => handleElementClick(element.name)}
+    //     className={elementStates[element.name] ? 'control active-btn' : 'control'}
+    //     data-id = {element.name}
+    //     >
+    //         <h1>{'dddddddd'}</h1>
+    //        <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>
+    //      </div>      
+          ))
+      
+ }
                         <div class="about-item myown">
                             <div class="abt-text">
                                 <p class="large-text projectsAmountMyOwn">10+</p>

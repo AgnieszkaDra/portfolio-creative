@@ -109,18 +109,16 @@ export const Header = (props) => {
       </Typography>
           <ControllsContext.Provider value={{elementStates, setElementStates}} > 
           {data.sections.map((element) => (
-    
-               
-    <div key={element.name}
+        <div key={element.name}
         onClick={() => handleElementClick(element.name)}
         className={elementStates[element.name] ? 'control active-btn' : 'control'}
         data-id = {element.name}
         >
+         
            <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>   
          </div>      
           ))
-      
- }
+    }
 
       {/* <Controlls className={'header__controlls'} {...data} onClick={handleElementClick()}></Controlls> */}
        </ControllsContext.Provider>  
