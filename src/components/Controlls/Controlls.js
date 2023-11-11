@@ -2,11 +2,15 @@ import React from 'react';
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import data from '../../data';
+import Ola from '../Ola/Ola';
+import { NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import PropTypes from 'prop-types'
 
 import classes from './styles.module.css'
+import data from '../../data'
+
 import Main from '../Main/Main';
 import About from '../About';
 
@@ -36,6 +40,11 @@ export const Controlls = (props) => {
     contact: false,
     // Add more elements as needed
   });
+
+  const toPage = (value) => {
+    // Your logic to calculate the dynamic URL based on the value
+    return `/${value}`;
+  };
 
 
     const keysWithTrueValue = Object.keys(elementStates).filter(key => elementStates[key] === true);
@@ -93,26 +102,41 @@ export const Controlls = (props) => {
     
    
     
-    {/* <ControllsContext.Provider value={{elementStates, setElementStates}} >   */}
-
-  {sections.map((element) => (
+    <ControllsContext.Provider value={{elementStates, setElementStates}} >   
+<section className={classes.section}>
+  <>
+  {'ola'}
+   {data.sections.map((element) => (
     
-               
-    <div key={element.name}
+
+        <div key={element.name}
         onClick={() => handleElementClick(element.name)}
         className={elementStates[element.name] ? 'control active-btn' : 'control'}
         data-id = {element.name}
         >
-           <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>   
-         </div>      
-          ))
+          <>
+              { <NavLink 
+                to={toPage(element.name)}
+            >Home</NavLink>}
+         { <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>   }
+          </>
+        
+         </div>  
+
+
       
+               
+      
+          ))
+ 
  }
+  </>
+ 
 
-
+        </section> 
        
   
-      {/* </ControllsContext.Provider>   */}
+      </ControllsContext.Provider>   
      
     
    

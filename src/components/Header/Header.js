@@ -7,6 +7,7 @@ import Image from '../Image/Image';
 import Dots from '../Dots';
 import Controlls from '../Controlls/Controlls';
 import About from '../About';
+import Ola from '../Ola/Ola';
 import data from '../../data'
 import './styles.module.scss'
 import logo from '../../assets/face.jpg';
@@ -107,21 +108,24 @@ export const Header = (props) => {
         <br></br>
         Love to create beautiful and functional websites.
       </Typography>
+      <Ola></Ola>
+  
           <ControllsContext.Provider value={{elementStates, setElementStates}} > 
-          {data.sections.map((element) => (
+          {/* {data.sections.map((element) => (
         <div key={element.name}
         onClick={() => handleElementClick(element.name)}
         className={elementStates[element.name] ? 'control active-btn' : 'control'}
         data-id = {element.name}
         >
          
-           <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>   
+<FontAwesomeIcon icon={element.icon}></FontAwesomeIcon>   
          </div>      
           ))
-    }
+    } */}
 
-      {/* <Controlls className={'header__controlls'} {...data} onClick={handleElementClick()}></Controlls> */}
+      {/* <Controlls className={'header__controlls'} {...data} onClick={handleElementClick()}></Controlls>  */}
        </ControllsContext.Provider>  
+       <Controlls></Controlls>
     </header>
   )
 }
