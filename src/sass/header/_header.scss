@@ -44,7 +44,13 @@
         }
     }
 
+   
+
     &__text.first {
+        font-family: 'Bebas-light', sans-serif;
+        font-size: 120px;
+        font-weight: 800;
+        letter-spacing: 0.7rem;
         color: $color-darkpink;
         position: absolute;
         transform: rotate(270deg);
@@ -58,7 +64,7 @@
         }
 
         @include respond(desktop) {
-            top: calc(30% - 10vh);
+            top: calc(37% - 10vh);
             left: calc(-35% - 2vh);
         }
 

@@ -33,7 +33,7 @@ export const Controlls = (props) => {
     ...otherProps
   } = props
 
- const [elementStates, setElementStates] = useState({
+  const [elementStates, setElementStates] = useState({
     home: false,
     about: false,
     portfolio: false,
@@ -46,48 +46,15 @@ export const Controlls = (props) => {
     return `/${value}`;
   };
 
+const handleElementClick = (elementName) => {
 
-    const keysWithTrueValue = Object.keys(elementStates).filter(key => elementStates[key] === true);
-// if(keysWithTrueValue[0] === 'about') {
-//  return (
-// <>
-// <About className={'about-container'}></About>
-
-// </>
-
-
-//  )
-// }
-  
-
-
-
-
-
-  const handleElementClick = (elementName) => {
-    alert('handle')
   
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],
     }));
   }
-  // const controlls =document.querySelectorAll('.control')
-  // const elements = [
-  //   { name: 'home', icon: faHouse , text: 'home'},
-  //   { name: 'about', icon: faUser, text: 'user'},
-  //   { name: 'portfolio', icon: faBriefcase, text: 'envelope'},
-  //   { name: 'contact', icon: faEnvelope , text: 'contact'},
-  //   // Add more elements as needed
-  // ];
 
-  // const MyContextProvider = ({ children }) => {
- 
-  
-  //   return (
-  //
-  //   );
-  // }
 
   const use = React.useContext(MyContextProvider);
 

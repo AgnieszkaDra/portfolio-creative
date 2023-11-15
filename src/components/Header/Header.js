@@ -25,11 +25,8 @@ export const Header = (props) => {
         <Navigation></Navigation>
       </div> */}
       <Controlls className={'header__controlls'}></Controlls>
-      <Typography
-        variant={'h1'}
-        className={'header__text first'}>
-        PORTFOLIO
-      </Typography>
+      {<h1 className={'header__text first'}> PORTFOLIO</h1>}
+      
       <Typography
         variant={'h2'}
         className={'header__text second'}>

@@ -1,0 +1,95 @@
+@import '../abstracts/index';
+
+.projects {
+    height: 100vh;
+    width: 100%;
+    background-color: $color-background;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 400px)
+}
+
+.project {
+    @include flexAbsoluteCenter();
+    position: relative;
+
+    .headline {
+        display: flex;
+        font-family: 'Lexend-bold';
+        text-transform: uppercase;
+        
+
+        &>* {
+            padding: 5px;
+        }
+    }
+
+    .id {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 20px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &01 {
+        border: 2px solid red;
+        
+        &__headline {
+        position: absolute;
+        top: 20px; 
+       
+        }
+        
+        .headline::before {
+            content: ""; /* Required for pseudo-elements */
+            background: linear-gradient(0deg, $color-lightturcoise, $color-darkturcoise);
+            width: 250px;
+            height: 80px;
+            margin-top: -20px;
+        }
+       &__description {
+        position: absolute;
+        font-family: 'Lexend-medium';
+        @include flexAbsoluteCenter();
+        bottom: 20px;
+        left:20px;
+        width: calc(50% - 20px);
+        height: 30%;
+        border: 3px solid $color-darkturcoise;
+        }
+        &__image {
+            position: absolute;
+            top:20%;
+            left:0;
+            width: 50%;
+            height: 40%;
+            @include flexAbsoluteCenter();
+            background: linear-gradient(0deg, $color-lightpink, $color-mediumpink);
+           img {
+           
+            box-shadow: 0 10px 8px rgba(255, 255, 255, 1);
+            object-fit: contain;
+           }
+        }
+        &__image2 {
+            position: absolute;
+            top:20%;
+            right: 10%;
+            width: 20%;
+            height: 40%;
+            @include flexAbsoluteCenter();
+            background: linear-gradient(0deg, $color-lightpink, $color-mediumpink);
+          
+        }
+        &__links {
+            position: absolute;
+            right: 0;
+            top: 50px;
+        }
+    }
+    
+}
