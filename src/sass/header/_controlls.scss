@@ -1,19 +1,5 @@
 @import '../abstracts/';
 
-.header__controlls {
-    display: none;
-
-    @include respond(desktop) {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        top: 10%;
-        right: -20%;
-        z-index: 5;
-    }
-}
 
 .control {
 
@@ -32,6 +18,12 @@
         pointer-events: none;
     }
 
+    &__link {
+        position: relative;
+        @include flexAbsoluteCenter;
+    }
+
+   
 }
 
 

@@ -87,7 +87,7 @@ export const About = (props) => {
                         </a>
                     </div>
                     </div>
-                    <div class="right-about">        {sections.map((element) => (
+                    {/* <div class="right-about">        {sections.map((element) => (
 
                <div className={'difk'}>ooosos</div>
     // <div key={element.name}
@@ -120,7 +120,7 @@ export const About = (props) => {
                             </div>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
                 <div class="about-stats">
                     <h4 class="stat-title">My Skills</h4>

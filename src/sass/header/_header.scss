@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100%;
     background-color: $color-background;
+    position: relative;
 
     @include respond(desktop) {
         height: 90vh;
@@ -18,6 +19,29 @@
         width: 70%;
         height: 80%;
         margin-left: 2%;
+    }
+
+    &__controlls {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 70%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(desktop) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            width: auto;
+            height: auto;
+            top: 10%;
+            right: 60px;
+            z-index: 5;
+        }
     }
 
     &__text.first {

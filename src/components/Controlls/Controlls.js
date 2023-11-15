@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Ola from '../Ola/Ola';
+
 import { NavLink } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 
@@ -100,56 +100,42 @@ export const Controlls = (props) => {
       {...otherProps}
     >    
     
-   
     
     <ControllsContext.Provider value={{elementStates, setElementStates}} >   
-<section className={classes.section}>
+    <section className={classes.section}>
   <>
-  {'ola'}
-   {data.sections.map((element) => (
-    
 
-        <div key={element.name}
+
+   {data.sections.map((element) => (
+      <div key={element.name}
         onClick={() => handleElementClick(element.name)}
         className={elementStates[element.name] ? 'control active-btn' : 'control'}
         data-id = {element.name}
         >
           <>
-              { <NavLink 
+            
+       { <NavLink 
+               className={'control__link'}
                 to={toPage(element.name)}
-            >Home</NavLink>}
-         { <FontAwesomeIcon icon={element.icon}  ></FontAwesomeIcon>   }
+              
+            >
+             {<FontAwesomeIcon icon={element.icon} className='control__icon' ></FontAwesomeIcon> } </NavLink>}
+     
           </>
         
-         </div>  
-
-
-      
-               
-      
-          ))
+         </div>
+         ))
  
  }
+ 
   </>
  
 
-        </section> 
-       
+  
+  </section>     
   
       </ControllsContext.Provider>   
-     
-    
-   
-  
-    
-    
-
-    
-
-  
-     
- 
-</div>
+      </div>
   )
   }
 
