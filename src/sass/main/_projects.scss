@@ -51,6 +51,8 @@
             height: 80px;
             margin-top: -20px;
         }
+
+        
        &__description {
         position: absolute;
         font-family: 'Lexend-medium';
@@ -89,6 +91,35 @@
             position: absolute;
             right: 0;
             top: 50px;
+        }
+        &__features {
+            position: absolute;
+          bottom: 20px;
+         right: 0;
+            width: 40%;
+            height: 30%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            border: 3px solid $color-darkpink;
+            .features__element {
+
+                font-family: 'Lexend-light';
+               display: grid;
+               grid-template-rows: repeat(2,50%);
+                span {
+                    display: block;
+                  width: 20px;
+                  height: 20px;
+                  color: $color-lightpink;
+                  font-family: 'Lexend-bold';
+                  font-size: 20px;
+                  @include flexAbsoluteCenter();
+                border-radius: 50%;
+                background-color: $color-darkturcoise;
+             
+              
+                }
+            }
         }
     }
     

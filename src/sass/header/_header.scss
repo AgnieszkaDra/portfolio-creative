@@ -18,7 +18,8 @@
         display: block;
         width: 70%;
         height: 80%;
-        margin-left: 2%;
+     
+        position: relative;
     }
 
     &__controlls {
@@ -44,47 +45,73 @@
         }
     }
 
-   
+   &__text {
+       font-family: 'Bebas-regular', sans-serif;
+   }
 
     &__text.first {
-        font-family: 'Bebas-light', sans-serif;
-        font-size: 120px;
-        font-weight: 800;
-        letter-spacing: 0.7rem;
+     
+        font-size: calc(80px + 1vh);
+      
+        font-weight: 1000;
+        letter-spacing: 1.2;
+        
         color: $color-darkpink;
         position: absolute;
-        transform: rotate(270deg);
-        top: calc(45% - 2vh);
-        left: calc(-35% - 2vh);
+        transform: rotate(-90deg);
+        transform-origin: top left;
+        white-space: nowrap;
         text-shadow: $color-white 1px 0 10px;
+      
 
         @include respond(tablet) {
-            top: calc(47% - 5vh);
-            left: calc(-30% - 8vh);
+           font-size: 120px;
+          
         }
 
         @include respond(desktop) {
-            top: calc(37% - 10vh);
-            left: calc(-35% - 2vh);
+            font-size: 90px;
+          
         }
-
+  @include respond(mobileHorizontal){
+            font-size: 60px;
+        }
     }
 
     &__text.second {
-        color: $color-white;
-        position: absolute;
-        transform: rotate(270deg);
-        top: calc(45% - 10vh);
-        left: -30%;
+        
+display: none;
 
         @include respond(tablet) {
-            left: calc(-25% - 2vh);
+            display: block;
+            font-size: 100px;
+            color: $color-white;
+        position: absolute;
+        transform: rotate(-90deg);
+        left: 15%;
+        transform-origin: top left;
+        white-space: nowrap;
+       
         }
 
-        @include respond(desktop) {
-            left: calc(-30% - 2vh);
-        }
-    }
+        @include respond(tablet) {
+            font-size: 90px;
+           
+         }
+ 
+         @include respond(desktop) {
+             font-size: 70px;
+           
+         }
+   @include respond(mobileHorizontal){
+             font-size: 60px;
+         }
+     }
+
+        // @include respond(desktop) {
+        //     left: calc(-30% - 2vh);
+        // }
+    
 
     &__text.third {
         color: $color-grey;
@@ -335,7 +362,7 @@
           }
         }
       }
-    }
+    
   
 
 
@@ -359,7 +386,7 @@ header>* {
 
 
 
-
+}
 
 
 
