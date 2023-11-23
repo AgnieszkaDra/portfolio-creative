@@ -36,7 +36,7 @@ export const Header = (props) => {
         spanVertical={3}>
         </Dots>
         {<h3 className={'header__text third'}>HI, I'M </h3>}
-        {<h3 className={'header__text third'}>HI, I'Mddfbjfdbgjhbjsh </h3>}
+        {<h3 className={'header__text'}>HI, I'Mddfbjfdbgjhbjsh </h3>}
         {<h4 className={'header__text fourth'}>AGNIESZKA DRAGAŃCZYK</h4>}
         {<h5 className={'header__text fifth'}>FRONTEND DEVELOPER - STUDENT</h5>}
 
