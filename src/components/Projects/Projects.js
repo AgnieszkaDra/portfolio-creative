@@ -82,7 +82,6 @@ let number = 0
                 to={element.githubUrl}
               >
                 <FontAwesomeIcon icon={faGithub} className='control__icon' ></FontAwesomeIcon> </NavLink>
-
               }
 
               {<NavLink
