@@ -40,13 +40,7 @@ export const Header = (props) => {
         {<h4 className={'header__text fourth'}>AGNIESZKA DRAGAŃCZYK</h4>}
         {<h5 className={'header__text fifth'}>FRONTEND DEVELOPER - STUDENT</h5>}
 
-        {/* <Typography
-          variant={'p'}
-          className={'header__text p'}>
-          I am learning frontend technologies HTML,CSS,SCSS,JS,React.
-          <br></br>
-          Love to create beautiful and functional websites.
-        </Typography> */}
+      
       </>
     </header>
     
