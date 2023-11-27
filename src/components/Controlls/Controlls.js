@@ -54,12 +54,7 @@ const handleElementClick = (elementName) => {
       [elementName]: !prevState[elementName],
     }));
   }
-
-
   const use = React.useContext(MyContextProvider);
-
-
-
     return (
  
     <div
