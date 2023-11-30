@@ -2,12 +2,19 @@
 @import './header';
 @import './main/';
 
-
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
 .App {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding:  0;
+    background-color: $color-background;
 }
 
 h4 {
@@ -16,5 +23,57 @@ h4 {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
+figure {
+    margin: 0;
+}
+
+.control__link {
+    position: relative;
+    font-size: 1.2rem;
+    color: $color-grey;
+    @include flexAbsoluteCenter;
+}
+
+.headline--h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+    color: $color-grey;
+  
+    @include respond(tablet) {
+      font-size: 1.5rem;
+    }
+  
+  }
+  
+  .headline--h4 {
+  
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+    text-transform: uppercase;
+    color: $color-grey;
+  
+    @include respond(tablet) {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .headline--h5 {
+  
+    text-align: center;
+    font-size: 0.9rem;
+    color: $color-grey;
+  
+    @include respond(tablet) {
+      font-size: 1.1rem;
+    }
+  }
+  
 

@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFirefox } from '@fortawesome/free-brands-svg-icons';
 
 
-import classes from './styles.module.css'
+import Controlls from '../Controlls/Controlls';
 import Image from '../Image/Image'
 import data from '../../data/projects'
 import logo from '../../assets/face.jpg';
@@ -15,12 +15,12 @@ import logo from '../../assets/face.jpg';
 export const Projects = (props) => {
   const {
     className,
-   
+
   } = props
 
-let number = 0
+  let number = 0
   const renderList = (item, i) => {
-   
+
     number++
     return (
       <>
@@ -28,9 +28,13 @@ let number = 0
           key={i}
           className={'features__element'}
         >
-        <span>{number}</span>  {item}
+          <span className='features__element-number'>
+            {number}
+          </span>
+          <div className='features__element-description'>
+            {item}
+          </div>
         </li>
-
       </>
     )
   }
@@ -39,18 +43,15 @@ let number = 0
 
   return (
     <section
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
-
+      className={`${className ? ` ${className}` : ''}`}
     >
       {data.categories.map((element) => (
 
         <div key={element.name}
-
           className={`project${element.id} project`}
           data-id={element.id}
         >
-
-          <div className={`project${element.id}__headline headline`}>
+        <div className={`project${element.id}__headline headline`}>
             <div className={`project${element.id}__id id`}>{element.id}.</div>
             <h4 className={`project${element.id}__name name`}>{element.name}</h4>
           </div>
@@ -73,8 +74,6 @@ let number = 0
               :
               ''
           }
-
-
           <div className={`project${element.id}__links links`}>
             <>
               {<NavLink
@@ -87,38 +86,26 @@ let number = 0
               {<NavLink
                 className={'links__element'}
                 to={element.view}
-
               >
-
                 <FontAwesomeIcon icon={faFirefox} className='control__icon' ></FontAwesomeIcon> </NavLink>
-
-
               }
-
-
             </>
-
-
           </div>
-          <ul className={`project${element.id}__features features`}>
-         
+          <div className={`project${element.id}__features features`}>
+            <h5 className={`headline--h5`}>FEATURES</h5>
+            <ul className={'features__list'}>
               {
                 element.features
                   ?
                   element.features.map((item, i) => {
-                    
                     return renderList(item, i)
                   })
                   :
                   ''
               }
-          
-          </ul>
-
-
-
-
-
+            </ul>
+          </div>
+          <Controlls className={'header__controlls'}></Controlls>
         </div>
       ))
 

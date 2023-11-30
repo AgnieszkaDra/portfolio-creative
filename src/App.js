@@ -17,7 +17,7 @@ function App() {
         <Routes>
           {<Route path='/' element={<Header className={'header'} />} />}
           {<Route path='/home' element={<Header className={'header'} />} />}
-          {<Route path='/about' element={<About />} />}
+          {<Route path='/about' element={<About className={'about'}/>} />}
           {<Route path='/projects' element={<Projects className={'projects'} />} />}
           {<Route path='/contact' element={<Contact className={'contact'} />} />}
         </Routes>

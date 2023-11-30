@@ -15,19 +15,20 @@ export const Header = (props) => {
 
   return (
 <header
-  className={`${classes.root}${className ? ` ${className}` : ''}`}
->
-  <>
-    <Controlls className={'header__controlls'}></Controlls>
-    {<h1 className={'header__text first'}> PORTFOLIO</h1>}
-    {/* {<h2 className={'header__text second'}> PORTFOLIO</h2>} */}
-    <Image
-      className={'header__image'}
-      url={logo}
-      name={logo}
+      className={`${classes.root}${className ? ` ${className}` : ''}`}
     >
-    </Image>
-    <Dots className={'header__dots--up'} 
+    
+      <>
+        <Controlls className={'header__controlls'}></Controlls>
+        {<h1 className={'header__text first'}> PORTFOLIO</h1>}
+        {<h2 className={'header__text second'}> PORTFOLIO</h2>}
+        <Image
+          className={'header__image'}
+          url={logo}
+          name={logo}
+        >
+        </Image>
+        <Dots className={'header__dots--up'} 
         spanHorizontal={3} 
         spanVertical={3}></Dots>
         <Dots className={'header__dots--down'} 
@@ -37,9 +38,7 @@ export const Header = (props) => {
         {<h3 className={'header__text third'}>HI, I'M </h3>}
         
         {<h4 className={'header__text fourth'}>AGNIESZKA DRAGAŃCZYK</h4>}
-        {<h5 className={'header__text fifth'}>FRONTEND DEVELOPER - STUDENT</h5>}
-
-      
+        {<h5 className={'header__text fifth'}>Love to create websites and apps</h5>}
       </>
     </header>
     
