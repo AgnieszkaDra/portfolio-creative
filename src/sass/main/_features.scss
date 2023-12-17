@@ -26,11 +26,26 @@
         margin: 20px 0;
         box-sizing: border-box;
         display: flex;
-        justify-content: space-around;
+    
         align-items: center;
    
-        padding: 20px 60px 20px 60px;
+        // padding: 20px 60px 20px 60px;
         border-radius: 10px;
+        &-number {
+          grid-row: 1/2;
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 216, 230);
+    font-family: "Lexend-bold";
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  
+    color: rgb(254, 255, 253);
+        }
      }
     
     &-slider__nav {

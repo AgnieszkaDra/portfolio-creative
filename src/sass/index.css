@@ -666,83 +666,125 @@ main {
 }
 
 .projects {
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(253, 253, 253);
-  position: relative;
+  display: grid;
+  grid-template-areas: "cont controlls";
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.projects__container {
+  grid-area: cont;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 400px);
+  width: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.projects__controlls {
+  grid-area: controlls;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: static;
 }
 
 .project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  grid-row: 1/2;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: "headline links" "image image2" "description features";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 20% 30% 50%;
+  height: 100vh;
 }
 
-.project .headline {
-  display: flex;
+.project__headline {
+  grid-area: headline;
+  grid-row: 1/2;
+  grid-column: 1/5;
   font-family: "Lexend-bold";
   text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
-.project .headline > * {
+.project__headline > * {
   padding: 5px;
 }
 
-.project .id {
+.project__id {
   font-size: 40px;
+  position: relative;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.project .name {
+.project__name {
   font-size: 20px;
   display: flex;
   align-items: flex-end;
 }
 
+.project__description {
+  grid-area: description;
+  font-family: "Lexend-medium";
+  padding: 20px;
+}
+
+.project__image {
+  grid-area: image;
+}
+
+.project__image img {
+  object-fit: contain;
+}
+
+.project__image2 {
+  grid-area: image2;
+}
+
+.project__feataures {
+  grid-area: features;
+  padding: 20px;
+}
+
 .project01 {
-  border: 2px solid red;
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(254, 255, 253));
+  display: grid;
+  grid-row: 1/2;
+  box-sizing: border-box;
+  grid-template-areas: "headline links" "image image2" "description features";
 }
 
 .project01__headline {
-  position: absolute;
-  top: 20px;
+  grid-column: 1/4;
 }
 
-.project01 .headline::before {
-  content: "";
-  background: linear-gradient(0deg, rgb(131, 240, 233), rgb(66, 230, 219));
-  width: 250px;
-  height: 80px;
-  margin-top: -20px;
+.project01__id {
+  background-color: red;
 }
 
 .project01__description {
-  position: absolute;
-  font-family: "Lexend-medium";
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
-  left: 20px;
-  width: calc(50% - 20px);
-  height: 30%;
-  border: 3px solid rgb(66, 230, 219);
-  box-sizing: border-box;
+  grid-column: 1/3;
 }
 
 .project01__image {
-  position: absolute;
-  top: 20%;
-  left: 0;
-  width: 50%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background-color: red;
 }
 
 .project01__image img {
@@ -751,15 +793,9 @@ main {
 }
 
 .project01__image2 {
-  position: absolute;
-  top: 20%;
-  right: 0%;
-  width: 50%;
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+  grid-area: image2;
+  grid-column: 3/5;
+  grid-row: 2/3;
 }
 
 .project01__image2 img {
@@ -767,42 +803,20 @@ main {
 }
 
 .project01__links {
-  position: absolute;
-  right: 60px;
-  top: 10px;
-  display: flex;
-}
-
-.project01 .links__element {
-  padding: 10px;
-  font-size: 20px;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(131, 240, 233);
-  margin: 2px;
-  border-radius: 50%;
-  color: rgb(35, 34, 34);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-area: links;
+  grid-column: 4/5;
 }
 
 .project01__features {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: calc(50% - 20px);
-  height: 30%;
-  border: 3px solid rgb(66, 230, 219);
+  grid-column: 3/5;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 30% 70%;
-  border: 3px solid rgb(255, 158, 185);
 }
 
 .project01 .features__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .project01 .features__element {
@@ -814,8 +828,8 @@ main {
 .project01 .features__element-number {
   grid-row: 1/2;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   color: rgb(255, 216, 230);
   font-family: "Lexend-bold";
   font-size: 20px;
@@ -823,7 +837,63 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  background-color: red;
+  color: rgb(254, 255, 253);
+}
+
+.project02 {
+  background: linear-gradient(0deg, rgb(66, 230, 219), rgb(254, 255, 253));
+  grid-template-rows: 20% 50% 30%;
+}
+
+.project02__headline {
+  grid-column: 1/3;
+}
+
+.project02__id {
   background-color: rgb(66, 230, 219);
+}
+
+.project02__image {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background-color: rgb(66, 230, 219);
+}
+
+.project02__image img {
+  object-fit: contain;
+  width: 90%;
+}
+
+.project02__image2 {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  background-color: rgb(66, 230, 219);
+}
+
+.project02__image2 img {
+  object-fit: contain;
+  width: 90%;
+}
+
+.project02__description {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.project02__features {
+  grid-column: 1/3;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 30% 70%;
+}
+
+.project02__features__element-number {
+  background-color: rgb(254, 255, 253);
+}
+
+.project02 .features__element-number {
+  background-color: rgb(159, 189, 189);
 }
 
 .gradient-pink {
@@ -1011,10 +1081,23 @@ main {
   margin: 20px 0;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 20px 60px 20px 60px;
   border-radius: 10px;
+}
+
+.features__element-number {
+  grid-row: 1/2;
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: rgb(255, 216, 230);
+  font-family: "Lexend-bold";
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgb(254, 255, 253);
 }
 
 .features-slider__nav {

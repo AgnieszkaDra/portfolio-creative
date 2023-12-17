@@ -14,13 +14,11 @@ import logo from '../../assets/face.jpg';
 
 export const Projects = (props) => {
   const {
-    className,
-
+    className
   } = props
 
   let number = 0
   const renderList = (item, i) => {
-
     number++
     return (
       <>
@@ -39,25 +37,23 @@ export const Projects = (props) => {
     )
   }
 
-
-
   return (
     <section
       className={`${className ? ` ${className}` : ''}`}
     >
-      {data.categories.map((element) => (
-
+      <div className={'projects__container'}>
+       {data.categories.map((element) => (
         <div key={element.name}
           className={`project${element.id} project`}
           data-id={element.id}
         >
-        <div className={`project${element.id}__headline headline`}>
-            <div className={`project${element.id}__id id`}>{element.id}.</div>
-            <h4 className={`project${element.id}__name name`}>{element.name}</h4>
+        <div className={`project${element.id}__headline project__headline`}>
+            <div className={`project${element.id}__id project__id`}>{element.id}.</div>
+            <h4 className={`project${element.id}__name project__name`}>{element.name}</h4>
           </div>
-          <div className={`project${element.id}__description description`}>{element.description}</div>
+          <div className={`project${element.id}__description project__description`}>{element.description}</div>
           <Image
-            className={`project${element.id}__image description`}
+            className={`project${element.id}__image project__image`}
             url={element.imageUrl}
             name={logo}
           >
@@ -66,7 +62,7 @@ export const Projects = (props) => {
             element.imageUrl2
               ?
               <Image
-                className={`project${element.id}__image2 description`}
+                className={`project${element.id}__image2 project__image2`}
                 url={element.imageUrl2}
                 name={logo}
               >
@@ -91,9 +87,9 @@ export const Projects = (props) => {
               }
             </>
           </div>
-          <div className={`project${element.id}__features features`}>
+          <div className={`project${element.id}__features project__features`}>
             <h5 className={`headline--h5`}>FEATURES</h5>
-            <ul className={'features__list'}>
+            {/* <ul className={'features'}>
               {
                 element.features
                   ?
@@ -103,13 +99,15 @@ export const Projects = (props) => {
                   :
                   ''
               }
-            </ul>
+            </ul> */}
           </div>
-          <Controlls className={'header__controlls'}></Controlls>
+        
         </div>
       ))
-
-      }
+      } 
+      </div>
+      
+      <Controlls className={'projects__controlls'}></Controlls>
     </section>
   )
 
