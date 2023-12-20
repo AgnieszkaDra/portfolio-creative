@@ -32,30 +32,52 @@
 .projects {
     display: grid;
     grid-template-areas:
-        'cont controlls';
-    grid-template-columns: 90% 10%;
-    grid-template-rows: 100%;
+        'controlls'
+        'projects';
+
+    @include respond(tablet) {
+        grid-template-areas:
+            'projects controlls';
+        grid-template-columns: 90% 10%;
+        grid-template-rows: 100%;
+    }
+
+
     box-sizing: border-box;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
+    @include respond(tablet) {
+        padding: 20px;
+    }
 
     &__container {
-        grid-area: cont;
+        grid-area: projects;
         display: grid;
-        grid-template-columns: repeat(2, 50%);
+     box-sizing: border-box;
         grid-auto-flow: column;
+        width: 100%;
+
         &>* {
             height: 100vh;
+            box-sizing: border-box;
+        }
+
+        @include respond(tablet) {
+            grid-template-columns: repeat(2, 50%);
         }
     }
 
     &__controlls {
         grid-area: controlls;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
+
         position: static;
+
+        @include respond(tablet) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -67,12 +89,24 @@
     box-sizing: border-box;
     display: grid;
     grid-template-areas:
-        'headline links'
-        'image image2'
-        'description features';
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 20% 30% 50%;
+        'headline'
+        'links'
+        'image'
+        'image2'
+        'description'
+        'features';
+    // grid-template-columns: repeat(1, 100%);
+
     height: 100vh;
+
+    @include respond(tablet) {
+        grid-template-areas:
+            'headline links'
+            'image image2'
+            'description features';
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 20% 30% 50%;
+    }
 
     &__headline {
         grid-area: headline;
@@ -134,12 +168,17 @@
 
     &__links {
         grid-area: links;
-        grid-column: 4/5;
-        grid-row: 1/2;
+
         font-size: 30px;
         position: relative;
         height: 60%;
         @include flexAbsoluteCenter();
+
+        @include respond(tablet) {
+            display: grid;
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
 
         a {
             padding: 10px;
@@ -152,6 +191,13 @@
         grid-column: 1/2;
         grid-row: 1/2;
         background: linear-gradient(0deg, $color-lightpink, $color-white);
+        box-sizing: border-box;
+        @include respond(tablet) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            box-sizing: border-box;
+            width: 100%;
+        }
 
         &__headline {
             grid-column: 1/4;
@@ -207,10 +253,15 @@
 
     &02 {
         grid-area: second;
-        grid-column: 2/3;
-        grid-row: 1/2;
+        grid-column: 1/2;
+        grid-row: 2/3;
         background: linear-gradient(0deg, $color-darkturcoise, $color-white);
         grid-template-rows: 20% 50% 30%;
+
+        @include respond(tablet) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
 
         &__headline {
             grid-column: 1/3;
@@ -274,10 +325,12 @@
         grid-column: 1/2;
         grid-row: 2/3;
     }
+
     &04 {
         grid-column: 2/3;
         grid-row: 2/3
     }
+
     &05 {
         grid-column: 1/2;
         grid-row: 3/4

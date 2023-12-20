@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import classes from './styles.module.css'
+
 import Image from '../Image/Image';
 import Dots from '../Dots';
 import Controlls from '../Controlls/Controlls';
-import './styles.module.scss'
+
 import logo from '../../assets/face.jpg';
 
 
@@ -15,7 +15,7 @@ export const Header = (props) => {
 
   return (
 <header
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
+      className={`${className ? ` ${className}` : ''}`}
     >
     
       <>
