@@ -1,68 +1,49 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
+
+import { validateForm } from "../../helpers/validator";
 import data from '../../data/contacts'
 import Icon from '../Icon'
 import { Link } from '../Link'
+import Field from '../Field/Field'
+import Controlls from '../Controlls/Controlls';
+
+import PropTypes from 'prop-types'
 
 
 export const Contact = (props) => {
   const {
     className,
-
   } = props
 
-  const [msgForm, setMsgForm] = useState('');
-  const [nameForm, setNameForm] = useState('');
-  const [emailForm, setEmailForm] = useState('');
+  const [form, setForm] = useState({
+    username: '',
+    email: '',
+    message: '',
+  })
 
-  const emailRegEx = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,4}))$/gim;
-  let emailValid = 1;
+  const [validationErrors, setValidationErrors] = useState({
+    email: '',
+    username: '',
+    password: '',
+  });
 
-  const removeError = field => {
-    const formBox = field.parentElement
-    formBox.classList.remove('error')
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({
+      ...form,
+      [name]: value
+    })
   }
-  
-  const showError = (field, message) => {
-    const formBox = field.parentElement
-    const errorMsg = formBox.querySelector('.contact__form-error')
-    formBox.classList.add('error')
-    errorMsg.textContent = message
-  }
 
-  const validateEmail = (form) => {
-    if (emailRegEx.test(email) && form !== '' && message !== '') {
-      removeError('email');
-      emailValid = 1;
-    } else if (email === '') {
-      showError('email', 'Email is required');
-    } else if (emailRegEx.test(email) && (form !== '' || message !== '')) {
-      removeError('email');
-    } else if (!emailRegEx.test(email)) {
-      showError('email', 'Email is invalid!');
-      emailValid = 0;
-    }
-  };
-
-
-  const checkForm = (fields) => {
-
-    console.log('Checking form:', fields);
-  };
-
-
-
-  const checkErrors = () => {
-
-    console.log('Checking errors');
-  };
-
-  const handleClick = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    checkForm([msgForm, nameForm, emailForm]);
-    validateEmail(emailForm);
-    checkErrors();
-  };
+    const errors = validateForm(form);
+    errors.email.length > 0 ||
+      errors.username.length > 0 ||
+      errors.message.length > 0
+      ? setValidationErrors(errors)
+      : alert('Form is sent successfully')
+  }
 
   const renderListItem = (item, i) => {
     return (
@@ -90,7 +71,8 @@ export const Contact = (props) => {
     <section
       className={`${className ? ` ${className}` : ''}`}
     >
-      {<h3 className={'contact__headline headline--h3'}>FORMULARZ KONTAKTOWY</h3>}
+      <Controlls className={'contact__controlls'}></Controlls>
+      {<h3 className={'contact__headline headline--h3'}>CONTACT FORM</h3>}
       <div className={'contact__box'}>
         <div className={'contact__contacts'}>
           <h4>AGNIESZKA DRAGAŃCZYK</h4>
@@ -102,39 +84,13 @@ export const Contact = (props) => {
             </ul>
           </div>
         </div>
-        <form className={"contact__form"} id="contact-form">
-          <div className={"contact__form-element name"}>
-            <label className={"contact__form-label"} for="name">Imię</label>
-            <input className={"contact__form-input"} id="name" type="text" name="user_name"
-              value={msgForm}
-              onChange={(e) => setMsgForm(e.target.value)}
-              placeholder="Write your name" />
-            <p className={"contact__form-error"}>error</p>
-          </div>
-          <div className={"contact__form-element email"}>
-            <label className={"contact__form-label"} for="email">E-mail</label>
-            <input className={"contact__form-input"} id="email" type="email" name="user_email"
-              value={nameForm}
-              onChange={(e) => setNameForm(e.target.value)}
-              placeholder="Write your e-mail" />
-            <p className={"contact-form__error"}>error</p>
-          </div>
-          <div className={"contact__form-element message"}>
-            <label className={"contact__form__label"} for="message">Wiadomość</label>
-            <textarea className={"contact__form-input"} id="message" placeholder="Wprowadź wiadomość"
-              value={emailForm}
-              onChange={(e) => setEmailForm(e.target.value)}
-              name="message">
-            </textarea>
-            <p className={"contact__form-error"}>error</p>
-          </div>
-          <button className={"contact__form-element button"} type="submit" onClick={handleClick}>Wyślij</button>
+        <form className={"contact__form form"} id="contact-form" onSubmit={handleSubmit}>
+          <Field value={form.username} name="username" type="username" placeholder="Enter your name" label="username" onChange={e => handleChange(e)} error={validationErrors.username}></Field>
+          <Field value={form.email} name="email" type="email" placeholder="Enter your email" label="email" onChange={e => handleChange(e)} error={validationErrors.email}></Field>
+          <Field value={form.message} name="message" type="message" placeholder="Enter message" label="message" onChange={e => handleChange(e)} error={validationErrors.message}></Field>
+          <button className={"form__button"} type="submit" >Wyślij</button>
         </form>
       </div>
-      <div className={"contact__background-first"}></div>
-      <div className={"contact__background-second"}></div>
-      <div className={"contact__background-third"}></div>
-      <div className={"contact__background-four"}></div>
     </section>
   )
 }

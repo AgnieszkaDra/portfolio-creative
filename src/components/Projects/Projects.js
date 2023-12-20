@@ -110,7 +110,6 @@ export const Projects = (props) => {
       ))
       } 
       </div>
-      
       <Controlls className={'projects__controlls'}></Controlls>
     </section>
   )

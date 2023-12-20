@@ -13,10 +13,6 @@ const contacts = {
           icon: faPhone,
           data: '+48 517 862 170'
         },
-        {
-          icon: faGlobe,
-          data: 'https://subtle-tarsier-eedb30.netlify.app/'
-        }
       ]
     },
     profileDescription: {
