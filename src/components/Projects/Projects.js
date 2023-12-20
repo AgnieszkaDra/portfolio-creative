@@ -17,17 +17,17 @@ export const Projects = (props) => {
     className
   } = props
 
-  let number = 0
-  const renderList = (item, i) => {
-    number++
+
+  const renderList = (item, i, color) => {
+  i++
     return (
       <>
         <li
           key={i}
           className={'features__element'}
         >
-          <span className='features__element-number'>
-            {number}
+          <span className='features__element-number' style={{backgroundColor: color }}>
+            {i}
           </span>
           <div className='features__element-description'>
             {item}
@@ -48,13 +48,14 @@ export const Projects = (props) => {
           data-id={element.id}
         >
         <div className={`project${element.id}__headline project__headline`}>
-            <div className={`project${element.id}__id project__id`}>{element.id}.</div>
+            <div className={`project${element.id}__id project__id`} style={{ backgroundColor: element.mainColor }}>{element.id}.</div>
             <h4 className={`project${element.id}__name project__name`}>{element.name}</h4>
           </div>
           <div className={`project${element.id}__description project__description`}>{element.description}</div>
           <Image
             className={`project${element.id}__image project__image`}
             url={element.imageUrl}
+            style={{ backgroundColor: element.mainColor }}
             name={logo}
           >
           </Image>
@@ -70,18 +71,20 @@ export const Projects = (props) => {
               :
               ''
           }
-          <div className={`project${element.id}__links links`}>
+          <div className={`project${element.id}__links project__links`}>
             <>
               {<NavLink
                 className={'links__element'}
                 to={element.githubUrl}
+                style={{color: element.mainColor }}
               >
-                <FontAwesomeIcon icon={faGithub} className='control__icon' ></FontAwesomeIcon> </NavLink>
+                <FontAwesomeIcon icon={faGithub} className='control__icon'></FontAwesomeIcon> </NavLink>
               }
 
               {<NavLink
                 className={'links__element'}
                 to={element.view}
+                style={{color: element.mainColor }}
               >
                 <FontAwesomeIcon icon={faFirefox} className='control__icon' ></FontAwesomeIcon> </NavLink>
               }
@@ -89,17 +92,18 @@ export const Projects = (props) => {
           </div>
           <div className={`project${element.id}__features project__features`}>
             <h5 className={`headline--h5`}>FEATURES</h5>
-            {/* <ul className={'features'}>
+            <ul className={'features'}>
               {
                 element.features
                   ?
                   element.features.map((item, i) => {
-                    return renderList(item, i)
+                    const color= element.mainColor
+                    return renderList(item, i, color)
                   })
                   :
                   ''
               }
-            </ul> */}
+            </ul>
           </div>
         
         </div>
