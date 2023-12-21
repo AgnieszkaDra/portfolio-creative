@@ -3,38 +3,42 @@
 .about {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
-    display: grid;
-    grid-template-areas: 
-    'controlls'
-    'first'
-    'second';
+   
     @include respond(tablet) {
+        display: grid;
         grid-template-areas: 
         'controlls controlls'
         'first second';
         grid-template-columns: 40% 60%;
         grid-template-rows: 15vh 85vh;
     }
-    &__controlls {
-        grid-area: controlls;
-        width: 100%;
-       
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .control {
-            width: calc(3vh + 5px);
-            height: calc(3vh + 5px);
-            margin: 10px 20px;
+
+        &__controlls {
+    
+            background-color: rgb(254, 255, 253);
+    width: 100%;
+    height: 5rem;
+    margin-top: -5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+    top: 0px;
+    transition: all 0.8s ease 0s;
+    z-index: 200;
         }
-    }
+    
     &__part.first {
+        margin-top: 5rem;
         background-color: $color-white;
         grid-area: first;
-        height: 85vh;
+     
         @include respond(tablet) {
           width: 100%;
         }
@@ -77,6 +81,7 @@
             height: 100%;
             background-color: $color-lightpink;
         }
+
       
     }
 
@@ -90,6 +95,7 @@
         }
         &__features {
             grid-area: features;
+            padding: 10px;
         }
 }
 

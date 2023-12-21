@@ -584,38 +584,40 @@ main {
 .about {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
-  display: grid;
-  grid-template-areas: "controlls" "first" "second";
 }
 
 @media only screen and (min-width: 768px) {
   .about {
+    display: grid;
     grid-template-areas: "controlls controlls" "first second";
     grid-template-columns: 40% 60%;
     grid-template-rows: 15vh 85vh;
   }
 }
 .about__controlls {
-  grid-area: controlls;
+  background-color: rgb(254, 255, 253);
   width: 100%;
+  height: 5rem;
+  margin-top: -5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.about__controlls .control {
-  width: calc(3vh + 5px);
-  height: calc(3vh + 5px);
-  margin: 10px 20px;
+  justify-content: space-around;
+  position: sticky;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+  top: 0px;
+  transition: all 0.8s ease 0s;
+  z-index: 200;
 }
 
 .about__part.first {
+  margin-top: 5rem;
   background-color: rgb(254, 255, 253);
   grid-area: first;
-  height: 85vh;
 }
 
 @media only screen and (min-width: 768px) {
@@ -654,6 +656,7 @@ main {
 
 .second__features {
   grid-area: features;
+  padding: 10px;
 }
 
 .gradient-pink {
