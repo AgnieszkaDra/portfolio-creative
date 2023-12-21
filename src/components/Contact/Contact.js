@@ -71,10 +71,10 @@ export const Contact = (props) => {
     <section
       className={`${className ? ` ${className}` : ''}`}
     >
-      <Controlls className={'contact__controlls'}></Controlls>
       {<h3 className={'contact__headline headline--h3'}>CONTACT FORM</h3>}
+      <Controlls className={'contact__controlls'}></Controlls>
       <div className={'contact__box'}>
-        <div className={'contact__contacts'}>
+         <div className={'contact__contacts'}>
           <h4>AGNIESZKA DRAGAŃCZYK</h4>
           <div className={'contacts'}>
             <ul className={'contacts__list list'} >
@@ -85,9 +85,9 @@ export const Contact = (props) => {
           </div>
         </div>
         <form className={"contact__form form"} id="contact-form" onSubmit={handleSubmit}>
-          <Field value={form.username} name="username" type="username" placeholder="Enter your name" label="username" onChange={e => handleChange(e)} error={validationErrors.username}></Field>
-          <Field value={form.email} name="email" type="email" placeholder="Enter your email" label="email" onChange={e => handleChange(e)} error={validationErrors.email}></Field>
-          <Field value={form.message} name="message" type="message" placeholder="Enter message" label="message" onChange={e => handleChange(e)} error={validationErrors.message}></Field>
+          <Field value={form.username} type={"input"} name="username"  placeholder="Enter your name" label="username" onChange={e => handleChange(e)} error={validationErrors.username}></Field>
+          <Field value={form.email} name="email" type={"input"} placeholder="Enter your email" label="email" onChange={e => handleChange(e)} error={validationErrors.email}></Field>
+          <Field value={form.message} name="message" type={"textarea"} placeholder="Enter message" label="message" onChange={e => handleChange(e)} error={validationErrors.message}></Field>
           <button className={"form__button"} type="submit" >Wyślij</button>
         </form>
       </div>

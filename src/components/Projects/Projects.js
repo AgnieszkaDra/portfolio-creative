@@ -40,7 +40,8 @@ export const Projects = (props) => {
   return (
     <section
       className={`${className ? ` ${className}` : ''}`}
-    >
+    >    
+      <Controlls className={'projects__controlls'}></Controlls>
       <div className={'projects__container'}>
        {data.categories.map((element) => (
         <div key={element.name}
@@ -91,7 +92,7 @@ export const Projects = (props) => {
             </>
           </div>
           <div className={`project${element.id}__features project__features`}>
-            <h5 className={`headline--h5`}>FEATURES</h5>
+            <h5 className={`features__headline`}>FEATURES</h5>
             <ul className={'features'}>
               {
                 element.features
@@ -110,7 +111,7 @@ export const Projects = (props) => {
       ))
       } 
       </div>
-      <Controlls className={'projects__controlls'}></Controlls>
+  
     </section>
   )
 

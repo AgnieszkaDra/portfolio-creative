@@ -1,5 +1,4 @@
 import React from "react";
-// import StyledError from "./StyledError.styled";
 
 const Error = (props) => {
     const {message, onClick} = props

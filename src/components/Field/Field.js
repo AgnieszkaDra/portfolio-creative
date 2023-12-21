@@ -10,11 +10,34 @@ const Field = props => {
     };
 
     return(
+        
+            type === "input" ? 
+    (
       <div onClick={handleClick} className={'form__field'}>
          <label className="form__label">{label}</label>
          <input ref={inputRef} placeholder={placeholder} className="form__input" value={value} type={type} name={name} onChange={onChange}/>
          {error && error.length > 0 ? <Error message={error}/> : null}
-     </div>
+     </div>    
+    )
+  
+     : 
+     (
+        <div onClick={handleClick} className={'form__field'}>
+             <label className="form__label">{label}</label>
+       <textarea
+     rows={1}
+     ref={inputRef}
+     name={name}
+     onChange={onChange}
+     className={"form__textarea"}
+  
+     value={value}
+     placeholder={placeholder}
+  /> 
+  </div>
+     )
+
+      
     )
 }
 
