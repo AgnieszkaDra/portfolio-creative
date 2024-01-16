@@ -73,7 +73,7 @@ export const Projects = (props) => {
               ''
           }
           <div className={`project${element.id}__links project__links`}>
-            <>
+            <div>
               {<NavLink
                 className={'links__element'}
                 to={element.githubUrl}
@@ -84,12 +84,35 @@ export const Projects = (props) => {
 
               {<NavLink
                 className={'links__element'}
-                to={element.view}
+                to={element.viewUrl1}
                 style={{color: element.mainColor }}
               >
                 <FontAwesomeIcon icon={faFirefox} className='control__icon' ></FontAwesomeIcon> </NavLink>
               }
-            </>
+            </div>
+            {
+            element.githubUrl2
+              ?
+              <div>
+              {<NavLink
+                className={'links__element'}
+                to={element.githubUrl2}
+                style={{color: element.mainColor }}
+              >
+                <FontAwesomeIcon icon={faGithub} className='control__icon'></FontAwesomeIcon> </NavLink>
+              }
+
+              {<NavLink
+                className={'links__element'}
+                to={element.viewUrl2}
+                style={{color: element.mainColor }}
+              >
+                <FontAwesomeIcon icon={faFirefox} className='control__icon' ></FontAwesomeIcon> </NavLink>
+              }
+            </div>  
+              :
+              ''
+          }
           </div>
           <div className={`project${element.id}__features project__features`}>
             <h5 className={`features__headline`}>FEATURES</h5>
@@ -111,7 +134,6 @@ export const Projects = (props) => {
       ))
       } 
       </div>
-  
     </section>
   )
 

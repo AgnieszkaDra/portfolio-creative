@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Controlls from '../Controlls/Controlls'
 import data from '../../data'
-import classes from './styles.module.css'
+
 
 export const Image = (props) => {
   const {
@@ -13,18 +13,18 @@ export const Image = (props) => {
   } = props
 
   return (
-    <div
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
+    <figure
+      className={`${className ? ` ${className}` : ''}`}
       {...otherProps}
     >
       <img
-      className={classes.img}
+      className={''}
       src={props.url}
       alt={props.name}
       >
       </img>
   
-    </div>
+    </figure>
   )
 }
 
