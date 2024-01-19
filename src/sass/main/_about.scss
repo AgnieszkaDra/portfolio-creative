@@ -1,102 +1,107 @@
 @import '../abstracts/index';
 
 .about {
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-   
-    @include respond(tablet) {
-        display: grid;
-        grid-template-areas: 
-        'controlls controlls'
-        'first second';
-        grid-template-columns: 40% 60%;
-        grid-template-rows: 15vh 85vh;
-    }
-
-        &__controlls {
-    
-            background-color: rgb(254, 255, 253);
+    min-height: 100vh;
     width: 100%;
-    height: 5rem;
-    margin-top: -5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
-    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
-    top: 0px;
-    transition: all 0.8s ease 0s;
-    z-index: 200;
+    &__container {
+         display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        @include respond(tablet) {
+            flex-direction: row;
         }
-    
+    }
+   
     &__part.first {
-        margin-top: 5rem;
-        background-color: $color-white;
-        grid-area: first;
-     
         @include respond(tablet) {
           width: 100%;
         }
     }
     &__part.second {
         width: 100%;
-        height: 85vh;
         position: relative;
-        grid-area: second;
-        border: 5px solid green;
         box-sizing: border-box;
-        display: grid;
-        grid-template-areas: 
-        'title'
-        'features';
-        grid-template-rows: 10% 90%;
-        
-        @include respond(tablet) {
-            
-        //    &::after {
-        //     display: block;
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     transform:  rotate(-90deg) translateX(50px) translateY(50px);
-        //     width: 150px;
-        //     height: 150px;
-        //     border-radius: 200px 0 0 0;
-        //     border: 40px solid $color-lightpink; /* Set the border width and color */
-        // }   
-        }
-        &::before {
-            display: block;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 40%;
-            height: 100%;
-            background-color: $color-lightpink;
-        }
-
-      
     }
-
-   
 }
+
 .second {
-      &__title {
-            grid-area: title;
-            z-index: 2;
-            position: relative;
+    &__title {
+        position: relative;
+        z-index: 30;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 400px;
+
+    &-slider__nav {
+      width: 100%;
+      height: 400px;
+      @include flexAbsoluteCenter();
+      span {
+        display: block;
+        background: $color-darkpink;
+        border-radius: 50%;
+        font-size: 32px;
+        height: 50px;
+        width: 50px;
+        @include flexAbsoluteCenter();
+         &:hover {
+          background-color: $color-lightpink;
+          cursor: pointer;
+      }
+      }
+    }
+      &__element {
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         }
-        &__features {
-            grid-area: features;
-            padding: 10px;
-        }
+      
+    &--next {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    &--prev {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    
+    &-slider__wrapper {
+      width: 40%;
+      height: 200px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top:-10%;
+        left:-10%;
+        width: 70%;
+        height: 70%;
+        border: 3px solid $color-lightpink;
+      }
+    }
+  
+    &-description {
+      width: 40%;
+      background-color: $color-darkpink;
+    }
+  
+    &-slider__image {
+      width: 70%;
+      height: 70%;
+      background-color: $color-darkpink;
+      cursor: not-allowed;
+    }
 }
 
 

@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import Controlls from '../../ui/Controlls/Controlls';
+import Image from '../../ui/Image/Image';
+import app from '../../../assets/app.jpg'
+import features from '../../../data/features'
+
 import PropTypes from 'prop-types'
-import Controlls from '../Controlls/Controlls';
-import Image from '../Image/Image';
-import app from '../../assets/app.jpg'
-import features from '../../data/features';
 
 export const About = (props) => {
     const {
@@ -22,13 +23,13 @@ export const About = (props) => {
 
 
     const renderListItem = (item, i) => (
-        <div className="features__element" key={i}>
-          <figure className="features-slider__wrapper photo">
-            <img className="features-slider__image photo__image" src={item.image} alt={item.altText} />
+        <div className="carousel__element" key={i}>
+          <figure className="carousel-slider__wrapper photo">
+            <img className="carousel-slider__image photo__image" src={item.image} alt={item.altText} />
             <figcaption className="js-slider__caption">{item.source}</figcaption>
           </figure>
-          <div className="features-description">
-            <h4 className="features__title headline--h4">{item.name}</h4>
+          <div className="carousel-description">
+            <h4 className="carousel__title headline--h4">{item.name}</h4>
           </div>
         </div>
       );
@@ -52,18 +53,24 @@ export const About = (props) => {
             className={`${className ? ` ${className}` : ''}`}
         >
             {/* https://pixabay.com/illustrations/app-software-contour-settings-1013616/ */}
-            <Controlls className={'about__controlls'}></Controlls>
-            <div className={'about__part first'}>
+            <Controlls className={'controlls'}></Controlls>
+            <div className={'about__container'}>
+                <div className={'about__part first'}>
                 <h4 className={'headline--h4'}>Any idea?</h4>
                 <Image name='app' url={app}></Image>
             </div>
             <div className={'about__part second'}>
                 <h3 className={'second__title headline--h3'}>Let's find IT solutions for your business!!!</h3>
-                <div className={"second__features features"}>
-                    <span class="features-slider__nav features-slider__nav--prev" onClick={handleSpanDecrease}>&lt;</span>
+                <div className={"second__carousel carousel"}>
+                    <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
+                      <span className={""} onClick={handleSpanDecrease}>&lt;</span>  
+                    </div>
                     {renderedItems[currentSlide]}
-                    <span class="features-slider__nav features-slider__nav--next" onClick={handleSpanIncrease}>&gt;</span>
+                    <div className={"carousel-slider__nav carousel-slider__nav--next"}>
+                       <span onClick={handleSpanIncrease}>&gt;</span> 
+                    </div>
                 </div>
+            </div>  
             </div>
         </section>
     )

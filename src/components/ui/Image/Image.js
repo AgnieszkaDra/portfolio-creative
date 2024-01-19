@@ -1,8 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Controlls from '../Controlls/Controlls'
-import data from '../../data'
-
 
 export const Image = (props) => {
   const {

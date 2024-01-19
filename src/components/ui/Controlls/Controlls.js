@@ -1,12 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { NavLink } from 'react-router-dom';
+import data from '../../../data'
 import PropTypes from 'prop-types'
-
-import data from '../../data'
 
 export const ControllsContext = React.createContext();
 

@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 
-import { validateForm } from "../../helpers/validator";
-import data from '../../data/contacts'
-import Icon from '../Icon'
-import { Link } from '../Link'
-import Field from '../Field/Field'
-import Controlls from '../Controlls/Controlls';
+import { validateForm } from '../../../helpers/validator'
+import data from '../../../data/contacts'
+import Icon from '../../ui/Icon'
+import { Link } from '../../ui/Link'
+import Field from '../../ui/Field/Field';
+import Controlls from '../../ui/Controlls/Controlls'
 
 import PropTypes from 'prop-types'
-
 
 export const Contact = (props) => {
   const {
@@ -71,8 +70,7 @@ export const Contact = (props) => {
     <section
       className={`${className ? ` ${className}` : ''}`}
     >
-      {<h3 className={'contact__headline headline--h3'}>CONTACT FORM</h3>}
-      <Controlls className={'contact__controlls'}></Controlls>
+      <Controlls className={'controlls'}></Controlls>
       <div className={'contact__box'}>
          <div className={'contact__contacts'}>
           <h4>AGNIESZKA DRAGAŃCZYK</h4>

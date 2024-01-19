@@ -18,11 +18,13 @@
         display: block;
         width: 70%;
         height: 80%;
-     
+
         position: relative;
+
         @include respond(tablet) {
             height: 90%;
         }
+
         @include respond(mobileHorizontal) {
             width: 100%;
             height: 100%;
@@ -39,9 +41,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         @include respond(tablet) {
             margin-top: 0;
-              display: flex;
+            display: flex;
             justify-content: space-around;
             align-items: center;
             flex-direction: column;
@@ -52,47 +55,38 @@
             right: 60px;
             z-index: 5;
         }
-        
-        
+
         .control {
+            width: calc(5vh + 5px);
+            width: 15%;
+            background-color: $color-lightpink;
+            padding: 6px;
+            cursor: pointer;
+            border-radius: 50%;
+            @include flexAbsoluteCenter;
 
-    width: calc(5vh + 5px);
-    width: 15%;
-    // height: calc(5vh + 5px);
-    background-color: $color-lightpink;
-    padding: 6px;
-    cursor: pointer;
-    border-radius: 50%;
-    @include flexAbsoluteCenter;
-    
+            i {
+                font-size: 1.2rem;
+                color: $color-grey;
+            }
 
-    i {
-        font-size: 1.2rem;
-        color: $color-grey;
-    
+            &__link {
+                position: relative;
+                font-size: 1.2rem;
+                color: $color-grey;
+                @include flexAbsoluteCenter;
+            }
+
+            @include respond(tablet) {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
     }
 
-    &__link {
-        position: relative;
-        font-size: 1.2rem;
-        color: $color-grey;
-        @include flexAbsoluteCenter;
+    &__text {
+        font-family: 'Bebas-regular', sans-serif;
     }
-
-    @include respond(tablet) {
-        width: 100%;
-        border-radius: 0;
-    }
-
-   
-}
-    }
-
-
-
-   &__text {
-       font-family: 'Bebas-regular', sans-serif;
-   }
 
     &__text.first {
         font-size: calc(60px + 1vh);
@@ -100,12 +94,12 @@
         letter-spacing: 1.2;
         color: $color-darkpink;
         position: absolute;
-        bottom:9%;
+        bottom: 9%;
         transform: rotate(-90deg);
         transform-origin: top left;
         white-space: nowrap;
         text-shadow: $color-white 1px 0 10px;
-      
+
         @include respond(tablet) {
             bottom: -6%;
             font-size: 120px;
@@ -116,54 +110,48 @@
             bottom: -5%;
         }
 
-  @include respond(mobileHorizontal){
+        @include respond(mobileHorizontal) {
             font-size: 70px;
         }
     }
 
     &__text.second {
-        
-display: none;
 
+        display: none;
         @include respond(tablet) {
             display: block;
             font-size: 100px;
             color: $color-white;
             text-shadow: $color-darkblue 1px 0 10px;
-        position: absolute;
-        transform: rotate(-90deg);
-        left: 10%;
-        bottom: 5%;
-        transform-origin: top left;
-        white-space: nowrap;
-       
+            position: absolute;
+            transform: rotate(-90deg);
+            left: 10%;
+            bottom: 5%;
+            transform-origin: top left;
+            white-space: nowrap;
+
         }
 
- 
-         @include respond(desktop) {
-             font-size: 70px;
-           
-         }
-   @include respond(mobileHorizontal){
-             font-size: 60px;
-             left:5%
-         }
-     }
+        @include respond(desktop) {
+            font-size: 70px;
+        }
 
-     
-    
+        @include respond(mobileHorizontal) {
+            font-size: 60px;
+            left: 5%
+        }
+    }
 
     &__text.third {
         color: $color-grey;
         position: absolute;
-   
         top: 55%;
         left: 40%;
-      
         z-index: 2;
         font-size: 25px;
         color: $color-white;
         letter-spacing: 0.3;
+
         @include respond(desktop) {
             top: 65%;
         }
@@ -178,9 +166,8 @@ display: none;
         padding: 10px;
         z-index: 2;
         background: $color-lightblue;
-
         padding-left: 2%;
-   
+
         @include respond(desktop) {
             top: 72%;
         }
@@ -192,23 +179,21 @@ display: none;
         position: absolute;
         width: 100%;
         top: 83%;
-    
         text-align: center;
         z-index: 2;
-    
-       
         font-weight: bolder;
+
         @include respond(tablet) {
             top: 80%;
             font-size: calc(20px + 1vh);
             text-align: end;
-
         }
+
         @include respond(mobileHorizontal) {
             text-align: center;
         }
     }
-    
+
 
     &__text.p {
         color: $color-grey;
@@ -219,7 +204,7 @@ display: none;
         text-align: center;
         z-index: 2;
         padding-left: 2%;
-      
+
     }
 
     &__image {
@@ -229,15 +214,15 @@ display: none;
         width: 60%;
         height: 40vh;
         box-shadow: -8px 7px 5px 0px $color-lightblue;
--webkit-box-shadow: -8px 7px 5px 0px $color-lightblue;
--moz-box-shadow: -8px 7px 5px 0px $color-lightblue;
+        -webkit-box-shadow: -8px 7px 5px 0px $color-lightblue;
+        -moz-box-shadow: -8px 7px 5px 0px $color-lightblue;
 
         @include respond(tablet) {
             width: 45%;
             left: 35%;
             top: 10%;
             height: 45vh;
-        
+
             &::after {
                 content: '';
                 width: 100%;
@@ -249,15 +234,15 @@ display: none;
                 border: 4px dotted $color-darkblue;
                 border-radius: 5px;
                 z-index: 2;
-
             }
         }
+
         @include respond(desktop) {
             width: 45%;
             left: 35%;
             top: 13%;
             height: 45vh;
-        
+
             &::after {
                 content: '';
                 width: 100%;
@@ -276,7 +261,6 @@ display: none;
     }
 
     &__dots--up {
-
         display: none;
 
         @include respond(tablet) {
@@ -320,9 +304,11 @@ display: none;
             }
 
         }
+
         @include respond(mobileHorizontal) {
             display: none;
         }
+
         @include respond(desktop) {
             display: none;
         }
@@ -363,9 +349,11 @@ display: none;
             }
 
         }
+
         @include respond(desktop) {
             display: none;
         }
+
         @include respond(mobileHorizontal) {
             display: none;
         }
@@ -379,47 +367,35 @@ display: none;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-  
+
         @include respond(max-tablet) {
-          .nav__menu.nav__block {
-            height: 100vh;
-            width: 100%;
-            position: absolute;
-            top: 0vh;
-            left: 0;
-            z-index: 2;
-            display: block;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding-left: 40%;
-            background: $color-darkpink 40%;
-            &>li {
-              margin-bottom: 10px;
-  
-              a {
-                color: $color-white;
-                font-weight: bold;
-              }
+            .nav__menu.nav__block {
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                top: 0vh;
+                left: 0;
+                z-index: 2;
+                display: block;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 40%;
+                background: $color-darkpink 40%;
+
+                &>li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: $color-white;
+                        font-weight: bold;
+                    }
+                }
             }
-          }
         }
-        .nav__menu.nav__hide {
-          display: none;
-        }
-  
-        @include respond(desktop) {
-          .hamburger {
-            display: none;
-          }
-  
-          .nav {
-            display: none;
-          }
-        }
-      }
-    
-  
+    }
+
+
 
 
 
@@ -431,14 +407,14 @@ display: none;
     // align-items: center;
 
 
-    
-  
-  
 
-header>* {
-    width: 100%;
-    box-sizing: border-box;
-}
+
+
+
+    header>* {
+        width: 100%;
+        box-sizing: border-box;
+    }
 
 
 

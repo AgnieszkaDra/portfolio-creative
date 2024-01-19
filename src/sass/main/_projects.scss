@@ -1,5 +1,6 @@
 @import '../abstracts/index';
 
+
 .features {
     &__headline {
         margin: 0;
@@ -33,26 +34,15 @@
     }
 
 }
-
 .projects {
-    display: flex;
-    flex-direction: column;
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    @include respond(tablet) {
-        padding: 20px;
-    }
 
     &__container {
         display: flex;
         flex-direction: column;
         flex: 1 1 0%;
-        margin: 5rem auto 0px;
-
+        
         &>* {
             height: 100vh;
         }
@@ -62,27 +52,12 @@
             grid-template-columns: repeat(2, 50%);
         }
     }
-
-    &__controlls {
-        background-color: $color-white;
-        width: 100%;
-        height: 5rem;
-        margin-top: -5rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        position: sticky;
-        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
-        top: 0px;
-        transition: all 0.8s ease 0s;
-        z-index: 200;
-    }
 }
 
 .project {
     width: 100%;
     height: calc(100vh - 5rem);
-    padding: 10px;
+    padding: 20px;
     display: grid;
     grid-template-areas:
         'headline headline'
@@ -143,8 +118,6 @@
 
     &__features {
         grid-area: features;
-        // grid-column: 3/5;
-        // grid-row: 3/4;
         padding: 20px;
     }
 
@@ -172,6 +145,26 @@
 
     &03 {
         background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+    }
+
+    &04 {
+        background: linear-gradient(0deg, $color-lightpink, $color-white);
+    }
+
+    &05 {
+        background: linear-gradient(0deg, $color-lightpink, $color-white);
+    }
+
+    &06 {
+        background: linear-gradient(0deg, $color-lightgrey, $color-white);
+    }
+
+    &07 {
+        background: linear-gradient(0deg, $color-mediumpink, $color-white);
+    }
+
+    &08 {
+        background: linear-gradient(0deg, $color-lightblue, $color-white);
     }
 
     

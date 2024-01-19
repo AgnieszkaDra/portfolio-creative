@@ -2,12 +2,11 @@
 import './sass/index.css';
 import './assets/fonts/fonts.css'
 import React from 'react'
-import Header from './components/Header/Header'
-
-import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/layout/Header/Header';
+import About from './components/layout/About/About';
+import Projects from './components/layout/Projects/Projects';
+import Contact from './components/layout/Contact/Contact';
 
 
 function App() {

@@ -2,7 +2,7 @@ import React, { useRef} from "react";
 import Error from "../Error/Error";
 
 
-const Field = props => {
+export const Field = props => {
     const {value, type, label, onChange, error, name, placeholder} = props
     const inputRef = useRef(null);
     const handleClick = () => {

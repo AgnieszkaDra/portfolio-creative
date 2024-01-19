@@ -1,16 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFirefox } from '@fortawesome/free-brands-svg-icons';
+import Controlls from '../../ui/Controlls/Controlls';
+import Image from '../../ui/Image/Image';
+import data from '../../../data/projects'
+import logo from '../../../assets/face.jpg';
 
-
-import Controlls from '../Controlls/Controlls';
-import Image from '../Image/Image'
-import data from '../../data/projects'
-import logo from '../../assets/face.jpg';
-
+import PropTypes from 'prop-types'
 
 export const Projects = (props) => {
   const {
@@ -41,7 +39,7 @@ export const Projects = (props) => {
     <section
       className={`${className ? ` ${className}` : ''}`}
     >    
-      <Controlls className={'projects__controlls'}></Controlls>
+      <Controlls className={'controlls'}></Controlls>
       <div className={'projects__container'}>
        {data.categories.map((element) => (
         <div key={element.name}
