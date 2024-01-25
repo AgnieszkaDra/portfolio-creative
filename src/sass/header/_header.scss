@@ -5,6 +5,7 @@
     width: 100%;
     background-color: $color-background;
     position: relative;
+    @include absCenter();
 
     @include respond(desktop) {
         height: 90vh;
@@ -165,7 +166,7 @@
         left: 35%;
         padding: 10px;
         z-index: 2;
-        background: $color-lightblue;
+        color: $color-darkblue;
         padding-left: 2%;
 
         @include respond(desktop) {
@@ -174,7 +175,7 @@
     }
 
     &__text.fifth {
-        color: $color-lightblue;
+        color: $color-darkblue;
         font-size: calc(14px + 1vh);
         position: absolute;
         width: 100%;
@@ -213,9 +214,9 @@
         top: 12%;
         width: 60%;
         height: 40vh;
-        box-shadow: -8px 7px 5px 0px $color-lightblue;
-        -webkit-box-shadow: -8px 7px 5px 0px $color-lightblue;
-        -moz-box-shadow: -8px 7px 5px 0px $color-lightblue;
+        // box-shadow: -8px 7px 5px 0px $color-lightpink;
+        // -webkit-box-shadow: -8px 7px 5px 0px $color-lightpink;
+        // -moz-box-shadow: -8px 7px 5px 0px $color-lightpink;
 
         @include respond(tablet) {
             width: 45%;
@@ -256,6 +257,10 @@
                 z-index: 2;
 
             }
+        }
+
+        img {
+            border: 5px dotted $color-darkblue;
         }
 
     }

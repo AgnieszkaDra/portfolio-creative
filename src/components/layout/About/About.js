@@ -35,16 +35,7 @@ export const About = (props) => {
       );
 
 
-
-
-
-    const startIndex = currentSlide;
-    const endIndex = (currentSlide + 1) % features.list.length;
-    const mobileEndIndex = currentSlide % features.list.length
-
-    const isMobile = window.innerWidth <= 900;
-     
-    const renderedItems = features.list.map((item, i) => renderListItem(item, i));
+const renderedItems = features.list.map((item, i) => renderListItem(item, i));
 
 
 
@@ -57,7 +48,7 @@ export const About = (props) => {
             <div className={'about__container'}>
                 <div className={'about__part first'}>
                 <h4 className={'headline--h4'}>Any idea?</h4>
-                <Image name='app' url={app}></Image>
+                <Image className={'about__image'} name='app' url={app}></Image>
             </div>
             <div className={'about__part second'}>
                 <h3 className={'second__title headline--h3'}>Let's find IT solutions for your business!!!</h3>

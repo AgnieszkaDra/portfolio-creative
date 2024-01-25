@@ -1,14 +1,14 @@
 @import '../abstracts/';
 .controlls {
     
-background-color: $color-lightblue;
+
 width: 100%;
 height: 80px;
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
 position: sticky;
-box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+
 top: 0px;
 transition: all 0.8s ease 0s;
 z-index: 200;
@@ -17,12 +17,12 @@ z-index: 200;
 
     width: calc(5vh + 5px);
     height: calc(5vh + 5px);
-    background-color: $color-darkpink;
+    background-color: $color-lightpink;
     padding: 1rem;
     cursor: pointer;
-    border-radius: 50%;
+    // border-radius: 50%;
     @include flexAbsoluteCenter;
-    margin: .7rem 0;
+    margin: 20px;
  
     i {
         font-size: 1.2rem;

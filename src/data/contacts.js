@@ -1,4 +1,4 @@
-import { faEnvelope, faPhone, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone, faInfo } from '@fortawesome/free-solid-svg-icons'
 
 
 const contacts = {
@@ -12,6 +12,10 @@ const contacts = {
         {
           icon: faPhone,
           data: '+48 517 862 170'
+        },
+        {
+          icon: faInfo,
+          data: 'This contact form does not send message'
         },
       ]
     },
