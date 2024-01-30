@@ -25,15 +25,15 @@ export const Header = (props) => {
           name={logo}
         >
         </Image>
-        <Dots className={'header__dots--up'}
-          spanHorizontal={3}
+        <Dots className={'header__dots header__dots-up'}
+          spanHorizontal={7}
           spanVertical={3}></Dots>
-        <Dots className={'header__dots--down'}
-          spanHorizontal={5}
+        <Dots className={'header__dots header__dots-down'}
+          spanHorizontal={9}
           spanVertical={3}>
         </Dots>
         {<h3 className={'header__text third'}>HI, I'M </h3>}
-        {<h4 className={'header__text fourth'}>AGNIESZKA DRAGAŃCZYK</h4>}
+        {<h4 className={'header__text fourth'}>AGNIESZKA</h4>}
         {<h5 className={'header__text fifth'}>Frontend developer</h5>}
       </>
     </header>

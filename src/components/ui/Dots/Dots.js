@@ -6,8 +6,6 @@ import classes from './styles.module.css'
 export const Dots = (props) => {
     const {
     className,
-
-  
     spanHorizontal,
     spanVertical,
     ...otherProps
@@ -24,53 +22,41 @@ export const Dots = (props) => {
     }
   }
 
-  const dotsStyle = dynamicStyle(props.spanHorizontal, props.spanVertical)
+  const dotsStyle = dynamicStyle(props.spanHorizontal, props.spanVertical);
 
-//  
+  const dot = () => {
+    return {
+      width: '7px',
+      height: '7px',
+      display: 'block',
+      borderRadius: '50%',
+    }
+  }
 
-  const spanElement2 = (horizontal, vertical) => {
+  const spanElement = (horizontal, vertical) => {
     const numberOfElements = horizontal * vertical;
     const elements = [];
 
     for (let i = 1; i <= numberOfElements; i++) {
-      elements.push(<div><span key={i}></span></div>);
+      elements.push(<span key={i} className=''></span>);
     }
     return (
       <div
-  style={dotsStyle}
+      style={dotsStyle}
       >
-    
         {elements}
       </div>
     );
   }
-
-//   if(normal) {
-//     return (
-//         <div
-//         className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
-//         >
-           
-//           {spanElement(props.span)}
-         
-//         </div>
-//       )
-//   }
-
-
-     return (
+  return (
     <div
     className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
     >
-       
-      {spanElement2(props.spanHorizontal, props.spanVertical)}
+      {spanElement(props.spanHorizontal, props.spanVertical)}
     </div>
   )
   }
  
-  
-
-
 Dots.propTypes = {
   className: PropTypes.string
 }
