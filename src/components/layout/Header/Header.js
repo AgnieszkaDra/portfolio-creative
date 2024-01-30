@@ -16,7 +16,7 @@ export const Header = (props) => {
       className={`${className ? ` ${className}` : ''}`}
     >
       <>
-        <Controlls className={'header__controlls'}></Controlls>
+        <Controlls className={'controlls'}></Controlls>
         {<h1 className={'header__text first'}> PORTFOLIO</h1>}
         {<h2 className={'header__text second'}> PORTFOLIO</h2>}
         <Image
@@ -34,7 +34,7 @@ export const Header = (props) => {
         </Dots>
         {<h3 className={'header__text third'}>HI, I'M </h3>}
         {<h4 className={'header__text fourth'}>AGNIESZKA DRAGAŃCZYK</h4>}
-        {<h5 className={'header__text fifth'}>Love to create websites and apps</h5>}
+        {<h5 className={'header__text fifth'}>Frontend developer</h5>}
       </>
     </header>
   )

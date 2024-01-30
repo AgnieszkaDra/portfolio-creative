@@ -3,44 +3,34 @@
 .header {
     height: 100vh;
     width: 100%;
-    background-color: $color-background;
-    position: relative;
-    @include absCenter();
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10vh 50vh 10vh 10vh 10vh 10vh;
 
     @include respond(desktop) {
+        @include absCenter();
         height: 90vh;
         width: 70%;
-    }
-
-    &::before {
-        content: '';
-        background: $color-lightpink;
-        background: linear-gradient(0deg, $color-lightpink, $color-mediumpink);
-        display: block;
-        width: 70%;
-        height: 80%;
-
-        position: relative;
-
-        @include respond(tablet) {
-            height: 90%;
-        }
-
-        @include respond(mobileHorizontal) {
-            width: 100%;
-            height: 100%;
+        &::before {
+            content: '';
+            background: $color-lightpink;
+            background: linear-gradient(0deg, $color-background, $color-mediumnavy);
+            display: block;
+            width: 600px;
+            height: 450px; 
+            position: relative;
+            z-index: -10;
         }
     }
 
-    &__controlls {
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        width: 70%;
-        height: 10%;
-        margin-top: 8px;
+  
+
+    .controlls {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         @include respond(tablet) {
@@ -51,38 +41,13 @@
             flex-direction: column;
             position: absolute;
             width: 8%;
-            height: 45%;
+            height: 60vh;;
             top: 10%;
             right: 60px;
             z-index: 5;
         }
 
-        .control {
-            width: calc(5vh + 5px);
-            width: 15%;
-            background-color: $color-lightpink;
-            padding: 6px;
-            cursor: pointer;
-            border-radius: 50%;
-            @include flexAbsoluteCenter;
-
-            i {
-                font-size: 1.2rem;
-                color: $color-grey;
-            }
-
-            &__link {
-                position: relative;
-                font-size: 1.2rem;
-                color: $color-grey;
-                @include flexAbsoluteCenter;
-            }
-
-            @include respond(tablet) {
-                width: 100%;
-                border-radius: 0;
-            }
-        }
+      
     }
 
     &__text {
@@ -90,20 +55,20 @@
     }
 
     &__text.first {
+        grid-column: 1/2;
         font-size: calc(60px + 1vh);
         font-weight: 1000;
         letter-spacing: 1.2;
-        color: $color-darkpink;
+        color: $color-pink;
         position: absolute;
         bottom: 9%;
         transform: rotate(-90deg);
         transform-origin: top left;
         white-space: nowrap;
-        text-shadow: $color-white 1px 0 10px;
-
         @include respond(tablet) {
             bottom: -6%;
             font-size: 120px;
+              text-shadow: $color-white 1px 0 10px;
         }
 
         @include respond(desktop) {
@@ -123,14 +88,13 @@
             display: block;
             font-size: 100px;
             color: $color-white;
-            text-shadow: $color-darkblue 1px 0 10px;
+            text-shadow: $color-pink 1px 0 10px;
             position: absolute;
             transform: rotate(-90deg);
             left: 10%;
             bottom: 5%;
             transform-origin: top left;
             white-space: nowrap;
-
         }
 
         @include respond(desktop) {
@@ -144,30 +108,28 @@
     }
 
     &__text.third {
-        color: $color-grey;
-        position: absolute;
-        top: 55%;
-        left: 40%;
-        z-index: 2;
-        font-size: 25px;
-        color: $color-white;
-        letter-spacing: 0.3;
+       grid-column: 2/3;
+       grid-row: 3/4;
+        color: $color-pink;
+        text-align: start;
 
-        @include respond(desktop) {
-            top: 65%;
-        }
+        font-size: 40px;
+     
+        letter-spacing: 0.3;
+        display: block;
+
+      
     }
 
     &__text.fourth {
-        color: $color-white;
-        position: absolute;
+   
+        grid-column: 2/3;
+        grid-row: 4/5;
+       text-align: start;
         font-size: 25px;
-        top: 62%;
-        left: 35%;
-        padding: 10px;
-        z-index: 2;
-        color: $color-darkblue;
-        padding-left: 2%;
+        font-weight: 700;
+        color: $color-pink;
+     
 
         @include respond(desktop) {
             top: 72%;
@@ -175,94 +137,54 @@
     }
 
     &__text.fifth {
-        color: $color-darkblue;
-        font-size: calc(14px + 1vh);
-        position: absolute;
+        color: $color-pink;
+        font-size: calc(12px + 1vh);
+        grid-column: 2/3;
+        grid-row: 5/6;
+       
         width: 100%;
-        top: 83%;
-        text-align: center;
+  
+        text-transform: uppercase;
+        text-align: start;
         z-index: 2;
         font-weight: bolder;
 
         @include respond(tablet) {
             top: 80%;
             font-size: calc(20px + 1vh);
-            text-align: end;
+           
         }
 
-        @include respond(mobileHorizontal) {
-            text-align: center;
-        }
     }
 
 
-    &__text.p {
-        color: $color-grey;
-        position: absolute;
-        width: 100%;
-        top: 87%;
-        right: 0;
-        text-align: center;
-        z-index: 2;
-        padding-left: 2%;
-
-    }
+    
 
     &__image {
-        position: absolute;
-        left: 35%;
-        top: 12%;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        position: relative;
         width: 60%;
         height: 40vh;
-        // box-shadow: -8px 7px 5px 0px $color-lightpink;
-        // -webkit-box-shadow: -8px 7px 5px 0px $color-lightpink;
-        // -moz-box-shadow: -8px 7px 5px 0px $color-lightpink;
-
-        @include respond(tablet) {
-            width: 45%;
-            left: 35%;
-            top: 10%;
-            height: 45vh;
-
-            &::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                left: 25%;
-                top: -10%;
-                border: 4px dotted $color-darkblue;
-                border-radius: 5px;
-                z-index: 2;
-            }
-        }
-
-        @include respond(desktop) {
-            width: 45%;
-            left: 35%;
-            top: 13%;
-            height: 45vh;
-
-            &::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                left: 25%;
-                top: -10%;
-                border: 4px dotted $color-darkblue;
-                border-radius: 5px;
-                z-index: 2;
-
-            }
-        }
-
         img {
-            border: 5px dotted $color-darkblue;
+            border: none;
+            box-shadow: none;
         }
-
+       
+        @include respond(tablet) {
+            &::after {
+                content: '';
+                width: 70%;
+                height: 40vh;
+                display: block;
+                position: absolute;
+                left: 25%;
+                top: -10%;
+                border: 4px dotted $color-darkblue;
+                border-radius: 5px;
+                z-index: 2;
+            }
+        }
     }
 
     &__dots--up {
@@ -400,22 +322,6 @@
         }
     }
 
-
-
-
-
-
-
-    // flex-basis: 70%;
-    // display: flex;
-    // justify-content: flex-end;
-    // align-items: center;
-
-
-
-
-
-
     header>* {
         width: 100%;
         box-sizing: border-box;
@@ -430,20 +336,3 @@
 
 
 
-
-.image.first {
-    position: absolute;
-    // top: 200px;
-    // left: 200px;
-    // width: 60%;
-}
-
-.div-second {
-    border: 2px solid $color-darkblue;
-    width: 60%;
-    height: 70%;
-    position: absolute;
-    top: 200px;
-    left: 200px;
-    z-index: 2
-}

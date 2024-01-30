@@ -22,12 +22,12 @@ export const projects = {
             id: '01',
             imageUrl: drug,
             imageUrl2: pharmacy,
-            description: 'This is a website, which has written two times.First time using pure JS and second time using React.',
+            description: 'This is a website, which has written two times.First time using pure JS(website in refactoring) and second time using React.',
             features: ['useful website', 'unicate form to order'],
-            githubUrl: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
-            githubUrl2: 'https://github.com/AgnieszkaDra/PharmacyWebsite-react',
-            viewUrl1: 'https://hilarious-alpaca-f63944.netlify.app/',
-            viewUrl2: 'https://luminous-dusk-95a487.netlify.app/',
+            githubUrl: 'https://github.com/AgnieszkaDra/PharmacyWebsite-react',
+            // githubUrl2: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
+            viewUrl1: 'https://luminous-dusk-95a487.netlify.app/',
+            // viewUrl2: 'https://hilarious-alpaca-f63944.netlify.app/',
             mainColor: 'red'
 
         },
