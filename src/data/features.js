@@ -10,44 +10,42 @@ const te =  'I stumbled upon this website while searching for something entirely
 const elser = 'But on the other hand the loading times are nothing short of agonizing, turning what should be a simple online visit into a test of patience.'
 
 export const features = {
-
-
     list: [
       {
         image: technology,
-        name: 'Business card/Portfolio/??',
-        text: '',
+        name: '',
+        text: 'I am still learning frontend technologies and use them in growing my porftolio',
         source: 'https://pixabay.com/illustrations/technology-equipment-responsive-web-2468063/',
         id: 0
       },
       {
         image: idea,
-        name: 'Start realize your concepts',
-        text: 'Start realize your concepts',
+        name: '',
+        text: `I've got dillemma between learning new technologies or refactoring project's code which I know is not good enough`,
         source: 'https://www.pexels.com/photo/white-bubble-illustration-1111372/',
         id:1,
       },
       {
         image: portfolio,
         name: 'PORTFOLIO',
-        text: 'Trendy and fresh design, fits any website',
+        text: `Now it's time for TypeScript...and plan to write website with this technology to my friend`,
         start:5,
         id:2
       },
       {
         image: chart,
         name: 'Put your data visible in your data',
-        text: 'Trendy and fresh design, fits any website',
+        text: 'Give me chance and hire me to your project',
         start:5,
         id:3
       },
-      {
-        image: gallery,
-        name: '"Why not showcase a gallery of your photos on your website?"',
-        text: 'Trendy and fresh design, fits any website',
-        start:5,
-        id:4
-      },
+      // {
+      //   image: gallery,
+      //   name: '???',
+      //   text: '',
+      //   start:5,
+      //   id:4
+      // },
     
     ]
   }

@@ -10,7 +10,7 @@
         
         @include respond(tablet) {
             flex-direction: row;
-            height: calc(100vh - 80px);
+            // height: calc(100vh - 80px);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -123,13 +123,14 @@
   
     &-description {
       width: 40%;
-      background-color: $color-lightpink;
+      background-color: $color-pink;
+     
     }
   
     &-slider__image {
       width: 70%;
       height: 70%;
-      background-color: $color-lightpink;
+      background-color: $color-pink;
       cursor: not-allowed;
     }
 }

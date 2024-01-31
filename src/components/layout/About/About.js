@@ -29,7 +29,7 @@ export const About = (props) => {
             <figcaption className="js-slider__caption">{item.source}</figcaption>
           </figure>
           <div className="carousel-description">
-            <h4 className="carousel__title headline--h4">{item.name}</h4>
+            <h5 className="carousel__title headline--h5">{item.text}</h5>
           </div>
         </div>
       );
@@ -47,11 +47,11 @@ const renderedItems = features.list.map((item, i) => renderListItem(item, i));
             <Controlls className={'controlls'}></Controlls>
             <div className={'about__container'}>
                 <div className={'about__part first'}>
-                <h4 className={'headline--h4'}>Any idea?</h4>
+                <h4 className={'headline--h4'}>Any idea to solve with me?</h4>
                 <Image className={'about__image'} name='app' url={app}></Image>
             </div>
             <div className={'about__part second'}>
-                <h3 className={'second__title headline--h3'}>Let's find IT solutions for your business!!!</h3>
+                <h3 className={'second__title headline--h3'}>Let's trust and hire me!</h3>
                 <div className={"second__carousel carousel"}>
                     <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
                       <span className={""} onClick={handleSpanDecrease}>&lt;</span>  

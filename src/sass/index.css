@@ -307,7 +307,6 @@ main {
 @media only screen and (min-width: 768px) {
   .about__container {
     flex-direction: row;
-    height: calc(100vh - 80px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -428,13 +427,13 @@ main {
 
 .carousel-description {
   width: 40%;
-  background-color: rgb(255, 216, 230);
+  background-color: rgb(231, 128, 211);
 }
 
 .carousel-slider__image {
   width: 70%;
   height: 70%;
-  background-color: rgb(255, 216, 230);
+  background-color: rgb(231, 128, 211);
   cursor: not-allowed;
 }
 
