@@ -52,7 +52,7 @@ export const Projects = (props) => {
           </div>
           <div className={`project${element.id}__description project__description`}>{element.description}</div>
           <Image
-            className={`project${element.id}__image project__image`}
+            className={`project${element.id}__image project__image1`}
             url={element.imageUrl}
             style={{ backgroundColor: element.mainColor }}
             name={logo}
