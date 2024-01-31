@@ -21,7 +21,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 10vh 50vh 10vh 10vh 10vh 10vh;
+  grid-template-rows: 10vh 60vh 10vh 10vh 10vh;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -30,8 +30,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 90vh;
+    height: 100vh;
     width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
   }
   .header::before {
     content: "";
@@ -239,7 +241,7 @@
 
 @media only screen and (min-width: 768px) {
   .controlls .control {
-    margin: 40px;
+    margin: 20px;
     width: 65px;
     height: 40px;
   }
@@ -294,11 +296,31 @@ main {
 }
 
 .about {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@media only screen and (min-width: 1200px) {
+  .about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    height: 90vh;
+    grid-template-rows: 10vh 80vh;
+  }
+}
+.about .controlls {
+  grid-column: 1/3;
+  grid-row: 1/2;
 }
 
 .about__container {
+  grid-column: 1/3;
+  grid-row: 2/3;
   display: flex;
   flex-direction: column;
   padding: 0 10px;
@@ -314,10 +336,33 @@ main {
   }
   .about__container > * {
     width: 49%;
+    height: 45vh;
+    display: grid;
+    grid-template-rows: 20% 80%;
   }
 }
+.about__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about__image img {
-  border: 5px dotted rgb(105, 173, 244);
+  width: 70%;
+  height: 70%;
+  border: none;
+}
+
+.about__image::after {
+  content: "";
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  border: 4px dotted rgb(105, 173, 244);
+  border-radius: 5px;
+  z-index: -2;
 }
 
 @media only screen and (min-width: 768px) {
@@ -326,7 +371,7 @@ main {
   }
 }
 .about__part.first h4 {
-  color: rgb(255, 158, 185);
+  color: rgb(231, 128, 211);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -338,35 +383,25 @@ main {
 }
 
 .about__part.second h3 {
-  color: rgb(255, 158, 185);
+  color: rgb(231, 128, 211);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.second__title {
-  position: relative;
-  z-index: 30;
-}
-
-@media only screen and (min-width: 768px) {
-  .second {
-    transform: translateY(100px);
-  }
-}
 .carousel {
   position: relative;
   width: 100%;
-  height: 400px;
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  grid-template-rows: 400px;
-  border: 5px dotted rgb(105, 173, 244);
+}
+
+.carousel__title {
+  padding: 10px;
 }
 
 .carousel-slider__nav {
   width: 100%;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,7 +420,7 @@ main {
 }
 
 .carousel-slider__nav span:hover {
-  background-color: rgb(255, 158, 185);
+  background-color: rgb(231, 128, 211);
   cursor: pointer;
 }
 
@@ -411,7 +446,6 @@ main {
 
 .carousel-slider__wrapper {
   width: 40%;
-  height: 200px;
   position: relative;
 }
 
@@ -481,34 +515,41 @@ main {
 .projects {
   min-height: 100vh;
   width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20vh; /* First row with a fixed height of 10vh */
+}
+
+.projects .controlls {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border: 3px solid red;
 }
 
 .projects__container {
+  grid-column: 1/3;
+  grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  flex: 1 1 0%;
-  width: 100%;
-}
-
-.projects__container > * {
-  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 90%);
+  grid-auto-rows: 60vh;
+  grid-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .projects__container {
-    display: flex;
-  }
-  .projects__container > * {
-    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45%);
+    grid-auto-rows: 60vh;
   }
 }
 .project {
-  height: calc(100vh - 5rem);
   padding: 20px;
-  margin: auto;
-  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-areas: "headline headline" "links links" "image1 image2" "description description" "features features";
   grid-template-rows: 10% 10% 20% 20% 50%;
@@ -799,7 +840,7 @@ body {
 .App {
   position: relative;
   max-width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   margin: 0;
   padding: 0;

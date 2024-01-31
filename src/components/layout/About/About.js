@@ -26,7 +26,7 @@ export const About = (props) => {
         <div className="carousel__element" key={i}>
           <figure className="carousel-slider__wrapper photo">
             <img className="carousel-slider__image photo__image" src={item.image} alt={item.altText} />
-            <figcaption className="js-slider__caption">{item.source}</figcaption>
+            <figcaption className="js-slider__caption"></figcaption>
           </figure>
           <div className="carousel-description">
             <h5 className="carousel__title headline--h5">{item.text}</h5>

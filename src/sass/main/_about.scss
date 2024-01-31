@@ -1,38 +1,71 @@
 @import '../abstracts/index';
 
 .about {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    @include respond(desktop) {
+      @include absCenter();
+      box-sizing: border-box;
+      height: 90vh;
+      grid-template-rows: 10vh 80vh;
+    }
+    .controlls {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
     &__container {
-        display: flex;
-        flex-direction: column;
-        padding: 0 10px;
+      grid-column: 1/3;
+      grid-row: 2/3;
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
         
         @include respond(tablet) {
             flex-direction: row;
-            // height: calc(100vh - 80px);
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 40px;
             & > * {
               width: 49%;
+              height: 45vh;
+              display: grid;
+              grid-template-rows: 20% 80%;
             }
         }
     }
 
     &__image {
+     
+       @include flexAbsoluteCenter();
       img {
-        border: 5px dotted $color-darkblue;
+        width: 70%;
+        height: 70%;
+        border: none;
+
+      }
+      &::after {
+        content: '';
+        width: 40%;
+        height: 50%;
+        position: absolute;
+        left: 40%;
+        top: 20%;
+        border: 4px dotted $color-darkblue;
+        border-radius: 5px;
+        z-index: -2;
       }
     }
    
     &__part.first {
+ 
         @include respond(tablet) {
           transform: translateY(-100px);
         }
         h4 {
-          color: $color-darkpink;
+          color: $color-pink;
           font-size: 25px;
           font-weight: 700;
           margin-bottom: 10px;
@@ -41,37 +74,32 @@
     &__part.second {
         position: relative;
         box-sizing: border-box;
+     
         h3 {
-          color: $color-darkpink;
+          color: $color-pink;
           font-size: 25px;
           font-weight: 700;
           margin-bottom: 10px;
-        }
-    }
+        }  
+      }
 }
 
-.second {
-    &__title {
-        position: relative;
-        z-index: 30;
-    }
-     @include respond(tablet) {
-      transform: translateY(100px);
-    }
-}
+
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 400px;
+  
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 400px;
-    border: 5px dotted $color-darkblue;
+
+    &__title {
+      padding: 10px;
+    }
    
     &-slider__nav {
       width: 100%;
-      height: 400px;
+   
       @include flexAbsoluteCenter();
       span {
         display: block;
@@ -82,7 +110,7 @@
         width: 50px;
         @include flexAbsoluteCenter();
          &:hover {
-          background-color: $color-darkpink;
+          background-color: $color-pink;
           cursor: pointer;
       }
       }
@@ -95,6 +123,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+   
         }
       
     &--next {
@@ -108,7 +137,6 @@
     
     &-slider__wrapper {
       width: 40%;
-      height: 200px;
       position: relative;
       &::before {
         content: '';

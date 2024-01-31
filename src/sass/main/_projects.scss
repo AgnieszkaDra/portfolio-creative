@@ -36,35 +36,50 @@
 .projects {
     min-height: 100vh;
     width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20vh; /* First row with a fixed height of 10vh */
+
+    .controlls {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        border: 3px solid red;;
+      }
 
     &__container {
+        grid-column: 1/3;
+        grid-row: 2/3;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        flex: 1 1 0%;
-        width: 100%;
-        
-        &>* {
-            height: 100vh;
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 90%);
+        grid-auto-rows: 60vh ;
+          
+         grid-gap: 20px;
+
+            grid-row-gap: 20px; 
+            // grid-template-rows: auto auto auto; /* Example row sizes */
+ 
+      
 
         @include respond(tablet) {
-            display: flex;
-         
-            & > * {
-                width: 50%;
-            }
+           
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 45%);
+            grid-auto-rows: 60vh ;
+           
         }
     }
 }
 
 .project {
 
-    height: calc(100vh - 5rem);
+    // height: calc(100vh - 5rem);
     padding: 20px;
-    margin: auto;
-    margin-bottom: 50px;
+  
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas:
         'headline headline'
@@ -144,10 +159,12 @@
 
     &01 {
         background: linear-gradient(0deg, $color-lightpink, $color-white);
+    
     }
 
     &02 {
         background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+ 
     }
 
     &03 {
@@ -178,8 +195,7 @@
 }
 
 figure {
-    // max-width: 600px;
-      margin: 0 auto;
+    margin: 0 auto;
 }
 
 img {

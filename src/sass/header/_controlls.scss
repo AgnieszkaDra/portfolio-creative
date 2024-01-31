@@ -50,7 +50,7 @@ cursor: pointer;
 
 @include flexAbsoluteCenter;
 @include respond(tablet) {
-   margin: 40px; 
+   margin: 20px; 
    width: 65px;
 height: 40px;
 }
