@@ -48,10 +48,10 @@ export const projects = {
             id:'03',
             imageUrl: game1,
             imageUrl2: game2,
-            githubUrl:  'https://github.com/AgnieszkaDra/Calculator-task',
+            githubUrl:  'https://github.com/AgnieszkaDra/Calculator-game',
             viewUrl1: 'https://splendorous-creponne-6e9cb4.netlify.app/',
-            description: 'Base calculator, which has written in Vanilla JS technology.',
-            features: ['useful calculator', 'visible previous operations'],
+            description: 'Simple game similar to  Sinal game https://www.calculators.org/games/sinal/',
+            features: ['useful calculator', 'visible previous operations', 'still in writing'],
             mainColor: ' rgb(159, 189, 189)'
         },
         { 
@@ -61,7 +61,7 @@ export const projects = {
             imageUrl2: basic2,
             viewUrl1: 'https://mellifluous-profiterole-46d3ae.netlify.app/',
             githubUrl:  'https://github.com/AgnieszkaDra/Basic-Page-React',
-            description: 'Base calculator, which has written in Vanilla JS technology.',
+            description: 'Basic page which has been writing in React.',
             features: ['original dropdown menu', 'No framework was used to create the slider.'],
             mainColor: '#e4007c'
         },
