@@ -11,7 +11,8 @@ import basic3 from '../assets/projects/basic3.png'
 import basic4 from '../assets/projects/basic4.png'
 import CV1 from '../assets/projects/CV1.png'
 import CV2 from '../assets/projects/CV2.png'
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import skills from '../assets/projects/skills.png'
+import portfolio1 from '../assets/projects/portfolio1.png'
 
 
 
@@ -50,7 +51,7 @@ export const projects = {
             imageUrl2: game2,
             githubUrl:  'https://github.com/AgnieszkaDra/Calculator-game',
             viewUrl1: 'https://splendorous-creponne-6e9cb4.netlify.app/',
-            description: 'Simple game similar to  Sinal game https://www.calculators.org/games/sinal/',
+            description: 'Simple game similar to  Sinal game',
             features: ['useful calculator', 'visible previous operations', 'still in writing'],
             mainColor: ' rgb(159, 189, 189)'
         },
@@ -91,7 +92,7 @@ export const projects = {
         { 
             name: 'Skills',  
             id:'07',
-            imageUrl: '',
+            imageUrl: skills,
             imageUrl2: '',
             viewUrl1: '',
             githubUrl:  'https://github.com/AgnieszkaDra/Skills',
@@ -103,7 +104,7 @@ export const projects = {
         { 
             name: 'Portfolio',  
             id:'08',
-            imageUrl: '',
+            imageUrl: portfolio1,
             imageUrl2: '',
             viewUrl1: '',
             githubUrl:  'https://github.com/AgnieszkaDra/portfolio-creative',

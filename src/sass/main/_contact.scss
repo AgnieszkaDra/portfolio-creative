@@ -1,48 +1,28 @@
 @import '../abstracts/index';
 
 .contact {
-   background: linear-gradient(0deg, $color-darkblue, $color-white);
   min-height: 100vh;
   width: 100%;
+  color: $color-grey;
   
   &__headline {
-    color: $color-grey;
     position: relative;
     margin-top: 5rem;
   }
 
   &__box {
-  
-    width: 100%;
-    box-sizing: border-box;
+    background-color: $color-lightpink;
+    padding: 20px;
     display: flex;
-   
     flex-direction: column;
- 
-    padding: 1rem;
-  
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-
-    border-radius: 0.5rem;
-    background-color: white;
-
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    width: 390px;
-    padding: 2rem;
-    margin: 0px 3rem 3rem;
-    gap: 3rem;
-    max-width: 1200px;
 
     @include respond(tablet) {
-      box-sizing: border-box;
+        box-sizing: border-box;
         @include absCenter();
         width: 50%;
-      flex-direction: row;
-    }
-    &>* {
+        flex-direction: row;
+      }
+      & > * {
       width: 100%;
       @include respond(tablet) {
         width: 100%;
@@ -65,9 +45,9 @@
    
       &__link {
         color: $color-grey;
-         font-size: 1rem;
-         @include flexAbsoluteCenter;
-         text-wrap: nowrap;
+        font-size: 1rem;
+        @include flexAbsoluteCenter;
+        text-wrap: nowrap;
       }
       }
     }
@@ -89,7 +69,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
-    color: $color-grey;
+  
   }
   &__input {
       width: 60%;
@@ -97,7 +77,7 @@
       background: none;
       padding: 10px 8px;
       border-radius: 0.3em;
-      border: 1px solid $color-lightgrey;
+      border: 1px solid $color-grey;
       color: white;
       &:focus, &:active {
         outline: none;
@@ -106,6 +86,7 @@
   &__label {
       text-transform: capitalize;
       font-weight: 500;
+      font-size: 18px;
   }
   &__textarea {
     background: none;
@@ -116,7 +97,7 @@
     height: 40px;
     padding: 10px 8px;
     border-radius: 0.3em;
-    border: 1px solid $color-lightgrey;
+    border: 1px solid $color-grey;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -130,7 +111,7 @@
       margin-bottom: 15px; 
       padding: 5px;
       border-radius: 0.3em;
-      background-color: $color-lightgrey;
+      background-color: $color-darknavy;
       color: $color-white; 
       border: none;
       box-shadow: none;
