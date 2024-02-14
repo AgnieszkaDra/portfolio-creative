@@ -5,7 +5,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 10vh 60vh 40vh; 
+    grid-template-rows: 10vh 60vh 30vh; 
 
     @include respond(desktop) {
         @include absCenter();

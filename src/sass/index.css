@@ -21,7 +21,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 10vh 60vh 40vh;
+  grid-template-rows: 10vh 60vh 30vh;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -267,7 +267,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
     height: 90vh;
     grid-template-rows: 10vh 80vh;
   }
@@ -319,9 +318,15 @@ main {
   position: absolute;
   left: 40%;
   top: 20%;
-  border: 4px dotted rgb(105, 173, 244);
+  border: 4px dotted rgb(254, 255, 253);
   border-radius: 5px;
   z-index: -2;
+}
+
+.about__part {
+  background: linear-gradient(0deg, rgb(253, 253, 253), rgb(25, 25, 71));
+  color: rgb(254, 255, 253);
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -330,22 +335,23 @@ main {
   }
 }
 .about__part.first h4 {
-  color: rgb(231, 128, 211);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .about__part.second {
   position: relative;
   box-sizing: border-box;
+  transform: translateY(100px);
 }
 
 .about__part.second h3 {
-  color: rgb(231, 128, 211);
   font-size: 25px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .carousel {
@@ -368,7 +374,7 @@ main {
 
 .carousel-slider__nav span {
   display: block;
-  background: rgb(255, 216, 230);
+  background: rgb(25, 25, 71);
   border-radius: 50%;
   font-size: 32px;
   height: 50px;
@@ -379,7 +385,7 @@ main {
 }
 
 .carousel-slider__nav span:hover {
-  background-color: rgb(231, 128, 211);
+  background-color: rgb(7, 7, 48);
   cursor: pointer;
 }
 
@@ -406,27 +412,19 @@ main {
 .carousel-slider__wrapper {
   width: 40%;
   position: relative;
-}
-
-.carousel-slider__wrapper::before {
-  content: "";
-  position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 70%;
-  height: 70%;
-  border: 3px dotted rgb(255, 158, 185);
+  color: rgb(254, 255, 253);
 }
 
 .carousel-description {
   width: 40%;
-  background-color: rgb(231, 128, 211);
+  font-size: 25px;
+  color: rgb(7, 7, 48);
 }
 
 .carousel-slider__image {
-  width: 70%;
-  height: 70%;
-  background-color: rgb(231, 128, 211);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(254, 255, 253);
   cursor: not-allowed;
 }
 
@@ -804,44 +802,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.headline--h3 {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 20px 0 20px 0;
-  color: rgb(35, 34, 34);
-}
-@media only screen and (min-width: 768px) {
-  .headline--h3 {
-    font-size: 1.5rem;
-  }
-}
-
-.headline--h4 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 20px 0 20px 0;
-  text-transform: uppercase;
-  color: rgb(35, 34, 34);
-}
-@media only screen and (min-width: 768px) {
-  .headline--h4 {
-    font-size: 1.2rem;
-  }
-}
-
-.headline--h5 {
-  text-align: center;
-  font-size: 0.9rem;
-  color: rgb(35, 34, 34);
-}
-@media only screen and (min-width: 768px) {
-  .headline--h5 {
-    font-size: 1.1rem;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */

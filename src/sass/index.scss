@@ -62,42 +62,6 @@ img {
     @include flexAbsoluteCenter;
 }
 
-.headline--h3 {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 20px 0 20px 0;
-    color: $color-grey;
-  
-    @include respond(tablet) {
-      font-size: 1.5rem;
-    }
-  
-  }
-  
-  .headline--h4 {
-  
-    text-align: center;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 20px 0 20px 0;
-    text-transform: uppercase;
-    color: $color-grey;
-  
-    @include respond(tablet) {
-      font-size: 1.2rem;
-    }
-  }
-  
-  .headline--h5 {
-  
-    text-align: center;
-    font-size: 0.9rem;
-    color: $color-grey;
-  
-    @include respond(tablet) {
-      font-size: 1.1rem;
-    }
-  }
+
   
 

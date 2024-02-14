@@ -43,15 +43,14 @@ const renderedItems = features.list.map((item, i) => renderListItem(item, i));
         <section
             className={`${className ? ` ${className}` : ''}`}
         >
-            {/* https://pixabay.com/illustrations/app-software-contour-settings-1013616/ */}
             <Controlls className={'controlls'}></Controlls>
             <div className={'about__container'}>
                 <div className={'about__part first'}>
-                <h4 className={'headline--h4'}>Any idea to solve with me?</h4>
+                <h4>let's discuss your project</h4>
                 <Image className={'about__image'} name='app' url={app}></Image>
             </div>
             <div className={'about__part second'}>
-                <h3 className={'second__title headline--h3'}>Let's trust and hire me!</h3>
+                <h3 className={'second__title headline--h3'}>Share your ideas with the world.</h3>
                 <div className={"second__carousel carousel"}>
                     <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
                       <span className={""} onClick={handleSpanDecrease}>&lt;</span>  
