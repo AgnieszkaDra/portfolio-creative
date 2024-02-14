@@ -16,7 +16,8 @@
         width: 40px;
         height: 30px;
         margin: 10px;
-        background-color: $color-pink;
+        background: linear-gradient(0deg, $color-background, $color-lightnavy);
+        
         padding: 6px;
         cursor: pointer;
 
@@ -24,7 +25,7 @@
 
         @include respond(tablet) {
             margin: 20px;
-            width: 65px;
+            width: 60px;
             height: 40px;
         }
 

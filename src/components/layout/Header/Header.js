@@ -17,24 +17,31 @@ export const Header = (props) => {
     >
       <>
         <Controlls className={'controlls'}></Controlls>
-        {<h1 className={'header__text first'}> PORTFOLIO</h1>}
-        {<h2 className={'header__text second'}> PORTFOLIO</h2>}
+        <div className={'header__text'}>
+          <h1> PORTFOLIO</h1>
+          <h2> PORTFOLIO</h2>
+        </div>
         <Image
           className={'header__image'}
           url={logo}
           name={logo}
         >
         </Image>
-        <Dots className={'header__dots header__dots-up'}
+        <Dots
+          className={'header__dots header__dots-up'}
           spanHorizontal={7}
-          spanVertical={3}></Dots>
-        <Dots className={'header__dots header__dots-down'}
+          spanVertical={3}
+        />
+        <Dots
+          className={'header__dots header__dots-down'}
           spanHorizontal={9}
-          spanVertical={3}>
-        </Dots>
-        {<h3 className={'header__text third'}>HI, I'M </h3>}
-        {<h4 className={'header__text fourth'}>AGNIESZKA</h4>}
-        {<h5 className={'header__text fifth'}>Frontend developer</h5>}
+          spanVertical={3}
+        />
+        <div className={'header__info'}>
+          <h3>HI, I'M </h3>
+          <h3>AGNIESZKA</h3>
+          <h3>Frontend developer</h3>
+        </div>
       </>
     </header>
   )
