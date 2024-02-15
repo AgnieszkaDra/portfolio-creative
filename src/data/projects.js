@@ -1,6 +1,6 @@
 import pharmacy from '../assets/projects/pharmacy/pharmacy.png'
-import drug from '../assets/projects/pharmacy/leki.webp'
-import sew from '../assets/sewPortfolio.png'
+import drug from '../assets/projects/pharmacy/leki.png'
+import sew from '../assets/projects/sewPortfolio1.png'
 import calculator1 from '../assets/projects/calculator1.png'
 import calculator2 from '../assets/projects/calculator.png'
 import game1 from '../assets/projects/game1.png'
@@ -38,13 +38,13 @@ export const projects = {
             id: '02',
             imageUrl: sew,
           
-            description: 'This is a website, which has written two times.First time using pure JS(website in refactoring) and second time using React.',
-            features: ['TypeScript + React', 'It will be first comercial project'],
+            description: 'It will be first comercial project',
+            // features: ['TypeScript + React', 'open categories', 'many photos of products', 'nowa'],
             githubUrl: 'https://github.com/AgnieszkaDra/SewPortfolioPage',
             // githubUrl2: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
             viewUrl1: 'https://merry-bombolone-6f9da6.netlify.app/',
             // viewUrl2: 'https://hilarious-alpaca-f63944.netlify.app/',
-            mainColor: 'red'
+            mainColor: 'rgb(66, 230, 219)'
 
         },
       
