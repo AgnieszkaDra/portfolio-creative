@@ -56,7 +56,7 @@ export const Projects = (props) => {
             <Image
               className={`project__image1`}
               url={element.imageUrl}
-              style={{ backgroundColor: element.mainColor }}
+              style={{ backgroundColor: 'transparent' }}
               name={logo}
             >
             </Image>
@@ -66,6 +66,7 @@ export const Projects = (props) => {
                 <Image
                   className={`project__image2`}
                   url={element.imageUrl2}
+                  style={{ backgroundColor: 'transparent' }}
                   name={logo}
                 >
                 </Image>

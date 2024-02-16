@@ -1,4 +1,4 @@
-import pharmacy from '../assets/projects/pharmacy/pharmacy.png'
+import order from '../assets/projects/pharmacy/order.png'
 import drug from '../assets/projects/pharmacy/leki.png'
 import sew from '../assets/projects/sewPortfolio1.png'
 import calculator1 from '../assets/projects/calculator1.png'
@@ -23,7 +23,7 @@ export const projects = {
             name: 'Pharmacy Website',
             id: '01',
             imageUrl: drug,
-            imageUrl2: pharmacy,
+            imageUrl2: order,
             description: 'This is a website, which has written two times.First time using pure JS(website in refactoring) and second time using React.',
             features: ['useful website', 'unicate form to order'],
             githubUrl: 'https://github.com/AgnieszkaDra/PharmacyWebsite-react',
@@ -39,7 +39,7 @@ export const projects = {
             imageUrl: sew,
           
             description: 'It will be first comercial project',
-            // features: ['TypeScript + React', 'open categories', 'many photos of products', 'nowa'],
+            features: ['TypeScript + React', 'open categories'],
             githubUrl: 'https://github.com/AgnieszkaDra/SewPortfolioPage',
             // githubUrl2: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
             viewUrl1: 'https://merry-bombolone-6f9da6.netlify.app/',
