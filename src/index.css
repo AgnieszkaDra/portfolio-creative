@@ -1,10 +1,14 @@
-/* *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+
+:root {
+  --color-pharmacy-red: rgb(255, 0, 0);
+  --color-pharmacy-pink: rgb(249, 217, 213);
+  --color-sew-beige: rgb(228, 216, 196);
+  --color-sew-navy: rgb(39, 45, 69);
+  --color-posts-turcoise: rgb(117, 163, 163);
+  --color-posts-grey: rgb(240, 240, 240);
+  --color-posts-green: rgb(203, 230, 211);
+
+}
 
 
 

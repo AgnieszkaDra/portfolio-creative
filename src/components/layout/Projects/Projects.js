@@ -44,6 +44,9 @@ export const Projects = (props) => {
         {data.categories.map((element) => (
           <div key={element.name}
             className={`project${element.id} project`}
+            style={{
+              background: `linear-gradient(0deg, ${element.background1}, ${element.background2})`
+            }}
             data-id={element.id}
           >
             <div className={`project__headline`}>

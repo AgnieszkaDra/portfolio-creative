@@ -1,6 +1,7 @@
 import order from '../assets/projects/pharmacy/order.png'
 import drug from '../assets/projects/pharmacy/leki.png'
 import sew from '../assets/projects/sewPortfolio1.png'
+import posts1 from '../assets/projects/posts1.png'
 import calculator1 from '../assets/projects/calculator1.png'
 import calculator2 from '../assets/projects/calculator.png'
 import game1 from '../assets/projects/game1.png'
@@ -15,7 +16,13 @@ import CV2 from '../assets/projects/CV2.png'
 import skills from '../assets/projects/skills.png'
 import portfolio1 from '../assets/projects/portfolio1.png'
 
-
+const pharmacyRed = getComputedStyle(document.documentElement).getPropertyValue('--color-pharmacy-red');
+const pharmacyPink = getComputedStyle(document.documentElement).getPropertyValue('--color-pharmacy-pink');
+const sewBeige = getComputedStyle(document.documentElement).getPropertyValue('--color-sew-beige');
+const sewNavy = getComputedStyle(document.documentElement).getPropertyValue('--color-sew-navy');
+const postsTurcoise = getComputedStyle(document.documentElement).getPropertyValue('--color-posts-turcoise');
+const postsGreen = getComputedStyle(document.documentElement).getPropertyValue('--color-posts-green');
+const postsGrey = getComputedStyle(document.documentElement).getPropertyValue('--color-posts-grey');
 
 export const projects = {
     categories: [
@@ -27,31 +34,40 @@ export const projects = {
             description: 'This is a website, which has written two times.First time using pure JS(website in refactoring) and second time using React.',
             features: ['useful website', 'unicate form to order'],
             githubUrl: 'https://github.com/AgnieszkaDra/PharmacyWebsite-react',
-            // githubUrl2: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
             viewUrl1: 'https://luminous-dusk-95a487.netlify.app/',
-            // viewUrl2: 'https://hilarious-alpaca-f63944.netlify.app/',
-            mainColor: 'red'
-
+            mainColor: pharmacyRed,
+            background1: pharmacyPink,
+            background2: 'white'
         },
         {
             name: 'Sew Portfolio',
             id: '02',
             imageUrl: sew,
-          
             description: 'It will be first comercial project',
             features: ['TypeScript + React', 'open categories'],
             githubUrl: 'https://github.com/AgnieszkaDra/SewPortfolioPage',
-            // githubUrl2: 'https://github.com/AgnieszkaDra/Pharmacy-Website',
             viewUrl1: 'https://merry-bombolone-6f9da6.netlify.app/',
-            // viewUrl2: 'https://hilarious-alpaca-f63944.netlify.app/',
-            mainColor: 'rgb(66, 230, 219)'
-
+            mainColor: sewNavy,
+            background1: sewBeige,
+            background2: 'white'
+        },
+        {
+            name: 'Opening Posts',
+            id: '03',
+            imageUrl: posts1,
+            description: 'It will be first comercial project',
+            features: ['working with API', 'Vue technology', 'Pinia'],
+            githubUrl: 'https://github.com/AgnieszkaDra/OpeningPosts--Vue',
+            viewUrl1: 'https://tubular-strudel-c363fe.netlify.app/#/',
+            mainColor: postsTurcoise,
+            background1: postsGrey,
+            background2: postsGreen
         },
       
 
         {
             name: 'Calculator Task',
-            id: '03',
+            id: '04',
             imageUrl: calculator1,
             imageUrl2: calculator2,
             githubUrl: 'https://github.com/AgnieszkaDra/Calculator-task',
@@ -62,7 +78,7 @@ export const projects = {
         },
         {
             name: 'Calculator Game',
-            id: '04',
+            id: '05',
             imageUrl: game1,
             imageUrl2: game2,
             githubUrl: 'https://github.com/AgnieszkaDra/Calculator-game',
@@ -73,7 +89,7 @@ export const projects = {
         },
         {
             name: 'Basic page in React',
-            id: '05',
+            id: '06',
             imageUrl: basicPage,
             imageUrl2: basic2,
             viewUrl1: 'https://mellifluous-profiterole-46d3ae.netlify.app/',
@@ -84,7 +100,7 @@ export const projects = {
         },
         {
             name: 'Basic page in HTML,SCSS,JS',
-            id: '06',
+            id: '07',
             imageUrl: basic3,
             imageUrl2: basic4,
             viewUrl1: 'https://timely-narwhal-bfa32d.netlify.app/',
@@ -95,7 +111,7 @@ export const projects = {
         },
         {
             name: 'CV in React',
-            id: '07',
+            id: '08',
             imageUrl: CV1,
             imageUrl2: CV2,
             viewUrl1: '',
@@ -107,7 +123,7 @@ export const projects = {
         },
         {
             name: 'Skills',
-            id: '08',
+            id: '09',
             imageUrl: skills,
             imageUrl2: '',
             viewUrl1: '',
@@ -119,7 +135,7 @@ export const projects = {
         },
         {
             name: 'Portfolio',
-            id: '09',
+            id: '10',
             imageUrl: portfolio1,
             imageUrl2: '',
             viewUrl1: '',
@@ -129,8 +145,6 @@ export const projects = {
             features: ['React-routing'],
             mainColor: '#e4007c'
         },
-        // { name: 'projects', id:'03', text: 'envelope'},
-        // { name: 'contact',  id:'04', text: 'contact'},
     ]
 }
 

@@ -575,15 +575,7 @@ main {
   color: red;
 }
 
-.project01 {
-  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(254, 255, 253));
-}
-
 .project02 {
-  background: linear-gradient(0deg, rgb(66, 230, 219), rgb(254, 255, 253));
-}
-
-.project03 {
   background: linear-gradient(0deg, rgb(66, 230, 219), rgb(254, 255, 253));
 }
 
@@ -746,6 +738,15 @@ main {
 
 .form__button:hover {
   background-color: white;
+}
+
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
 }
 
 body {
