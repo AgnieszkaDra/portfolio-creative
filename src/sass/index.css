@@ -65,38 +65,41 @@
 }
 
 .header__headline {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  transform: rotate(-90deg) translateY(30vh) translateX(3vh);
-  transform-origin: bottom left;
-  white-space: nowrap;
-  font-size: 35px;
-  letter-spacing: 1.2;
-}
-
-.header__headline .h1 {
-  text-shadow: rgb(254, 255, 253) 1px 0 10px;
-  font-weight: 1000;
-  color: rgb(155, 175, 175);
-  z-index: 10;
-}
-
-.header__headline .h2 {
-  color: rgb(254, 255, 253);
-  z-index: 5;
-  font-weight: 800;
-  transform: translateY(-10vh);
-  text-shadow: rgb(155, 175, 175) 1px 0 10px;
-}
-
-.header__dots {
   display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__headline {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: rotate(-90deg) translateY(30vh) translateX(3vh);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    font-size: 35px;
+    letter-spacing: 1.2;
+  }
+  .header__headline .h1 {
+    text-shadow: rgb(254, 255, 253) 1px 0 10px;
+    font-weight: 1000;
+    color: rgb(155, 175, 175);
+    z-index: 10;
+  }
+  .header__headline .h2 {
+    color: rgb(254, 255, 253);
+    z-index: 5;
+    font-weight: 800;
+    transform: translateY(-10vh);
+    text-shadow: rgb(155, 175, 175) 1px 0 10px;
+  }
+}
+.header__dots {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .header__dots > * {
@@ -107,43 +110,45 @@
   height: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-  .header__dots {
-    display: block;
-  }
-  .header__dots .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: rgb(155, 175, 175);
-  }
-  .header__dots-up {
-    position: absolute;
-    bottom: 10%;
-    right: 5%;
-    display: block;
-    overflow: hidden;
-    width: 15%;
-    height: 7.5%;
-  }
-  .header__dots-down {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    display: block;
-    overflow: hidden;
-    width: 25%;
-    height: 7.5%;
-  }
-}
-.header__info {
-  position: absolute;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.header__dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(155, 175, 175);
 }
 
+.header__dots-up {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  overflow: hidden;
+  width: 15%;
+  height: 7.5%;
+}
+
+.header__dots-down {
+  position: absolute;
+  bottom: 6%;
+  left: 7%;
+  display: block;
+  overflow: hidden;
+  width: 25%;
+  height: 7.5%;
+}
+
+.header__info {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  width: 70%;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__info {
+    width: 20%;
+    left: 20%;
+  }
+}
 .header__info--underline {
   text-decoration: underline;
 }
@@ -158,21 +163,16 @@
 }
 
 .controlls {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-  top: 0px;
-  transition: all 0.8s ease 0s;
-  z-index: 200;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5%;
 }
 
 .controlls .control {
-  width: 40px;
-  height: 30px;
-  margin: 10px;
+  padding: 3px;
+  margin: 20px;
+  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(113, 147, 147));
   padding: 6px;
   cursor: pointer;
   display: flex;
@@ -182,25 +182,18 @@
 
 @media only screen and (min-width: 768px) {
   .controlls .control {
-    margin: 20px;
-    width: 60px;
-    height: 40px;
+    padding: 6px;
   }
 }
 .controlls .control__link {
   position: relative;
-  font-size: 1.2rem;
-  color: rgb(105, 240, 231);
+  font-size: 0.8rem;
+  color: #5b5858;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-  .controlls .control {
-    border-radius: 0;
-  }
-}
 .gradient-pink {
   /*
   * Created with https://www.css-gradient.com

@@ -24,6 +24,7 @@ export const Controlls = (props) => {
   };
 
   const handleElementClick = (elementName) => {
+    alert('click')
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],

@@ -43,7 +43,7 @@ const renderedItems = features.list.map((item, i) => renderListItem(item, i));
         <section
             className={`${className ? ` ${className}` : ''}`}
         >
-            <Controlls className={'controlls'}></Controlls>
+           
             <div className={'about__container'}>
                 <div className={'about__part first'}>
                 <h4>let's discuss your project</h4>
