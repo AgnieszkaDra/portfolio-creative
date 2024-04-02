@@ -26,7 +26,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding:  0;
-  background-color: $color-darknavy;
+  background-color: $color-background;
+  color: $color-font;
   // @include flexAbsoluteCenter()
 }
 

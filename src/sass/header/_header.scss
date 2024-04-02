@@ -3,147 +3,112 @@
 .header {
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 10vh 60vh 30vh; 
-
-    @include respond(desktop) {
-        @include absCenter();
-        width: 70%;
-
-        &::before {
-            content: '';
-            background: linear-gradient(0deg, $color-background, $color-mediumnavy);
-            grid-column: 1/3;
-            grid-row: 1/3;
-        }
+    position: relative;
+    &::before {
+        position: absolute;
+        top: 5%; 
+        left: 5%; 
+        width: 90%;
+        height: 90%;
+        content: '';
+        border: 2px dotted $color-turcoise-dark;
     }
-
-    .controlls {
-        grid-column: 1/3;
-        grid-row: 1/2;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        @include respond(tablet) {
-            grid-column: 2/3;
-            grid-row: 2/3;
-            height: 75%;
-            align-items: end;
-            flex-direction: column;
-        }
-
+    &__controlls {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
         .control {
-            margin: 10px calc(10% - 30px) 0px 0px;
+            padding: 3px;
+            margin: 20px;
+            background: linear-gradient(0deg, $color-turcoise-dark, $color-turcoise-dark2);
+            padding: 6px;
+            cursor: pointer;
+            @include flexAbsoluteCenter;
+    
+            @include respond(tablet) {
+                padding: 6px;
+            }
+    
+            &__link {
+                position: relative;
+                font-size: 0.8rem;
+                color: darken($color-font, 10%);
+                @include flexAbsoluteCenter;
+            }
         }
     }
 
-    &__text {
-        display: none;
-        color: $color-background;
-        @include respond(desktop) {
-            grid-column: 1/2;
-            grid-row: 2/3;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            transform: rotate(-90deg) translateY(30vh) translateX(3vh);
-            transform-origin: bottom left;
-            white-space: nowrap;
-            font-size: 35px;
-            letter-spacing: 1.2;
-            h1 {
+    &__headline {
+        position: absolute;
+        top:50%;
+        left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transform: rotate(-90deg) translateY(30vh) translateX(3vh);
+        transform-origin: bottom left;
+        white-space: nowrap;
+        font-size: 35px;
+        letter-spacing: 1.2;
+            .h1 {
                 text-shadow: $color-white 1px 0 10px;
                 font-weight: 1000;
-                color: $color-mediumnavy;
+                color: $color-contrast;
                 z-index: 10;
             }
-            h2 {
+            .h2 {
+                color: $color-white;
                 z-index: 5;
                 font-weight: 800;
                 transform: translateY(-10vh);
-                text-shadow: $color-mediumnavy 1px 0 10px;
+                text-shadow: $color-contrast 1px 0 10px;
             }
-        }
     }
-
-    &__info {
-        grid-column: 2/3;
-        grid-row: 3/4;
-        font-size: 30px;
-        color: $color-background;
-        h3, h4, h5 {
-            display: block;
-        }
-    }
-
-    &__image {
-        grid-column: 2/3;
-        grid-row: 2/3;
-        position: relative;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            z-index: 10;
-            width: 80%;
-            height: 80%;
-        }
-
-        @include respond(tablet) {
-            &::after {
-                content: '';
-                width: 50%;
-                height: 75%;
-                position: absolute;
-                top: 0;
-                right: 10%;
-                border: 4px dotted $color-background;
-                border-radius: 5px;
-            }
-        }
-    }
-
-
     &__dots {
         display: none;
-
+        width: 100%;
+        height: 100%;
+        & > * {
+            @include flexAbsoluteCenter();
+            width: 100%;
+            height: 100%;
+        }
+            
         @include respond(tablet) {
-            div {
-                width: 100%;
-                height: 100%;
-
-                span {
+            display: block;         
+                .dot {
                     width: 7px;
                     height: 7px;
-                    display: block;
                     border-radius: 50%;
-                    background-color: $color-white;
+                    background-color: $color-contrast;
                 }
-            }
-
-            &-up {
-                position: absolute;
-                bottom: 10%;
-                right: 0%;
-                display: block;
-                overflow: hidden;
-                width: 15%;
-                height: 7.5%;
-            }
-
-            &-down {
-                position: absolute;
-                bottom: 0%;
-                left: 0%;
-                display: block;
-                overflow: hidden;
-                width: 25%;
-                height: 7.5%;
-            }
+                &-up {
+                    position: absolute;
+                    bottom: 10%;
+                    right: 5%;
+                    display: block;
+                    overflow: hidden;
+                    width: 15%;
+                    height: 7.5%;
+                }
+            
+                &-down {
+                    position: absolute;
+                    bottom: 5%;
+                    left: 5%;
+                    display: block;
+                    overflow: hidden;
+                    width: 25%;
+                    height: 7.5%;
+                }
+        }
+    }
+    &__info {
+        position: absolute;
+        @include absCenter;
+        &--underline {
+            text-decoration: underline;
         }
     }
 }

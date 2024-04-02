@@ -1,8 +1,6 @@
 import React from 'react';
-import Image from '../../ui/Image/Image';
 import Dots from '../../ui/Dots/Dots';
 import Controlls from '../../ui/Controlls/Controlls';
-import logo from '../../../assets/face.jpg'
 
 import PropTypes from 'prop-types'
 
@@ -15,18 +13,12 @@ export const Header = (props) => {
     <header
       className={`${className ? ` ${className}` : ''}`}
     >
-      <>
-        <Controlls className={'controlls'}></Controlls>
-        <div className={'header__text'}>
-          <h1> PORTFOLIO</h1>
-          <h2> PORTFOLIO</h2>
+      <div className='header__container'>
+        <Controlls className={' header__controlls'}></Controlls>
+        <div className={'header__headline'}>
+          <h1 className='h1'> PORTFOLIO</h1>
+          <h2 className='h2'> PORTFOLIO</h2>
         </div>
-        <Image
-          className={'header__image'}
-          url={logo}
-          name={logo}
-        >
-        </Image>
         <Dots
           className={'header__dots header__dots-up'}
           spanHorizontal={7}
@@ -41,8 +33,9 @@ export const Header = (props) => {
           <h3>HI, I'M </h3>
           <h3>AGNIESZKA</h3>
           <h3>Frontend developer</h3>
+          <p>I believe that modern websites and applications have the potential to enhance every facet of business operations.<br/>With a clear mission to showcase the diverse capabilities of software development, I aim <span className={'header__info--underline'}>on the way</span> to demonstrate the power and versatility of innovative solutions through examples in portfolio.</p>
         </div>
-      </>
+      </div>
     </header>
   )
 }

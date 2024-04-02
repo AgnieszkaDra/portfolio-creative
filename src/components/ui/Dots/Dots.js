@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classes from './styles.module.css'
-
 
 export const Dots = (props) => {
     const {
@@ -11,10 +9,7 @@ export const Dots = (props) => {
     ...otherProps
   } = props
 
-
-
-
-  const dynamicStyle = (hor, vert) => {
+const dynamicStyle = (hor, vert) => {
     return {
          display: 'grid', 
          gridTemplateColumns: `repeat(${hor}, 1fr)`,
@@ -24,33 +19,30 @@ export const Dots = (props) => {
 
   const dotsStyle = dynamicStyle(props.spanHorizontal, props.spanVertical);
 
-  const dot = () => {
-    return {
-      width: '7px',
-      height: '7px',
-      display: 'block',
-      borderRadius: '50%',
-    }
-  }
+
 
   const spanElement = (horizontal, vertical) => {
     const numberOfElements = horizontal * vertical;
     const elements = [];
+ 
 
     for (let i = 1; i <= numberOfElements; i++) {
-      elements.push(<span key={i} className=''></span>);
+      elements.push(<div>
+        <span key={i} className='dot'></span>
+        </div>);
     }
     return (
-      <div
-      style={dotsStyle}
-      >
-        {elements}
-      </div>
+    <>
+          {elements}
+    </>
+  
+
     );
   }
   return (
     <div
-    className={`${classes.root}${className ? ` ${className}` : ''}`}{...otherProps}
+    className={`${className ? ` ${className}` : ''}`}{...otherProps}
+    style={dotsStyle}
     >
       {spanElement(props.spanHorizontal, props.spanVertical)}
     </div>

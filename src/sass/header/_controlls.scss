@@ -16,7 +16,7 @@
         width: 40px;
         height: 30px;
         margin: 10px;
-        background: linear-gradient(0deg, $color-background, $color-lightnavy);
+        // background: linear-gradient(0deg, $color-mediumturcoise, $color-white);
         
         padding: 6px;
         cursor: pointer;
@@ -32,7 +32,7 @@
         &__link {
             position: relative;
             font-size: 1.2rem;
-            color: $color-darknavy;
+            color: $color-mediumturcoise;
             @include flexAbsoluteCenter;
         }
 
