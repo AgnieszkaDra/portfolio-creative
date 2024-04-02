@@ -3,87 +3,24 @@
 .about {
     height: 100vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    @include respond(desktop) {
-      @include absCenter();
-      height: 90vh;
-      grid-template-rows: 10vh 80vh;
-    }
-    .controlls {
-      grid-column: 1/3;
-      grid-row: 1/2;
-    }
-    &__container {
-      grid-column: 1/3;
-      grid-row: 2/3;
-      display: flex;
-      flex-direction: column;
-      padding: 0 10px;
-        
-        @include respond(tablet) {
-            flex-direction: row;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 40px;
-            & > * {
-              width: 49%;
-              height: 45vh;
-              display: grid;
-              grid-template-rows: 20% 80%;
-            }
-        }
-    }
-
-    &__image {
-     
-       @include flexAbsoluteCenter();
-      img {
-        width: 70%;
-        height: 70%;
-        border: none;
-
-      }
-      &::after {
-        content: '';
-        width: 40%;
-        height: 50%;
-        position: absolute;
-        left: 40%;
-        top: 20%;
-        border: 4px dotted $color-white;
-        border-radius: 5px;
-        z-index: -2;
-      }
-    }
-    &__part {
-      background: linear-gradient(0deg, $color-background, $color-mediumnavy);
-      color: $color-white;
-    
-      text-align: center;
-    }
-   
-    &__part.first {
- 
-        @include respond(tablet) {
-          transform: translateY(-100px);
-        }
-        h4 {
-       
-          font-size: 25px;
-          font-weight: 700;
-          margin-bottom: 10px;
-          text-transform: uppercase;
-        }
-    }
-    &__part.second {
-        position: relative;
-        box-sizing: border-box;
-        transform: translateY(100px);
-        h3 {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 5%; 
+      left: 5%; 
+      width: 90%;
+      height: 90%;
+      content: '';
+      border: 2px dotted $color-turcoise-dark;
+  }
+   &__carousel {
+      
+        @include absCenter;
+.h3 {
          
-          font-size: 25px;
+          font-size: 20px;
+          color: $color-contrast;
+          text-align: center;
           font-weight: 700;
           margin-bottom: 10px;
           text-transform: uppercase;
@@ -96,7 +33,7 @@
 .carousel {
     position: relative;
     width: 100%;
-  
+    height: 250px;
     display: grid;
     grid-template-columns: 10% 80% 10%;
 
@@ -110,11 +47,11 @@
       @include flexAbsoluteCenter();
       span {
         display: block;
-        background: $color-mediumnavy;
+        background: $color-contrast;
         border-radius: 50%;
-        font-size: 32px;
-        height: 50px;
-        width: 50px;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
         @include flexAbsoluteCenter();
          &:hover {
           background-color: $color-darknavy;
@@ -149,8 +86,8 @@
   
     &-description {
       width: 40%;
-      font-size: 25px;
-      color: $color-darknavy;
+     
+     
     }
   
     &-slider__image {

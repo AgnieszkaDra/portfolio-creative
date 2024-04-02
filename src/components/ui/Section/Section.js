@@ -27,7 +27,7 @@ export const Section = (props) => {
   return (
    
        <section
-      className={`${classes.root}${className ? ` ${className}` : ''}`}
+      className={`${classes.root}${className ? `${className}` : ''}`}
       {...otherProps}
       onClick = {() => {forwardSection()}}
     >

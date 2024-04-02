@@ -41,16 +41,19 @@ const renderedItems = features.list.map((item, i) => renderListItem(item, i));
 
     return (
         <section
-            className={`${className ? ` ${className}` : ''}`}
+            className={`${className ? `${className}` : ''}`}
         >
           <Controlls className={'controlls'}></Controlls> 
-            <div className={'about__container'}>
-                <div className={'about__part first'}>
+          <div className={'header__headline'}>
+          <h1 className='h1'> PORTFOLIO</h1>
+          <h2 className='h2'> PORTFOLIO</h2>
+        </div>
+                {/* <div className={'about__part first'}>
                 <h4>let's discuss your project</h4>
                 <Image className={'about__image'} name='app' url={app}></Image>
-            </div>
-            <div className={'about__part second'}>
-                <h3 className={'second__title headline--h3'}>Share your ideas with the world.</h3>
+            </div> */}
+            <div className={'about__carousel'}>
+                <h3 className={'h3'}>Share your ideas with the world.</h3>
                 <div className={"second__carousel carousel"}>
                     <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
                       <span className={""} onClick={handleSpanDecrease}>&lt;</span>  
@@ -61,7 +64,7 @@ const renderedItems = features.list.map((item, i) => renderListItem(item, i));
                     </div>
                 </div>
             </div>  
-            </div>
+            
         </section>
     )
 

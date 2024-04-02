@@ -1,12 +1,12 @@
 import technology from '../assets/technology.png';
 import idea from '../assets/idea.png'
-import portfolio from '../assets/portfolio.png'
+import company from '../assets/company-logo.jpg'
 import chart from '../assets/chart.png'
 
 export const features = {
     list: [
        {
-        image: portfolio,
+        image: company,
         name: 'PORTFOLIO',
         text: `Don't conceal your business; become visible within your network.`,
         start:5,
