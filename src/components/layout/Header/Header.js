@@ -14,7 +14,7 @@ export const Header = (props) => {
       className={`${className ? ` ${className}` : ''}`}
     >
       <div className='header__container'>
-        {/* <Controlls className={' header__controlls'}></Controlls> */}
+        <Controlls className={'controlls'}></Controlls>
         <div className={'header__headline'}>
           <h1 className='h1'> PORTFOLIO</h1>
           <h2 className='h2'> PORTFOLIO</h2>

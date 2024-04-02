@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App className="App" />,
+    element: <Header className="header" />,
   },
   {
     path: '/home',

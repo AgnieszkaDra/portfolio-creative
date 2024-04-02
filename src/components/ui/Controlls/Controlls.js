@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
+
 import data from '../../../data'
 import PropTypes from 'prop-types'
 
@@ -24,7 +25,6 @@ export const Controlls = (props) => {
   };
 
   const handleElementClick = (elementName) => {
-    alert('click')
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],
@@ -35,27 +35,21 @@ export const Controlls = (props) => {
     <section
       className={`${className ? ` ${className}` : ''}`}
     >
-      <ControllsContext.Provider value={{ elementStates, setElementStates }} >
-        <>
-          {data.sections.map((element) => (
-            <div key={element.name}
-              onClick={() => handleElementClick(element.name)}
-              className={elementStates[element.name] ? 'control active-btn' : 'control'}
-              data-id={element.name}
-            >
-              <>
-                {<NavLink
-                  className={'control__link'}
-                  to={toPage(element.name)}
-                  >
-                  {<FontAwesomeIcon icon={element.icon} className='control__icon' ></FontAwesomeIcon>} </NavLink>}
-              </>
-            </div>
-          ))
+    {data.sections.map((element) => (
+        <div key={element.name}
+          onClick={() => handleElementClick(element.name)}
+          className={elementStates[element.name] ? 'control active-btn' : 'control'}
+          data-id={element.name}
+        >
+          {<NavLink
+            className={'control__link'}
+            to={toPage(element.name)}
+          >
+          {<FontAwesomeIcon icon={element.icon} className='control__icon' ></FontAwesomeIcon>} </NavLink>}
+        </div>
+        ))
           }
-        </>
-      </ControllsContext.Provider>
-    </section>
+  </section>
   )
 }
 

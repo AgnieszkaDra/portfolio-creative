@@ -13,32 +13,6 @@
         content: '';
         border: 2px dotted $color-turcoise-dark;
     }
-    &__controlls {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 5%;
-        .control {
-            padding: 3px;
-            margin: 20px;
-            background: linear-gradient(0deg, $color-turcoise-dark, $color-turcoise-dark2);
-            padding: 6px;
-            cursor: pointer;
-            @include flexAbsoluteCenter;
-    
-            @include respond(tablet) {
-                padding: 6px;
-            }
-    
-            &__link {
-                position: relative;
-                font-size: 0.8rem;
-                color: darken($color-font, 10%);
-                @include flexAbsoluteCenter;
-            }
-        }
-    }
-
     &__headline {
         display: none;
         @include respond(tablet) {
