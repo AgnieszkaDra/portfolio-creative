@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import './sass/index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from './App'
+// import App from './App'
 import Header from './components/layout/Header/Header'
 import About from './components/layout/About/About'
 import Projects from './components/layout/Projects/Projects'
@@ -34,9 +35,11 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  <div className={'container'}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>,
+  </div>
 )
 
 // If you want to start measuring performance in your app, pass a function

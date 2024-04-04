@@ -10,7 +10,7 @@ export const Header = (props) => {
 
   return (
     <header className={`${className ? ` ${className}` : ''}`}>
-      <div className={'header__container'}>
+      
         <Controlls className={'controlls'}/>
         <Headline/>
         <Dots
@@ -38,7 +38,6 @@ export const Header = (props) => {
             through examples in portfolio.
           </p>
         </div>
-      </div>
     </header>
   )
 }

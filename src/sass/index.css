@@ -18,17 +18,7 @@
 
 .header {
   width: 100%;
-  position: relative;
-}
-
-.header__container {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  border: 2px dotted rgb(155, 175, 175);
-  width: 90vw;
-  height: 90vh;
+  height: 100%;
   position: relative;
 }
 
@@ -127,16 +117,7 @@ main {
 
 .about {
   width: 100%;
-}
-
-.about__container {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  border: 2px dotted rgb(155, 175, 175);
-  width: 90vw;
-  height: 90vh;
+  height: 100%;
   position: relative;
 }
 
@@ -195,17 +176,7 @@ main {
 
 .projects {
   width: 100%;
-  position: relative;
-}
-
-.projects__container {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  border: 2px dotted rgb(155, 175, 175);
-  width: 90vw;
-  height: 90vh;
+  height: 100%;
   position: relative;
 }
 
@@ -737,6 +708,17 @@ body {
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+.container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: 2px dotted rgb(155, 175, 175);
+  width: 90vw;
+  height: 90vh;
+  position: relative;
 }
 
 .App {

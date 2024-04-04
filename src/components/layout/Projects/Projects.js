@@ -142,7 +142,7 @@ export const Projects = (props) => {
   const { className } = props
   return (
     <section className={`${className ? ` ${className}` : ''}`}>
-      <div className={'projects__container'}>
+      
       <Controlls className={'controlls'}></Controlls>
       {/* <Headline/> */}
       <Carousel
@@ -150,7 +150,6 @@ export const Projects = (props) => {
         content={renderProjects}
         className={'projects__carousel'}
       ></Carousel>
-      </div>
     </section>
   )
 }

@@ -27,7 +27,7 @@ export const About = (props) => {
 
   return (
     <section className={`${className ? `${className}` : ''}`}>
-      <div className={'about__container'}>
+      
         <Controlls className={'controlls'}/>
         <Headline/>
         <div className={'about__carousel'}>
@@ -37,7 +37,6 @@ export const About = (props) => {
           content={renderAboutElements}
         />
         </div>
-      </div>
     </section>
   )
 }
