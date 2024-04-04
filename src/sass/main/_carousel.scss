@@ -24,7 +24,7 @@
       height: 30px;
       @include flexAbsoluteCenter();
       &:hover {
-        background-color: $color-darknavy;
+        background-color: $color-background;
         cursor: pointer;
       }
     }

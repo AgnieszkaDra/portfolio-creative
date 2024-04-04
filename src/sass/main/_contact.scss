@@ -4,22 +4,16 @@
   min-height: 100vh;
   width: 100%;
   color: $color-grey;
-
-  &__headline {
-    position: relative;
-    margin-top: 5rem;
-  }
-
   &__box {
     background: linear-gradient(
       0deg,
       $color-contrast,
-      $color-contrast2
+      $color-background
     );
     padding: 20px;
     display: flex;
     flex-direction: column;
-
+   height: 100vh;
     @include respond(tablet) {
       box-sizing: border-box;
       @include absCenter();

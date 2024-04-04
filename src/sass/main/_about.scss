@@ -14,13 +14,19 @@
     border: 2px dotted $color-turcoise-dark;
   }
   &__carousel {
-    @include absCenter;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 75%;
+    @include respond(tablet){
+      @include absCenter;
+    }
     .h3 {
       font-size: 20px;
+      margin-bottom: 20px;
       color: $color-contrast;
       text-align: center;
       font-weight: 700;
-      margin-bottom: 10px;
       text-transform: uppercase;
     }
   }
