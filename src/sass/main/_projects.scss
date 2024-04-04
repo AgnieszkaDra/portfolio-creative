@@ -42,18 +42,27 @@
   }
 
   &__carousel {
-    width: 75%;
-
-    
     position: absolute;
     top: 15%;
     left: 5%;
+    width: 85%;
     @include respond(tablet){
         position: absolute;
         top: 15%;
         left: 20%;
         width: 60%;
     }
+  }
+  .carousel__element {
+    display: flex;
+    flex-direction: column;
+    @include respond(tablet){
+      flex-direction: row;
+    }
+  }
+
+  .carousel-description {
+    width: 100%;
   }
 }
 

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Controlls from '../../ui/Controlls/Controlls'
 import features from '../../../data/features'
+import Carousel from '../../ui/Carousel'
+import data from '../../../data/features'
 
 import PropTypes from 'prop-types'
 
@@ -21,8 +23,8 @@ export const About = (props) => {
     )
   }
 
-  const renderListItem = (item, i) => (
-    <div className="carousel__element" key={i}>
+  const renderAbout = (item, i) => (
+    <div className="carousel__element" key={item.name}>
       <figure className="carousel-slider__wrapper photo">
         <img
           className="carousel-slider__image photo__image"
@@ -37,7 +39,7 @@ export const About = (props) => {
     </div>
   )
 
-  const renderedItems = features.list.map((item, i) => renderListItem(item, i))
+  // const renderedItems = features.list.map((item, i) => renderListItem(item, i))
 
   return (
     <section className={`${className ? `${className}` : ''}`}>
@@ -48,7 +50,12 @@ export const About = (props) => {
       </div>
       <div className={'about__carousel'}>
         <h3 className={'h3'}>Share your ideas with the world.</h3>
-        <div className={'second__carousel carousel'}>
+        <Carousel
+        value={data.list}
+        content={renderAbout}
+        className={''}
+      ></Carousel>
+        {/* <div className={'second__carousel carousel'}>
           <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
             <span className={''} onClick={handleSpanDecrease}>
               &lt;
@@ -58,7 +65,7 @@ export const About = (props) => {
           <div className={'carousel-slider__nav carousel-slider__nav--next'}>
             <span onClick={handleSpanIncrease}>&gt;</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

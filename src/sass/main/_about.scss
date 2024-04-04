@@ -15,19 +15,35 @@
   }
   &__carousel {
     position: absolute;
-    top: 20%;
-    left: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
     width: 75%;
     @include respond(tablet){
       @include absCenter;
     }
     .h3 {
-      font-size: 20px;
+      font-size: 10px;
+      @include respond(tablet){
+          font-size: 20px;
+      }
       margin-bottom: 20px;
       color: $color-contrast;
       text-align: center;
       font-weight: 700;
       text-transform: uppercase;
     }
+  }
+
+  .carousel__element {
+    display: flex;
+    flex-direction: column;
+    @include respond(tablet){
+      flex-direction: row;
+    }
+  }
+
+  .carousel-description {
+    width: 100%;
   }
 }

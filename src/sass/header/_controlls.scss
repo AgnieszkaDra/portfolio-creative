@@ -4,7 +4,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 5%;
+  right: -5%;
+  @include respond(tablet){
+      right: 5%;
+  }
   .control {
     padding: 3px;
     margin: 20px;

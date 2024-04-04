@@ -27,21 +27,6 @@ export const features = {
         'https://pixabay.com/illustrations/technology-equipment-responsive-web-2468063/',
       id: 2,
     },
-
-    // {
-    //   image: chart,
-    //   name: 'Put your data visible in your data',
-    //   text: 'Give me chance and hire me to your project',
-    //   start:5,
-    //   id:3
-    // },
-    // {
-    //   image: gallery,
-    //   name: '???',
-    //   text: '',
-    //   start:5,
-    //   id:4
-    // },
   ],
 }
 
