@@ -1,6 +1,7 @@
 import React from 'react'
-import Dots from '../../ui/Dots/Dots'
 import Controlls from '../../ui/Controlls/Controlls'
+import Headline from '../../ui/Headline'
+import Dots from '../../ui/Dots/Dots'
 
 import PropTypes from 'prop-types'
 
@@ -9,12 +10,9 @@ export const Header = (props) => {
 
   return (
     <header className={`${className ? ` ${className}` : ''}`}>
-      <div className="header__container">
-        <Controlls className={'controlls'}></Controlls>
-        <div className={'header__headline'}>
-          <h1 className="h1"> PORTFOLIO</h1>
-          <h2 className="h2"> PORTFOLIO</h2>
-        </div>
+      <div className={'header__container'}>
+        <Controlls className={'controlls'}/>
+        <Headline/>
         <Dots
           className={'header__dots header__dots-up'}
           spanHorizontal={7}
@@ -34,7 +32,7 @@ export const Header = (props) => {
             to enhance every facet of business operations.
             <br />
             With a clear mission to showcase the diverse capabilities of
-            software development, I aim{' '}
+            software development, I aim
             <span className={'header__info--underline'}>on the way</span> to
             demonstrate the power and versatility of innovative solutions
             through examples in portfolio.

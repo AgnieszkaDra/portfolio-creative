@@ -18,63 +18,20 @@
 
 .header {
   width: 100%;
-  height: 100vh;
   position: relative;
 }
 
-.header::before {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  content: "";
+.header__container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
   border: 2px dotted rgb(155, 175, 175);
+  width: 90vw;
+  height: 90vh;
+  position: relative;
 }
 
-.header__headline {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 7%;
-  left: 5%;
-  transform: translateX(50%);
-}
-
-.header__headline .h1 {
-  text-shadow: rgb(254, 255, 253) 1px 0 10px;
-  font-weight: 1000;
-  color: rgb(155, 175, 175);
-  z-index: 10;
-}
-
-.header__headline .h2 {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .header__headline {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transform: rotate(-90deg) translateY(30vh) translateX(3vh);
-    transform-origin: bottom left;
-    white-space: nowrap;
-    font-size: 35px;
-    letter-spacing: 1.2;
-  }
-  .header__headline .h2 {
-    display: block;
-    color: rgb(254, 255, 253);
-    z-index: 5;
-    font-weight: 800;
-    transform: translateY(-10vh);
-    text-shadow: rgb(155, 175, 175) 1px 0 10px;
-  }
-}
 .header__dots {
   width: 100%;
   height: 100%;
@@ -120,6 +77,7 @@
   top: 20%;
   left: 7%;
   width: 70%;
+  font-size: 13px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -130,52 +88,6 @@
 }
 .header__info--underline {
   text-decoration: underline;
-}
-
-.gradient-pink {
-  /*
-  * Created with https://www.css-gradient.com
-  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
-  */
-  background: rgb(255, 216, 230);
-  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
-}
-
-.controlls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -5%;
-}
-
-@media only screen and (min-width: 768px) {
-  .controlls {
-    right: 5%;
-  }
-}
-.controlls .control {
-  padding: 3px;
-  margin: 20px;
-  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(113, 147, 147));
-  padding: 6px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .controlls .control {
-    padding: 6px;
-  }
-}
-.controlls .control__link {
-  position: relative;
-  font-size: 0.8rem;
-  color: #5b5858;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .gradient-pink {
@@ -214,19 +126,18 @@ main {
 }
 
 .about {
-  height: 100vh;
   width: 100%;
-  position: relative;
 }
 
-.about::before {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  content: "";
+.about__container {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
   border: 2px dotted rgb(155, 175, 175);
+  width: 90vw;
+  height: 90vh;
+  position: relative;
 }
 
 .about__carousel {
@@ -283,54 +194,27 @@ main {
 }
 
 .projects {
-  min-height: 100vh;
   width: 100%;
+  position: relative;
 }
 
-.projects::before {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  content: "";
-  border: 2px dotted rgb(155, 175, 175);
-  display: grid;
-  grid-template-columns: 90% 10%;
-  grid-template-rows: 15% 85%;
-  grid-template-areas: "headline headline" "carousel controlls";
-}
-
-@media only screen and (min-width: 768px) {
-  .projects::before {
-    grid-template-columns: 30% 60% 10%;
-    grid-template-areas: "headline carousel controlls";
-  }
-}
 .projects__container {
-  grid-column: 1/3;
-  grid-row: 2/3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 90%);
-  grid-auto-rows: min-height(60vh);
-  grid-gap: 20px;
-  grid-row-gap: 20px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  border: 2px dotted rgb(155, 175, 175);
+  width: 90vw;
+  height: 90vh;
+  position: relative;
 }
 
-@media only screen and (min-width: 768px) {
-  .projects__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 45%);
-  }
-}
 .projects__carousel {
   position: absolute;
-  top: 15%;
+  top: 0%;
   left: 5%;
   width: 85%;
+  height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -358,7 +242,7 @@ main {
 .project {
   padding: 20px;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   display: grid;
   grid-template-areas: "headline headline" "links links" "image1 image2" "description description" "features features";
   grid-auto-columns: 50% 50%;
@@ -656,7 +540,6 @@ main {
 }
 
 .carousel {
-  height: 250px;
   display: grid;
   grid-template-columns: 10fr 80fr 10fr;
   grid-template-areas: "prev carousel next";
@@ -739,6 +622,106 @@ main {
   background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
 }
 
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+}
+
+.controlls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5%;
+}
+
+@media only screen and (min-width: 768px) {
+  .controlls {
+    right: 5%;
+  }
+}
+.controlls .control {
+  padding: 3px;
+  margin: 20px;
+  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(113, 147, 147));
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .controlls .control {
+    padding: 6px;
+  }
+}
+.controlls .control__link {
+  position: relative;
+  font-size: 0.8rem;
+  color: #5b5858;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-pink {
+  /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
+  */
+  background: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(255, 216, 230), rgb(255, 162, 192));
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  height: 200px;
+}
+
+.headline-h1 {
+  text-shadow: rgb(254, 255, 253) 1px 0 10px;
+  font-weight: 1000;
+  color: rgb(155, 175, 175);
+  z-index: 10;
+  height: 200px;
+}
+
+.headline-h2 {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .headline {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: rotate(-90deg) translateY(30vh) translateX(3vh);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    font-size: 35px;
+    letter-spacing: 1.2;
+  }
+  .headline-h2 {
+    display: block;
+    color: rgb(254, 255, 253);
+    z-index: 5;
+    font-weight: 800;
+    transform: translateY(-10vh);
+    text-shadow: rgb(155, 175, 175) 1px 0 10px;
+    height: 200px;
+  }
+}
 body {
   margin: 0;
   overflow-x: hidden;

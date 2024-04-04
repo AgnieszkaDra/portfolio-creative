@@ -1,10 +1,4 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faFirefox } from '@fortawesome/free-brands-svg-icons'
-import Image from '../Image/Image'
-import projects from '../../../data/projects'
 
 export const Carousel = (props) => {
   const { value, className, content } = props
@@ -24,8 +18,7 @@ export const Carousel = (props) => {
   }
 
   const renderedItems = value.map((item, i) => content(item, i))
-  console.log(value, content)
-
+ 
   return (
     <div className={`${className ? `${className} carousel` : 'carousel'}`}>
       <div className={'carousel-slider__nav carousel-slider__nav--prev'}>

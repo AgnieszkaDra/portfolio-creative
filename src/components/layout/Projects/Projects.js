@@ -1,5 +1,6 @@
 import React from 'react'
 import Controlls from '../../ui/Controlls/Controlls'
+import Headline from '../../ui/Headline'
 import data from '../../../data/projects'
 import Carousel from '../../ui/Carousel'
 
@@ -141,16 +142,15 @@ export const Projects = (props) => {
   const { className } = props
   return (
     <section className={`${className ? ` ${className}` : ''}`}>
+      <div className={'projects__container'}>
       <Controlls className={'controlls'}></Controlls>
-      <div className={'header__headline'}>
-        <h1 className="h1"> PORTFOLIO</h1>
-        <h2 className="h2"> PORTFOLIO</h2>
-      </div>
+      {/* <Headline/> */}
       <Carousel
         value={data.categories}
         content={renderProjects}
         className={'projects__carousel'}
       ></Carousel>
+      </div>
     </section>
   )
 }
