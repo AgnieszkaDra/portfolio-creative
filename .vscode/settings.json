@@ -6,7 +6,7 @@
       "defaultPath": "src/components",
       "folder": "{{pascal name}}",
       "questions": {
-        "name": "Component name",
+        "name": "Component name"
       },
       "files": [
         {
@@ -51,17 +51,11 @@
         },
         {
           "name": "styles.module.css",
-          "content": [
-            ".root {}",
-            ""
-          ]
+          "content": [".root {}", ""]
         },
         {
           "name": "styles.module.scss",
-          "content": [
-            ".rootSass {}",
-            ""
-          ]
+          "content": [".rootSass {}", ""]
         }
       ]
     },
@@ -70,7 +64,7 @@
       "defaultPath": "src/components",
       "folder": "{{pascal name}}",
       "questions": {
-        "name": "Component name",
+        "name": "Component name"
       },
       "files": [
         {
@@ -115,10 +109,7 @@
         },
         {
           "name": "styles.module.css",
-          "content": [
-            ".root {}",
-            ""
-          ]
+          "content": [".root {}", ""]
         }
       ]
     }

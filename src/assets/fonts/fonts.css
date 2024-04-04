@@ -1,76 +1,76 @@
 @font-face {
-    font-family: 'Lexend-extraLight';
-    src:
-      url(./Lexend/Lexend-ExtraLight.ttf) format('truetype'),
-      url(./Lexend/Lexend-ExtraLight.woff) format('woff'),
-      url(./Lexend/Lexend-ExtraLight.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 200;
-  }
+  font-family: 'Lexend-extraLight';
+  src:
+    url(./Lexend/Lexend-ExtraLight.ttf) format('truetype'),
+    url(./Lexend/Lexend-ExtraLight.woff) format('woff'),
+    url(./Lexend/Lexend-ExtraLight.woff2) format('woff2');
 
-  @font-face {
-    font-family: 'Lexend-light';
-    src:
-      url(./Lexend/Lexend-Light.ttf) format('truetype'),
-      url(./Lexend/Lexend-Light.woff) format('woff'),
-      url(./Lexend/Lexend-Light.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 300;
-  }
+  font-style: normal;
+  font-weight: 200;
+}
 
-  @font-face {
-    font-family: 'Lexend-light';
-    src:
-      url(./Lexend/Lexend-Light.ttf) format('truetype'),
-      url(./Lexend/Lexend-Light.woff) format('woff'),
-      url(./Lexend/Lexend-Light.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 300;
-  }
+@font-face {
+  font-family: 'Lexend-light';
+  src:
+    url(./Lexend/Lexend-Light.ttf) format('truetype'),
+    url(./Lexend/Lexend-Light.woff) format('woff'),
+    url(./Lexend/Lexend-Light.woff2) format('woff2');
 
-  @font-face {
-    font-family: 'Lexend-regular';
-    src:
-      url(./Lexend/Lexend-Regular.ttf) format('truetype'),
-      url(./Lexend/Lexend-Regular.woff) format('woff'),
-      url(./Lexend/Lexend-Regular.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 400;
-  }
+  font-style: normal;
+  font-weight: 300;
+}
 
-  @font-face {
-    font-family: 'Lexend-medium';
-    src:
-      url(./Lexend/Lexend-Medium.ttf) format('truetype'),
-      url(./Lexend/Lexend-Medium.woff) format('woff'),
-      url(./Lexend/Lexend-Medium.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 500;
-  }
+@font-face {
+  font-family: 'Lexend-light';
+  src:
+    url(./Lexend/Lexend-Light.ttf) format('truetype'),
+    url(./Lexend/Lexend-Light.woff) format('woff'),
+    url(./Lexend/Lexend-Light.woff2) format('woff2');
 
-  @font-face {
-    font-family: 'Lexend-bold';
-    src:
-      url(./Lexend/Lexend-Bold.ttf) format('truetype'),
-      url(./Lexend/Lexend-Bold.woff) format('woff'),
-      url(./Lexend/Lexend-Bold.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 800;
-  }
+  font-style: normal;
+  font-weight: 300;
+}
 
-  @font-face {
-    font-family: 'Bebas-light';
-    src:
-      url(./Bebas/BebasNeue-Regular.ttf) format('truetype'),
-      url(./Bebas/BebasNeue-Regular.woff) format('woff'),
-      url(./Bebas/BebasNeue-Regular.woff2) format('woff2');
-      
-    font-style: normal;
-    font-weight: 300;
-  }
+@font-face {
+  font-family: 'Lexend-regular';
+  src:
+    url(./Lexend/Lexend-Regular.ttf) format('truetype'),
+    url(./Lexend/Lexend-Regular.woff) format('woff'),
+    url(./Lexend/Lexend-Regular.woff2) format('woff2');
+
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lexend-medium';
+  src:
+    url(./Lexend/Lexend-Medium.ttf) format('truetype'),
+    url(./Lexend/Lexend-Medium.woff) format('woff'),
+    url(./Lexend/Lexend-Medium.woff2) format('woff2');
+
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Lexend-bold';
+  src:
+    url(./Lexend/Lexend-Bold.ttf) format('truetype'),
+    url(./Lexend/Lexend-Bold.woff) format('woff'),
+    url(./Lexend/Lexend-Bold.woff2) format('woff2');
+
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Bebas-light';
+  src:
+    url(./Bebas/BebasNeue-Regular.ttf) format('truetype'),
+    url(./Bebas/BebasNeue-Regular.woff) format('woff'),
+    url(./Bebas/BebasNeue-Regular.woff2) format('woff2');
+
+  font-style: normal;
+  font-weight: 300;
+}

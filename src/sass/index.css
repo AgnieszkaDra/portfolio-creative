@@ -33,6 +33,22 @@
 }
 
 .header__headline {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  transform: translateX(50%);
+}
+
+.header__headline .h1 {
+  text-shadow: rgb(254, 255, 253) 1px 0 10px;
+  font-weight: 1000;
+  color: rgb(155, 175, 175);
+  z-index: 10;
+}
+
+.header__headline .h2 {
   display: none;
 }
 
@@ -50,13 +66,8 @@
     font-size: 35px;
     letter-spacing: 1.2;
   }
-  .header__headline .h1 {
-    text-shadow: rgb(254, 255, 253) 1px 0 10px;
-    font-weight: 1000;
-    color: rgb(155, 175, 175);
-    z-index: 10;
-  }
   .header__headline .h2 {
+    display: block;
     color: rgb(254, 255, 253);
     z-index: 5;
     font-weight: 800;
@@ -241,9 +252,6 @@ main {
 .projects {
   min-height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: 30% 60% 10%;
-  grid-template-areas: "headline carousel controlls";
 }
 
 .projects::before {
@@ -254,8 +262,18 @@ main {
   height: 90%;
   content: "";
   border: 2px dotted rgb(155, 175, 175);
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 15% 85%;
+  grid-template-areas: "headline headline" "carousel controlls";
 }
 
+@media only screen and (min-width: 768px) {
+  .projects::before {
+    grid-template-columns: 30% 60% 10%;
+    grid-template-areas: "headline carousel controlls";
+  }
+}
 .projects__container {
   grid-column: 1/3;
   grid-row: 2/3;
@@ -276,13 +294,24 @@ main {
   }
 }
 .projects__carousel {
-  grid-area: carousel;
+  width: 75%;
+  position: absolute;
+  top: 15%;
+  left: 5%;
 }
 
+@media only screen and (min-width: 768px) {
+  .projects__carousel {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 60%;
+  }
+}
 .project {
   padding: 20px;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   display: grid;
   grid-template-areas: "headline headline" "links links" "image1 image2" "description description" "features features";
   grid-auto-columns: 50% 50%;
@@ -307,7 +336,7 @@ main {
 }
 
 .project__id {
-  font-size: 40px;
+  font-size: 20px;
   position: relative;
   height: 60%;
   display: flex;
@@ -315,6 +344,11 @@ main {
   align-items: center;
 }
 
+@media only screen and (min-width: 768px) {
+  .project__id {
+    font-size: 40px;
+  }
+}
 .project__name {
   font-size: 20px;
   display: flex;
@@ -322,21 +356,37 @@ main {
 }
 
 .project__description {
-  grid-area: description;
-  font-family: "Lexend-medium";
-  padding: 20px;
+  display: none;
 }
 
+@media only screen and (min-width: 768px) {
+  .project__description {
+    display: block;
+    grid-area: description;
+    font-family: "Lexend-medium";
+    padding: 20px;
+  }
+}
 .project__image1 {
   grid-area: image1;
-  height: 300px;
+  height: 100px;
 }
 
+@media only screen and (min-width: 768px) {
+  .project__image1 {
+    height: 200px;
+  }
+}
 .project__image2 {
   grid-area: image2;
-  height: 300px;
+  height: 100px;
 }
 
+@media only screen and (min-width: 768px) {
+  .project__image2 {
+    height: 200px;
+  }
+}
 .project__image1, .project__image2 {
   margin: 10px;
   box-shadow: 5px 5px 10px 0px rgb(7, 7, 48);
@@ -360,13 +410,18 @@ main {
   width: 30px;
   height: 30px;
   font-family: "Lexend-bold";
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
 }
 
+@media only screen and (min-width: 768px) {
+  .project .features__element-number {
+    font-size: 20px;
+  }
+}
 .project__links {
   grid-area: links;
   font-size: 30px;
@@ -428,7 +483,7 @@ main {
 }
 
 .contact__box {
-  background-color: rgb(255, 216, 230);
+  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(113, 147, 147));
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -528,7 +583,7 @@ main {
   margin-bottom: 15px;
   padding: 5px;
   border-radius: 0.3em;
-  background-color: rgb(7, 7, 48);
+  background-color: rgb(117, 113, 113);
   color: rgb(254, 255, 253);
   border: none;
   box-shadow: none;
@@ -559,9 +614,9 @@ main {
 
 .carousel {
   height: 250px;
-  position: relative;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  grid-template-columns: 10fr 80fr 10fr;
+  grid-template-areas: "prev carousel next";
 }
 
 .carousel__title {
@@ -600,16 +655,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: carousel;
 }
 
 .carousel--next {
   grid-column: 1/2;
   grid-row: 1/2;
+  grid-area: next;
 }
 
 .carousel--prev {
   grid-column: 3/4;
   grid-row: 1/2;
+  grid-area: prev;
 }
 
 .carousel-slider__wrapper {
@@ -645,6 +703,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.8;
+  color: rgb(117, 113, 113);
 }
 
 * {
@@ -698,6 +757,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.none {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

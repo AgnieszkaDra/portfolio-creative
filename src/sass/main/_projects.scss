@@ -1,187 +1,210 @@
 @import '../abstracts/index';
 
-
 .projects {
-    min-height: 100vh;
-    width: 100%;
+  min-height: 100vh;
+  width: 100%;
+  
+  &::before {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    content: '';
+    border: 2px dotted $color-turcoise-dark;
     display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 15% 85%;
+  grid-template-areas: 'headline headline'
+                        'carousel controlls';
+  @include respond(tablet) {
     grid-template-columns: 30% 60% 10%;
     grid-template-areas: 'headline carousel controlls';
-   
-    &::before {
+  }
+  }
+
+  &__container {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 90%);
+    grid-auto-rows: min-height(60vh);
+    grid-gap: 20px;
+    grid-row-gap: 20px;
+
+    @include respond(tablet) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 45%);
+    }
+  }
+
+  &__carousel {
+    width: 75%;
+
+    
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    @include respond(tablet){
         position: absolute;
-        top: 5%; 
-        left: 5%; 
-        width: 90%;
-        height: 90%;
-        content: '';
-        border: 2px dotted $color-turcoise-dark;
+        top: 15%;
+        left: 20%;
+        width: 60%;
     }
-   
-
-    &__container {
-        grid-column: 1/3;
-        grid-row: 2/3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 90%);
-        grid-auto-rows: min-height(60vh);
-        grid-gap: 20px;
-        grid-row-gap: 20px;
-
-        @include respond(tablet) {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 45%);
-           
-        }
-    }
-
-    &__carousel {
-       grid-area: carousel;
-    }
+  }
 }
 
 .project {
-    padding: 20px;
+  padding: 20px;
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-areas:
+    'headline headline'
+    'links links'
+    'image1 image2'
+    'description description'
+    'features features';
+  grid-auto-columns: 50% 50%;
+
+  @include respond(tablet) {
+    grid-template-areas:
+      'headline links'
+      'image1 image2'
+      'description description'
+      'features features';
+  }
+
+  &__headline {
+    grid-area: headline;
+    font-family: 'Lexend-bold';
+    text-transform: uppercase;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-areas:
-        'headline headline'
-        'links links'
-        'image1 image2'
-        'description description'
-        'features features';
-    grid-auto-columns: 50% 50%;
+    display: flex;
 
-    @include respond(tablet) {
-        grid-template-areas:
-            'headline links'
-            'image1 image2'
-            'description description'
-            'features features';
+    & > * {
+      padding: 5px;
     }
+  }
 
-    &__headline {
-        grid-area: headline;
-        font-family: 'Lexend-bold';
-        text-transform: uppercase;
-        width: 100%;
-        height: 100%;
-        display: flex;
-
-        &>* {
-            padding: 5px;
-        }
-    }
-
-    &__id {
+  &__id {
+    font-size: 20px;
+    @include respond(tablet){
         font-size: 40px;
-        position: relative;
-        height: 60%;
-        @include flexAbsoluteCenter();
     }
+    position: relative;
+    height: 60%;
+    @include flexAbsoluteCenter();
+  }
 
-    &__name {
-        font-size: 20px;
-        display: flex;
-        align-items: flex-end;
-    }
+  &__name {
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+  }
 
-    &__description {
+  &__description {
+    display: none;
+    @include respond(tablet){
+        display: block;
         grid-area: description;
         font-family: 'Lexend-medium';
         padding: 20px;
     }
-
-    &__image1 {
-        grid-area: image1;
-        height: 300px
-    }
-
-    &__image2 {
-        grid-area: image2;
-        height: 300px;
-    }
-
-    &__image1,
-    &__image2 {
-        margin: 10px;
-        box-shadow: 5px 5px 10px 0px $color-darknavy; 
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            object-fit: contain;
-        }
-    }
-
-    &__features {
-        grid-area: features;
-        padding: 20px;
-        font-family: 'Lexend-light';
-    }
-
-    .features {
-        &__element-number {
-            width: 30px;
-            height: 30px;
-            font-family: 'Lexend-bold';
-            font-size: 20px;
-            @include flexAbsoluteCenter();
-            border-radius: 50%;
-        }
-    }
-
-    &__links {
-        grid-area: links;
-
-        font-size: 30px;
-        position: relative;
-        height: 60%;
-        @include flexAbsoluteCenter();
-        flex-direction: column;
-
-        a {
-            padding: 10px;
-            color: $color-red;
-        }
-    }
-
-   
-
-    &02 {
-        background: linear-gradient(0deg, $color-darkturcoise, $color-white);
-
-    }
-
-    // &03 {
-    //     background: linear-gradient(0deg, $color-darkturcoise, $color-white);
-    // }
-
-    &04 {
-        background: linear-gradient(0deg, $color-lightpink, $color-white);
-    }
-
-    &05 {
-        background: linear-gradient(0deg, $color-lightpink, $color-white);
-    }
-
-    &06 {
-        background: linear-gradient(0deg, $color-lightgrey, $color-white);
-    }
-
-    &07 {
-        background: linear-gradient(0deg, $color-mediumpink, $color-white);
-    }
-
-    &08 {
-        background: linear-gradient(0deg, $color-lightblue, $color-white);
-    }
-
-
 }
 
+  &__image1 {
+    grid-area: image1;
+    height: 100px;
+    @include respond(tablet){
+        height: 200px;
+    }
+  }
+
+  &__image2 {
+    grid-area: image2;
+    height: 100px;
+    @include respond(tablet){
+        height: 200px;
+    }
+}
+
+  &__image1,
+  &__image2 {
+    margin: 10px;
+    box-shadow: 5px 5px 10px 0px $color-darknavy;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      object-fit: contain;
+    }
+  }
+
+  &__features {
+    grid-area: features;
+    padding: 20px;
+    font-family: 'Lexend-light';
+  }
+
+  .features {
+    &__element-number {
+      width: 30px;
+      height: 30px;
+      font-family: 'Lexend-bold';
+      font-size: 15px;
+      @include respond(tablet){
+        font-size: 20px;
+      }
+      @include flexAbsoluteCenter();
+      border-radius: 50%;
+    }
+  }
+
+  &__links {
+    grid-area: links;
+    font-size: 30px;
+    position: relative;
+    height: 60%;
+    @include flexAbsoluteCenter();
+    flex-direction: column;
+
+    a {
+      padding: 10px;
+      color: $color-red;
+    }
+  }
+
+  &02 {
+    background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+  }
+
+  // &03 {
+  //     background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+  // }
+
+  &04 {
+    background: linear-gradient(0deg, $color-lightpink, $color-white);
+  }
+
+  &05 {
+    background: linear-gradient(0deg, $color-lightpink, $color-white);
+  }
+
+  &06 {
+    background: linear-gradient(0deg, $color-lightgrey, $color-white);
+  }
+
+  &07 {
+    background: linear-gradient(0deg, $color-mediumpink, $color-white);
+  }
+
+  &08 {
+    background: linear-gradient(0deg, $color-lightblue, $color-white);
+  }
+}

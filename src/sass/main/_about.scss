@@ -1,35 +1,27 @@
 @import '../abstracts/index';
 
 .about {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    &::before {
-      position: absolute;
-      top: 5%; 
-      left: 5%; 
-      width: 90%;
-      height: 90%;
-      content: '';
-      border: 2px dotted $color-turcoise-dark;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    content: '';
+    border: 2px dotted $color-turcoise-dark;
   }
-   &__carousel {
-      
-        @include absCenter;
-.h3 {
-         
-          font-size: 20px;
-          color: $color-contrast;
-          text-align: center;
-          font-weight: 700;
-          margin-bottom: 10px;
-          text-transform: uppercase;
-        }  
-      }
-
-  
+  &__carousel {
+    @include absCenter;
+    .h3 {
+      font-size: 20px;
+      color: $color-contrast;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
 }
-
-
-
-

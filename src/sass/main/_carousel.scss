@@ -1,70 +1,70 @@
 @import '../abstracts/index';
 
 .carousel {
+  height: 250px;
+  
+  display: grid;
+  grid-template-columns: 10fr 80fr 10fr;
+  grid-template-areas: 'prev carousel next';
 
-    
-    height: 250px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
+  &__title {
+    padding: 10px;
+  }
 
-    &__title {
-      padding: 10px;
-    }
-   
-    &-slider__nav {
-      width: 100%;
-   
+  &-slider__nav {
+    width: 100%;
+
+    @include flexAbsoluteCenter();
+    span {
+      display: block;
+      background: $color-contrast;
+      border-radius: 50%;
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
       @include flexAbsoluteCenter();
-      span {
-        display: block;
-        background: $color-contrast;
-        border-radius: 50%;
-        font-size: 20px;
-        width: 30px;
-        height: 30px;
-        @include flexAbsoluteCenter();
-         &:hover {
-          background-color: $color-darknavy;
-          cursor: pointer;
-      }
+      &:hover {
+        background-color: $color-darknavy;
+        cursor: pointer;
       }
     }
-      &__element {
-        width: 100%;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      
-    &--next {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    &--prev {
-        grid-column: 3/4;
-        grid-row: 1/2;
-    }
-    
-    &-slider__wrapper {
-      width: 40%;
-      position: relative;
-      color: $color-white;
-    }
-  
-    &-description {
-      width: 40%;
-     
-     
-    }
-  
-    &-slider__image {
-      width: 100%;
-      height: 100%;
-      background-color: $color-white;
-      cursor: not-allowed;
-    }
+  }
+  &__element {
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: carousel;
+  }
+
+  &--next {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-area: next;
+  }
+  &--prev {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    grid-area: prev;
+  }
+
+  &-slider__wrapper {
+    width: 40%;
+    position: relative;
+    color: $color-white;
+  }
+
+  &-description {
+    width: 40%;
+  }
+
+  &-slider__image {
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    cursor: not-allowed;
+  }
 }

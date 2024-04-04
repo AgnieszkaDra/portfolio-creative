@@ -4,64 +4,62 @@
   min-height: 100vh;
   width: 100%;
   color: $color-grey;
-  
+
   &__headline {
     position: relative;
     margin-top: 5rem;
   }
 
   &__box {
-    background-color: $color-lightpink;
+    background: linear-gradient(
+      0deg,
+      $color-contrast,
+      $color-contrast2
+    );
     padding: 20px;
     display: flex;
     flex-direction: column;
 
     @include respond(tablet) {
-        box-sizing: border-box;
-        @include absCenter();
-        width: 50%;
-        flex-direction: row;
-      }
-      & > * {
+      box-sizing: border-box;
+      @include absCenter();
+      width: 50%;
+      flex-direction: row;
+    }
+    & > * {
       width: 100%;
       @include respond(tablet) {
         width: 100%;
       }
     }
-
   }
 
   &__contacts {
-  
     .contacts {
       .list {
-         &__element {
-         margin-left: auto;
-         display: flex;
-         justify-content: flex-start;
-         padding: 5px;
-   
-      }
-   
-      &__link {
-        color: $color-grey;
-        font-size: 1rem;
-        @include flexAbsoluteCenter;
-        text-wrap: nowrap;
-      }
+        &__element {
+          margin-left: auto;
+          display: flex;
+          justify-content: flex-start;
+          padding: 5px;
+        }
+
+        &__link {
+          color: $color-grey;
+          font-size: 1rem;
+          @include flexAbsoluteCenter;
+          text-wrap: nowrap;
+        }
       }
     }
-  
   }
 
   &__form {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: $color-grey;
   }
-
 }
 
 .form {
@@ -69,24 +67,24 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
-  
   }
   &__input {
-      width: 60%;
-      margin-top: 10px;
-      background: none;
-      padding: 10px 8px;
-      border-radius: 0.3em;
-      border: 1px solid $color-grey;
-      color: white;
-      &:focus, &:active {
-        outline: none;
-      }
+    width: 60%;
+    margin-top: 10px;
+    background: none;
+    padding: 10px 8px;
+    border-radius: 0.3em;
+    border: 1px solid $color-grey;
+    color: white;
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
   &__label {
-      text-transform: capitalize;
-      font-weight: 500;
-      font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 18px;
   }
   &__textarea {
     background: none;
@@ -102,32 +100,32 @@
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
-    &:focus, &:active {
+    &:focus,
+    &:active {
       outline: none;
     }
   }
   &__button {
-      width: 60%;
-      margin-bottom: 15px; 
-      padding: 5px;
-      border-radius: 0.3em;
-      background-color: $color-darknavy;
-      color: $color-white; 
-      border: none;
-      box-shadow: none;
-      box-sizing: border-box;
-      cursor: pointer;
-      position: relative;
-      font-weight: bold;
-      font-size: 1.5em;
-      transition: 0.5s;
-      &:active, &:focus {
-        outline: 0;
-      }
-      &:hover {
-        background-color:  white;;
-      }
+    width: 60%;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 0.3em;
+    background-color: $color-font;
+    color: $color-white;
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.5s;
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      background-color: white;
+    }
   }
-  }
-
-  
+}

@@ -1,8 +1,7 @@
-import sections from "./sections"
-
+import sections from './sections'
 
 export const data = {
-  sections
+  sections,
 }
 
 export default data
