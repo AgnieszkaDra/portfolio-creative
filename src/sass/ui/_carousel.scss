@@ -24,7 +24,7 @@
       height: 30px;
       @include flexAbsoluteCenter();
       &:hover {
-        background-color: $color-background;
+        background-color: $color-background-light;
         cursor: pointer;
       }
     }
@@ -54,7 +54,7 @@
   &-slider__wrapper {
     width: 40%;
     position: relative;
-    color: $color-white;
+    color: $color-font-light;
   }
 
   &-description {
@@ -64,7 +64,7 @@
   &-slider__image {
     width: 100%;
     height: 100%;
-    background-color: $color-white;
+    background-color: $color-font-light;
     cursor: not-allowed;
   }
 }

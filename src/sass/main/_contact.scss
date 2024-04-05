@@ -1,20 +1,21 @@
 @import '../abstracts/index';
 
 .contact {
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
-  color: $color-grey;
+  color: $color-font-dark;
   &__box {
     background: linear-gradient(
       0deg,
       $color-contrast,
-      $color-background
+      $color-background-light
     );
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-   height: 100vh;
+   height: 100%;
     @include respond(tablet) {
+      padding: 20px;
       box-sizing: border-box;
       @include absCenter();
       width: 50%;
@@ -39,10 +40,17 @@
         }
 
         &__link {
-          color: $color-grey;
+          color: $color-font-dark;
           font-size: 1rem;
           @include flexAbsoluteCenter;
           text-wrap: nowrap;
+        }
+
+        &__icon {
+          padding: 10px;
+          @include respond(tablet){
+            padding: 20px;
+          }
         }
       }
     }
@@ -52,7 +60,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $color-grey;
+    color: $color-font-dark;
   }
 }
 
@@ -68,8 +76,8 @@
     background: none;
     padding: 10px 8px;
     border-radius: 0.3em;
-    border: 1px solid $color-grey;
-    color: white;
+    border: 1px solid $color-font-dark;
+    color: $color-font-light;
     &:focus,
     &:active {
       outline: none;
@@ -89,7 +97,7 @@
     height: 40px;
     padding: 10px 8px;
     border-radius: 0.3em;
-    border: 1px solid $color-grey;
+    border: 1px solid $color-font-dark;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -104,8 +112,8 @@
     margin-bottom: 15px;
     padding: 5px;
     border-radius: 0.3em;
-    background-color: $color-font;
-    color: $color-white;
+    background-color: $color-font-dark;
+    color: $color-font-light;
     border: none;
     box-shadow: none;
     box-sizing: border-box;
@@ -119,7 +127,7 @@
       outline: 0;
     }
     &:hover {
-      background-color: white;
+      background-color: $color-font-light
     }
   }
 }

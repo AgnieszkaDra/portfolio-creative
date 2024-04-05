@@ -1,41 +1,6 @@
-$color-font: rgb(117, 113, 113);
-$color-background: rgb(248, 242, 242);
+$color-font-dark: rgb(117, 113, 113);
+$color-font-light: white;
+$color-background-light: rgb(248, 242, 242);
+$color-background-dark: rgba(248, 242, 242, 0.305);
 $color-contrast: rgb(155, 175, 175);
 $color-contrast2:  rgb(113, 147, 147);
-
-$color-white: rgb(254, 255, 253);
-$color-pink: rgb(231, 128, 211);
-$color-darkpink: rgb(255, 158, 185);
-$color-mediumpink: rgb(255, 162, 192);
-$color-lightpink: rgb(255, 216, 230);
-$color-lightblue: rgb(167, 201, 245);
-$color-darkblue: rgb(105, 173, 244);
-$color-darkturcoise: rgb(66, 230, 219);
-$color-darkturcoise2: rgb(76, 239, 229);
-// $color-turcoise-dark:  rgb(159, 189, 189);
-$color-turcoise-dark: rgb(155, 175, 175);
-$color-turcoise-dark2: rgb(113, 147, 147);
-// $color-turcoise-dark2: rgb(117, 163, 163);
-$color-mediumturcoise: rgb(105, 240, 231);
-$color-mediumturcoise2: rgb(109, 242, 233);
-$color-lightturcoise: rgb(131, 240, 233);
-$color-lightturcoise2: rgb(154, 244, 238);
-$color-lightturcoise3: rgb(185, 243, 241);
-
-$color-backgroundApp: rgb(249, 247, 249);
-$color-lightgrey: #969ca2;
-
-$color-grey: rgb(35, 34, 34);
-$color-red: red;
-$color-darknavy: rgb(7, 7, 48);
-$color-mediumnavy: rgb(25, 25, 71);
-$color-lightnavy: rgb(61, 61, 163);
-
-.gradient-pink {
-  /*
-* Created with https://www.css-gradient.com
-* Gradient link: https://www.css-gradient.com/?c1=ffd8e7&c2=ffa2c0&gt=l&gd=dbb
-*/
-  background: $color-lightpink;
-  background: linear-gradient(0deg, $color-lightpink, $color-mediumpink);
-}

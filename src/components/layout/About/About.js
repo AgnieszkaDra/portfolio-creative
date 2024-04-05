@@ -2,6 +2,7 @@ import React from 'react'
 import Controlls from '../../ui/Controlls/Controlls'
 import Headline from '../../ui/Headline'
 import Carousel from '../../ui/Carousel'
+import Pagination from '../../ui/Pagination'
 import data from '../../../data/features'
 
 import PropTypes from 'prop-types'
@@ -27,16 +28,20 @@ export const About = (props) => {
 
   return (
     <section className={`${className ? `${className}` : ''}`}>
-      
-        <Controlls className={'controlls'}/>
-        <Headline/>
-        <div className={'about__carousel'}>
+      <Controlls className={'controlls'} />
+      <Headline />
+      <div className={'about__carousel'}>
         <h3 className={'h3'}>Share your ideas with the world.</h3>
         <Carousel
           value={data.list}
           content={renderAboutElements}
         />
-        </div>
+        {/* <Pagination
+        totalPosts = {data.list.length}
+        postsPerPage = {1}
+        content = {data.list}
+        ></Pagination> */}
+      </div>
     </section>
   )
 }

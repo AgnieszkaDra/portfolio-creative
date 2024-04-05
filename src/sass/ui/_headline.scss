@@ -9,7 +9,7 @@
   
   height: 200px;
     &-h1 {
-      text-shadow: $color-white 1px 0 10px;
+      text-shadow: $color-font-light 1px 0 10px;
       font-weight: 1000;
       color: $color-contrast;
       z-index: 10;
@@ -36,7 +36,7 @@
     
      &-h2 {
       display: block;
-      color: $color-white;
+      color: $color-font-light;
       z-index: 5;
       font-weight: 800;
       transform: translateY(-10vh);

@@ -1,9 +1,14 @@
 @import '../abstracts/index';
 
 .projects {
+
   width: 100%;
   height: 100%;
   position: relative;
+
+
+  
+
   &__carousel {
     position: absolute;
     top: 0%;
@@ -109,7 +114,7 @@
   &__image1,
   &__image2 {
     margin: 10px;
-    box-shadow: 5px 5px 10px 0px $color-darknavy;
+    box-shadow: 5px 5px 10px 0px $color-contrast;
     img {
       width: 100%;
       height: 100%;
@@ -147,37 +152,37 @@
     @include flexAbsoluteCenter();
     flex-direction: column;
 
-    a {
-      padding: 10px;
-      color: $color-red;
-    }
+    // a {
+    //   padding: 10px;
+    //   color: $color-red;
+    // }
   }
 
-  &02 {
-    background: linear-gradient(0deg, $color-darkturcoise, $color-white);
-  }
+//   &02 {
+//     background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+//   }
 
-  // &03 {
-  //     background: linear-gradient(0deg, $color-darkturcoise, $color-white);
-  // }
+//   // &03 {
+//   //     background: linear-gradient(0deg, $color-darkturcoise, $color-white);
+//   // }
 
-  &04 {
-    background: linear-gradient(0deg, $color-lightpink, $color-white);
-  }
+//   &04 {
+//     background: linear-gradient(0deg, $color-lightpink, $color-white);
+//   }
 
-  &05 {
-    background: linear-gradient(0deg, $color-lightpink, $color-white);
-  }
+//   &05 {
+//     background: linear-gradient(0deg, $color-lightpink, $color-white);
+//   }
 
-  &06 {
-    background: linear-gradient(0deg, $color-lightgrey, $color-white);
-  }
+//   &06 {
+//     background: linear-gradient(0deg, $color-lightgrey, $color-white);
+//   }
 
-  &07 {
-    background: linear-gradient(0deg, $color-mediumpink, $color-white);
-  }
+//   &07 {
+//     background: linear-gradient(0deg, $color-mediumpink, $color-white);
+//   }
 
-  &08 {
-    background: linear-gradient(0deg, $color-lightblue, $color-white);
-  }
+//   &08 {
+//     background: linear-gradient(0deg, $color-lightblue, $color-white);
+//   }
 }

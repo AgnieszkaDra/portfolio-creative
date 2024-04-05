@@ -129,9 +129,9 @@ const renderProjects = (element, i) => (
       <ul className={'features'}>
         {element.features
           ? element.features.map((item, i) => {
-              const color = element.mainColor
-              return renderList(item, i, color)
-            })
+            const color = element.mainColor
+            return renderList(item, i, color)
+          })
           : ''}
       </ul>
     </div>
@@ -142,7 +142,6 @@ export const Projects = (props) => {
   const { className } = props
   return (
     <section className={`${className ? ` ${className}` : ''}`}>
-      
       <Controlls className={'controlls'}></Controlls>
       {/* <Headline/> */}
       <Carousel
