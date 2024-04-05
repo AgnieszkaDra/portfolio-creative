@@ -41,13 +41,14 @@
 
   &__info {
     position: absolute;
-    top: 20%;
-    left: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
     width: 70%;
     font-size: 13px;
     @include respond(tablet) {
       width: 20%;
-      left: 20%;
+      left: 7%;
     }
     &--underline {
       text-decoration: underline;

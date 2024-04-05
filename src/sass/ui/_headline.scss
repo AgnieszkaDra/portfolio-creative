@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 7%;
-  left: 0%;
-  transform: translateX(50%);
+ 
+  left: 5%;
+
     &-h1 {
       text-shadow: $color-font-light 1px 0 10px;
       font-weight: 1000;
@@ -17,11 +17,10 @@
     }
   
   @include respond(tablet) {
-    @include absCenter();
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transform: rotate(-90deg) translateY(-100%) translateX(20vh);
+   
+ 
+   
+    // transform: rotate(-90deg) translateY(calc(-100% + 5vw)) translateX(calc(20vh - 3vw));
     transform-origin: bottom left;
     white-space: nowrap;
     font-size: 35px;

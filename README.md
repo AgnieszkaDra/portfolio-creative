@@ -2,6 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+**Overview**
+
+Portfolio creative is an indepenedent website to present my actual skills.
+<p>
+  <img src="./src/assets/view.png" alt="view" width="100%" max-width="600px"/>
+</p>
+
+## Technology Stack
+
+[![React](https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black)] 
+
+🖥 **Features**
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
