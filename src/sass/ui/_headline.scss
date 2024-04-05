@@ -6,35 +6,28 @@
   position: absolute;
   top: 7%;
   left: 0%;
-  
-  height: 200px;
+  transform: translateX(50%);
     &-h1 {
       text-shadow: $color-font-light 1px 0 10px;
       font-weight: 1000;
       color: $color-contrast;
-      z-index: 10;
-      height: 200px;
-     
     }
-
     &-h2 {
       display: none;
     }
   
   @include respond(tablet) {
-    position: absolute;
-    top: 50%;
-    left: 0;
+    @include absCenter();
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transform: rotate(-90deg) translateY(30vh) translateX(3vh);
+    transform: rotate(-90deg) translateY(-100%) translateX(20vh);
     transform-origin: bottom left;
     white-space: nowrap;
     font-size: 35px;
     letter-spacing: 1.2;
-    
-     &-h2 {
+
+    &-h2 {
       display: block;
       color: $color-font-light;
       z-index: 5;

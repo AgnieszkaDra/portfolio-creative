@@ -1,12 +1,10 @@
 @import '../abstracts/index';
 
 .carousel {
-  // height: 250px;
-  
   display: grid;
   grid-template-columns: 10fr 80fr 10fr;
   grid-template-areas: 'prev carousel next';
-
+  height: 100%;
   &__title {
     padding: 10px;
   }

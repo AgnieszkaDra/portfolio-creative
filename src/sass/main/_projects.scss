@@ -6,20 +6,23 @@
   height: 100%;
   position: relative;
 
-
-  
+  .headline {
+    display: none;
+    @include respond(tablet){
+      display: block;
+    }
+  }
 
   &__carousel {
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    width: 85%;
+  
+    width: 80%;
     height: 100%;
     @include respond(tablet){
-        position: absolute;
-        top: 15%;
-        left: 20%;
-        width: 60%;
+        @include absCenter();
+      // position: absolute;
+      // top: 15%;
+      // left: 20%;
+      width: 60%;
     }
   }
   .carousel__element {

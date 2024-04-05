@@ -75,9 +75,9 @@
 .about__carousel {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  width: 75%;
+  transform: translateY(-50%);
+  width: 80%;
+  height: 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -86,6 +86,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 60%;
   }
 }
 .about__carousel .h3 {
@@ -122,19 +123,26 @@
   position: relative;
 }
 
+.projects .headline {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects .headline {
+    display: block;
+  }
+}
 .projects__carousel {
-  position: absolute;
-  top: 0%;
-  left: 5%;
-  width: 85%;
+  width: 80%;
   height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
   .projects__carousel {
     position: absolute;
-    top: 15%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 60%;
   }
 }
@@ -299,8 +307,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
-    flex-direction: row;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
 }
 .contact__box > * {
@@ -309,7 +318,16 @@
 
 @media only screen and (min-width: 768px) {
   .contact__box > * {
-    width: 100%;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact__contacts {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    grid-column: 1/2;
   }
 }
 .contact__contacts .contacts .list__element {
@@ -342,6 +360,8 @@
   flex-direction: column;
   justify-content: center;
   color: rgb(117, 113, 113);
+  width: 50%;
+  grid-column: 2/3;
 }
 
 .form__field {
@@ -419,6 +439,7 @@
   display: grid;
   grid-template-columns: 10fr 80fr 10fr;
   grid-template-areas: "prev carousel next";
+  height: 100%;
 }
 
 .carousel__title {
@@ -532,15 +553,13 @@
   position: absolute;
   top: 7%;
   left: 0%;
-  height: 200px;
+  transform: translateX(50%);
 }
 
 .headline-h1 {
   text-shadow: white 1px 0 10px;
   font-weight: 1000;
   color: rgb(155, 175, 175);
-  z-index: 10;
-  height: 200px;
 }
 
 .headline-h2 {
@@ -551,11 +570,12 @@
   .headline {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transform: rotate(-90deg) translateY(30vh) translateX(3vh);
+    transform: rotate(-90deg) translateY(-100%) translateX(20vh);
     transform-origin: bottom left;
     white-space: nowrap;
     font-size: 35px;

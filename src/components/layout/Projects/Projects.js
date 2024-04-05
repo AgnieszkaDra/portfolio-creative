@@ -143,7 +143,7 @@ export const Projects = (props) => {
   return (
     <section className={`${className ? ` ${className}` : ''}`}>
       <Controlls className={'controlls'}></Controlls>
-      {/* <Headline/> */}
+      <Headline/>
       <Carousel
         value={data.categories}
         content={renderProjects}
