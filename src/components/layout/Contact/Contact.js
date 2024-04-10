@@ -58,7 +58,7 @@ export const Contact = (props) => {
       <Controlls className={'controlls'}></Controlls>
       <div className={'contact__box'}>
         <div className={'contact__contacts'}>
-          <h4>AGNIESZKA DRAGAŃCZYK</h4>
+          <h4 className={'contact__name'}>AGNIESZKA DRAGAŃCZYK</h4>
           <div className={'contacts'}>
             <ul className={'contacts__list list'}>
               {data.profileList.list.map((item, i) => {
@@ -72,7 +72,8 @@ export const Contact = (props) => {
           id="contact-form"
           onSubmit={handleSubmit}
         >
-          <Field
+        <div className={'contact__form-container'}>
+             <Field
             value={form.username}
             type={'input'}
             name="username"
@@ -102,6 +103,7 @@ export const Contact = (props) => {
           <button className={'form__button'} type="submit">
             Wyślij
           </button>
+          </div>
         </form>
       </div>
     </section>

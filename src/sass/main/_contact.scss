@@ -4,6 +4,9 @@
   height: 100%;
   width: 100%;
   color: $color-font-dark;
+  &__name {
+    margin-bottom: 60px;
+  }
   &__box {
     background: linear-gradient(
       0deg,
@@ -24,9 +27,9 @@
     }
     & > * {
       width: 100%;
-      @include respond(tablet) {
-        width: 50%;
-      }
+      // @include respond(tablet) {
+      //   width: 50%;
+      // }
     }
   }
 
@@ -39,13 +42,13 @@
       grid-column: 1/2;
     }
     .contacts {
- 
+     
       .list {
         &__element {
           margin-left: auto;
           display: flex;
           justify-content: flex-start;
-          padding: 5px;
+          margin-bottom: 10px;
         }
 
         &__link {
@@ -53,10 +56,12 @@
           font-size: 1rem;
           @include flexAbsoluteCenter;
           text-wrap: nowrap;
+          margin-right: 10px;
         }
 
         &__icon {
           padding: 10px;
+          @include flexAbsoluteCenter;
           @include respond(tablet){
             padding: 20px;
           }
@@ -70,8 +75,13 @@
     flex-direction: column;
     justify-content: center;
     color: $color-font-dark;
-    width: 50%;
     grid-column: 2/3;
+    &-container {
+      width: 80%;
+      @include flexAbsoluteCenter();
+      flex-direction: column;
+      margin-left: auto;
+    }
   }
 }
 
@@ -80,6 +90,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    width: 100%;
   }
   &__input {
     width: 60%;
@@ -120,6 +131,7 @@
   }
   &__button {
     width: 60%;
+    margin-right: auto;
     margin-bottom: 15px;
     padding: 5px;
     border-radius: 0.3em;

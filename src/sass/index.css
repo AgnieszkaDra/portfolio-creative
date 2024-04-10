@@ -292,6 +292,10 @@
   color: rgb(117, 113, 113);
 }
 
+.contact__name {
+  margin-bottom: 60px;
+}
+
 .contact__box {
   background: linear-gradient(0deg, rgb(155, 175, 175), rgb(248, 242, 242));
   padding: 10px;
@@ -318,11 +322,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .contact__box > * {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 768px) {
   .contact__contacts {
     position: absolute;
     top: 50%;
@@ -335,7 +334,7 @@
   margin-left: auto;
   display: flex;
   justify-content: flex-start;
-  padding: 5px;
+  margin-bottom: 10px;
 }
 
 .contact__contacts .contacts .list__link {
@@ -345,10 +344,14 @@
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
+  margin-right: 10px;
 }
 
 .contact__contacts .contacts .list__icon {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -361,14 +364,23 @@
   flex-direction: column;
   justify-content: center;
   color: rgb(117, 113, 113);
-  width: 50%;
   grid-column: 2/3;
+}
+
+.contact__form-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
 }
 
 .form__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .form__input {
@@ -413,6 +425,7 @@
 
 .form__button {
   width: 60%;
+  margin-right: auto;
   margin-bottom: 15px;
   padding: 5px;
   border-radius: 0.3em;

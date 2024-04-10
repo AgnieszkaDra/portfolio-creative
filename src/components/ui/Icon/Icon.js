@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 
 export const Icon = (props) => {
-  const { icon } = props
+  const { icon, className } = props
 
   return (
-    <FontAwesomeIcon icon={icon}></FontAwesomeIcon>
+    <FontAwesomeIcon icon={icon} className={className}></FontAwesomeIcon>
   )
 }
 

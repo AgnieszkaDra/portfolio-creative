@@ -22,6 +22,7 @@ const pharmacyRed = getComputedStyle(document.documentElement).getPropertyValue(
 const pharmacyPink = getComputedStyle(
   document.documentElement,
 ).getPropertyValue('--color-pharmacy-pink')
+
 const sewBeige = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-sew-beige',
 )
@@ -31,15 +32,18 @@ const sewNavy = getComputedStyle(document.documentElement).getPropertyValue(
 const postsTurcoise = getComputedStyle(
   document.documentElement,
 ).getPropertyValue('--color-posts-turcoise')
+
 const postsGreen = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-posts-green',
 )
 const postsGrey = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-posts-grey',
 )
-const portfolio = getComputedStyle(document.documentElement).getPropertyValue(
+const portfolioGreen = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-portfolio',
 )
+
+
 
 export const projects = {
   categories: [
@@ -146,6 +150,8 @@ export const projects = {
       description: 'CV with function to download and save as PDF file',
       features: ['nice and useful CV example'],
       mainColor: 'rgb(88, 196, 219)',
+      background1: portfolioGreen,
+      background2: 'white',
     },
     {
       name: 'Skills',
@@ -169,7 +175,9 @@ export const projects = {
       viewUrl1: 'https://lucent-bublanina-ff1d8a.netlify.app/',
       description: 'Portfolio',
       features: ['React-routing'],
-      mainColor: portfolio,
+      mainColor: portfolioGreen,
+      background1: portfolioGreen,
+      background2: 'white'
     },
   ],
 }
