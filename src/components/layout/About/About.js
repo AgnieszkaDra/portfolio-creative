@@ -1,5 +1,4 @@
 import React from 'react'
-import Controlls from '../../ui/Controlls/Controlls'
 import Headline from '../../ui/Headline'
 import Carousel from '../../ui/Carousel'
 import Pagination from '../../ui/Pagination'
@@ -28,7 +27,7 @@ export const About = (props) => {
 
   return (
     <section className={`${className ? `${className}` : ''}`}>
-      <Controlls className={'controlls'} />
+
       <Headline />
       <div className={'about__carousel'}>
         <h3 className={'h3'}>Share your ideas with the world.</h3>

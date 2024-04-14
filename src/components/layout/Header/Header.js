@@ -10,8 +10,6 @@ export const Header = (props) => {
 
   return (
     <header className={`${className ? ` ${className}` : ''}`}>
-      
-        <Controlls className={'controlls'}/>
         <Headline/>
         <Dots
           className={'header__dots header__dots-up'}
