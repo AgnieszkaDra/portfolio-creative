@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import './sass/index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-// import App from './App'
 import Header from './components/layout/Header/Header'
 import About from './components/layout/About/About'
 import Projects from './components/layout/Projects/Projects'
 import Contact from './components/layout/Contact/Contact'
+import Error from './components/layout/Error'
 import reportWebVitals from './reportWebVitals'
 
 const router = createBrowserRouter([
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact className="contact" />,
+  },
+  {
+    path: '*',
+    element: <Error/>,
   },
 ])
 
