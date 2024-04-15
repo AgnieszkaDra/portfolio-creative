@@ -30,29 +30,27 @@ export const Controlls = (props) => {
   }
 
   return (
-    <section className={`${className ? ` ${className}` : ''}`}>
-      {data.sections.map((element) => (
-        <div
-          key={element.name}
-          onClick={() => handleElementClick(element.name)}
-          className={
-            elementStates[element.name] ? 'control active-btn' : 'control'
-          }
-          data-id={element.name}
-        >
-          {
-            <NavLink className={'control__link'} to={toPage(element.name)}>
-              {
-                <FontAwesomeIcon
-                  icon={element.icon}
-                  className="control__icon"
-                ></FontAwesomeIcon>
-              }
-            </NavLink>
-          }
-        </div>
-      ))}
-    </section>
+    <nav className={`${className ? ` ${className}` : ''}`}>
+      <ul>
+       {data.sections.map((element) => (
+        <li className={'control'}>
+           <NavLink className={'control__link'} 
+              to={toPage(element.name)}  
+              key={element.name}
+              onClick={() => handleElementClick(element.name)} 
+              activeclassname={`${'active-btn'}`} 
+            >
+            {
+              <FontAwesomeIcon
+                icon={element.icon}
+                className="control__icon"
+              ></FontAwesomeIcon>
+            }
+          </NavLink>
+        </li>
+        ))}
+      </ul>
+    </nav>
   )
 }
 

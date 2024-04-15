@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom';
 
-import Controlls from '../../ui/Controlls/Controlls';
+import Navigation from '../../ui/Navigation';
 
 const Home = () => {
   return (
     <>
       <div className='container'>
-        <Controlls className={'controlls'} />
+        <Navigation className={'controlls'} />
         <Outlet />
       </div>
     </>

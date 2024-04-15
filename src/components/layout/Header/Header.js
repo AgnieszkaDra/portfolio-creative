@@ -1,5 +1,4 @@
 import React from 'react'
-import Controlls from '../../ui/Controlls/Controlls'
 import Headline from '../../ui/Headline'
 import Dots from '../../ui/Dots/Dots'
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import Controlls from '../../ui/Controlls/Controlls'
 import Headline from '../../ui/Headline'
 import data from '../../../data/projects'
 import Carousel from '../../ui/Carousel'
