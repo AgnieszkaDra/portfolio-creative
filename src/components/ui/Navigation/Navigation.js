@@ -33,21 +33,26 @@ export const Controlls = (props) => {
     <nav className={`${className ? ` ${className}` : ''}`}>
       <ul>
        {data.sections.map((element) => (
-        <li className={'control'}>
-           <NavLink className={'control__link'} 
+        <li>
+  <NavLink className={'control'} 
               to={toPage(element.name)}  
               key={element.name}
+              activeclassname={`${'active-btn'}`}
               onClick={() => handleElementClick(element.name)} 
-              activeclassname={`${'active-btn'}`} 
             >
-            {
+            
+                 {
               <FontAwesomeIcon
                 icon={element.icon}
                 className="control__icon"
               ></FontAwesomeIcon>
-            }
+            }   
+            
+        
           </NavLink>
         </li>
+         
+     
         ))}
       </ul>
     </nav>

@@ -29,7 +29,7 @@ export const Header = (props) => {
             to enhance every facet of business operations.
             <br />
             With a clear mission to showcase the diverse capabilities of
-            software development, I aim
+            software development, I am
             <span className={'header__info--underline'}>on the way</span> to
             demonstrate the power and versatility of innovative solutions
             through examples in portfolio.

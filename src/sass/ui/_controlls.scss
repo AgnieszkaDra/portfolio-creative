@@ -7,7 +7,8 @@
   right: 0%;
   @include respond(tablet){
       right: 5%;
-  }
+  } 
+
   .control {
     padding: 3px;
     margin: 20px;
@@ -19,16 +20,21 @@
     padding: 6px;
     cursor: pointer;
     @include flexAbsoluteCenter;
+    font-size: 0.8rem;
 
     @include respond(tablet) {
       padding: 6px;
     }
 
-    &__link {
+    &__icon {
       position: relative;
-      font-size: 0.8rem;
+      @include flexAbsoluteCenter;
+      @include respond(tablet) {
+        padding: 6px;
+      }
       color: darken($color-font-dark, 10%);
       @include flexAbsoluteCenter;
+
     }
   }
 }

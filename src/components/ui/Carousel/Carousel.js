@@ -7,24 +7,22 @@ export const Carousel = (props) => {
 
   const handleSpanIncrease = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide > 0 ? prevSlide - 1 : value.length - 1,
-    )
-  }
+      prevSlide < value.length - 1 ? prevSlide + 1 : 0
+    );
+  };
 
   const handleSpanDecrease = () => {
     setCurrentSlide((prevSlide) =>
-      prevSlide < value.length - 1 ? prevSlide + 1 : 0,
-    )
-  }
+      prevSlide > 0 ? prevSlide - 1 : value.length - 1
+    );
+  };
 
   const renderedItems = value.map((item, i) => content(item, i))
  
   return (
     <div className={`${className ? `${className} carousel` : 'carousel'}`}>
       <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
-        <span className={''} onClick={handleSpanDecrease}>
-          &lt;
-        </span>
+        <span onClick={handleSpanDecrease}>&lt;</span>
       </div>
         {renderedItems[currentSlide]}
       <div className={'carousel-slider__nav carousel-slider__nav--next'}>
