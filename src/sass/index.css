@@ -1,3 +1,26 @@
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeftCenter {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .header {
   width: 100%;
   height: 100%;
@@ -5,8 +28,6 @@
 }
 
 .header__dots {
-  width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -19,48 +40,100 @@
 }
 
 .header__dots .dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: rgb(155, 175, 175);
-}
-
-.header__dots-up {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  overflow: hidden;
-  width: 15%;
-  height: 7.5%;
-}
-
-.header__dots-down {
-  position: absolute;
-  bottom: 6%;
-  left: 7%;
-  display: block;
-  overflow: hidden;
-  width: 25%;
-  height: 7.5%;
+  background-color: rgb(70, 153, 153);
+  width: 10px;
+  height: 10px;
+  animation: slideInLeft 0.75s ease both;
+  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 
 .header__info {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  left: 5%;
-  width: 70%;
-  font-size: 13px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18pt;
+  line-height: 36pt;
+  animation: slideInLeftCenter 0.75s ease both;
 }
 
-@media only screen and (min-width: 768px) {
-  .header__info {
-    width: 20%;
-    left: 7%;
-  }
+.header__info--color {
+  color: rgb(70, 153, 153);
 }
-.header__info--underline {
-  text-decoration: underline;
+
+.dot-container--2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 15%;
+}
+
+.dot-container--2 > * {
+  grid-column: span 1;
+  padding: 15px;
+}
+
+.dot-container--3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 15%;
+}
+
+.dot-container--3 > * {
+  grid-column: span 1;
+  padding: 15px;
+}
+
+.dot-container--4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 15%;
+}
+
+.dot-container--4 > * {
+  grid-column: span 1;
+  padding: 15px;
+}
+
+.dot-container--5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 15%;
+}
+
+.dot-container--5 > * {
+  grid-column: span 1;
+  padding: 15px;
+}
+
+.dot-container--6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 15%;
+}
+
+.dot-container--6 > * {
+  grid-column: span 1;
+  padding: 15px;
 }
 
 .about {
@@ -535,7 +608,7 @@
 .controlls .control {
   padding: 3px;
   margin: 20px;
-  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(113, 147, 147));
+  background: linear-gradient(0deg, rgb(155, 175, 175), rgb(70, 153, 153));
   padding: 6px;
   cursor: pointer;
   display: flex;
@@ -575,7 +648,7 @@
 .headline-h1 {
   text-shadow: white 1px 0 10px;
   font-weight: 1000;
-  color: rgb(155, 175, 175);
+  color: rgb(70, 153, 153);
 }
 
 .headline-h2 {
@@ -609,6 +682,9 @@ body {
   line-height: 1.8;
   color: rgb(117, 113, 113);
   background-color: rgb(248, 242, 242);
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 * {
@@ -623,7 +699,6 @@ body {
   margin-bottom: 5vh;
   margin-left: 5vw;
   margin-right: 5vw;
-  border: 2px dotted rgb(155, 175, 175);
   width: 90vw;
   height: 90vh;
   position: relative;

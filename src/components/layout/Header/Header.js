@@ -1,46 +1,54 @@
-import React from 'react'
-import Headline from '../../ui/Headline'
-import Dots from '../../ui/Dots/Dots'
+import React, { useEffect, useState } from 'react';
+import Headline from '../../ui/Headline';
+import Dots from '../../ui/Dots/Dots';
+import DotCalculator from './DotCalculator';
+import PropTypes from 'prop-types';
 
-import PropTypes from 'prop-types'
+export const Header = ({ className }) => {
+  const [dotCount, setDotCount] = useState(10); 
+  const dotCalculator = new DotCalculator(); 
 
-export const Header = (props) => {
-  const { className } = props
+
+  const updateDotCount = () => {
+    const windowWidth = window.innerWidth;
+    setDotCount(dotCalculator.calculate(windowWidth));
+  };
+
+  useEffect(() => {
+    updateDotCount(); 
+    const handleResize = () => {
+      updateDotCount(); 
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize); 
+  }, []);
 
   return (
-    <header className={`${className ? ` ${className}` : ''}`}>
-        <Headline/>
-        <Dots
-          className={'header__dots header__dots-up'}
-          spanHorizontal={7}
-          spanVertical={3}
-        />
-        <Dots
-          className={'header__dots header__dots-down'}
-          spanHorizontal={9}
-          spanVertical={3}
-        />
-        <div className={'header__info'}>
-          <h3>HI, I'M </h3>
-          <h3>AGNIESZKA</h3>
-          <h3>Frontend developer</h3>
-          <p>
-            I believe that modern websites and applications have the potential
-            to enhance every facet of business operations.
-            <br />
-            With a clear mission to showcase the diverse capabilities of
-            software development, I am
-            <span className={'header__info--underline'}>on the way</span> to
-            demonstrate the power and versatility of innovative solutions
-            through examples in portfolio.
-          </p>
-        </div>
+    <header className={`${className ? ` ${className}` : 'header'}`}>
+      <Headline />
+      <div className={`dot-container--${dotCount}`}>
+        {Array.from({ length: dotCount }).map((_, index) => (
+          <Dots
+            key={index}
+            className={`header__dots header__dots-${index}`}
+            spanHorizontal={`${dotCount - 1}`}
+            spanVertical={`${dotCount - 2}`}
+          />
+        ))}
+      </div>
+
+      <div className={'header__info'}>
+        <h3>HI, I'M </h3>
+        <h3 className={'header__info--color'}>AGNIESZKA</h3>
+        <h3>Frontend developer</h3>
+      </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   className: PropTypes.string,
-}
+};
 
-export default Header
+export default Header;
