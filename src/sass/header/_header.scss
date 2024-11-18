@@ -36,8 +36,8 @@
     display: block;
     .dot {
       background-color: $color-contrast2;
-      width: 10px;
-      height: 10px;
+      width: 7px;
+      height: 7px;
       animation: slideInLeft 0.75s ease both;
       clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
      
@@ -65,7 +65,7 @@
     height: 15%;
     & > * {
       grid-column: span 1;
-      padding: 15px;
+      padding: 20px;
     }
   }
 }

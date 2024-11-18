@@ -2,8 +2,8 @@ export default class DotCalculator {
     constructor() {
       this.breakpoints = [
         { width: 1200, dotCount: 6 },
-        { width: 992, dotCount: 4 },
-        { width: 768, dotCount: 2 },
+        { width: 992, dotCount: 6},
+        { width: 768, dotCount: 4 },
         { width: 0, dotCount: 0}, 
       ];
     }

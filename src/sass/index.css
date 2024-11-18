@@ -41,8 +41,8 @@
 
 .header__dots .dot {
   background-color: rgb(70, 153, 153);
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   animation: slideInLeft 0.75s ease both;
   clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
@@ -73,7 +73,7 @@
 
 .dot-container--2 > * {
   grid-column: span 1;
-  padding: 15px;
+  padding: 20px;
 }
 
 .dot-container--3 {
@@ -88,7 +88,7 @@
 
 .dot-container--3 > * {
   grid-column: span 1;
-  padding: 15px;
+  padding: 20px;
 }
 
 .dot-container--4 {
@@ -103,7 +103,7 @@
 
 .dot-container--4 > * {
   grid-column: span 1;
-  padding: 15px;
+  padding: 20px;
 }
 
 .dot-container--5 {
@@ -118,7 +118,7 @@
 
 .dot-container--5 > * {
   grid-column: span 1;
-  padding: 15px;
+  padding: 20px;
 }
 
 .dot-container--6 {
@@ -133,7 +133,7 @@
 
 .dot-container--6 > * {
   grid-column: span 1;
-  padding: 15px;
+  padding: 20px;
 }
 
 .about {
@@ -600,14 +600,9 @@
   right: 0%;
 }
 
-@media only screen and (min-width: 768px) {
-  .controlls {
-    right: 5%;
-  }
-}
 .controlls .control {
   padding: 3px;
-  margin: 20px;
+  margin: 40px;
   background: linear-gradient(0deg, rgb(155, 175, 175), rgb(70, 153, 153));
   padding: 6px;
   cursor: pointer;
@@ -615,6 +610,7 @@
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
+  clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }
 
 @media only screen and (min-width: 768px) {
@@ -641,35 +637,41 @@
 .headline {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 5%;
+  font-size: 35px;
+  color: rgb(70, 153, 153);
 }
 
-.headline-h1 {
+.headline__name {
   text-shadow: white 1px 0 10px;
   font-weight: 1000;
   color: rgb(70, 153, 153);
 }
 
-.headline-h2 {
-  display: none;
+.headline__title {
+  color: white;
+  font-weight: 800;
+  text-shadow: rgb(70, 153, 153) 1px 0 10px;
 }
 
 @media only screen and (min-width: 768px) {
   .headline {
     transform-origin: bottom left;
     white-space: nowrap;
-    font-size: 35px;
-    letter-spacing: 1.2;
   }
   .headline-h2 {
-    display: block;
     color: white;
     z-index: 5;
     font-weight: 800;
     transform: translateY(-10vh);
     text-shadow: rgb(155, 175, 175) 1px 0 10px;
-    height: 200px;
+  }
+  .headline-h3 {
+    color: white;
+    z-index: 5;
+    font-weight: 800;
+    transform: translateY(-18vh);
+    text-shadow: rgb(155, 175, 175) 1px 0 10px;
+    color: rgb(70, 153, 153);
   }
 }
 body {

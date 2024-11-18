@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Headline from '../../ui/Headline';
 import Dots from '../../ui/Dots/Dots';
 import DotCalculator from './DotCalculator';
 import PropTypes from 'prop-types';
@@ -25,24 +24,21 @@ export const Header = ({ className }) => {
   }, []);
 
   return (
-    <header className={`${className ? ` ${className}` : 'header'}`}>
-      <Headline />
+    <header className={`${className ? ` ${className}` : ''}`}>
       <div className={`dot-container--${dotCount}`}>
         {Array.from({ length: dotCount }).map((_, index) => (
           <Dots
             key={index}
             className={`header__dots header__dots-${index}`}
-            spanHorizontal={`${dotCount - 1}`}
-            spanVertical={`${dotCount - 2}`}
+            spanHorizontal={`${dotCount -2}`}
+            spanVertical={`${dotCount -2}`}
           />
         ))}
       </div>
-
-      <div className={'header__info'}>
-        <h3>HI, I'M </h3>
-        <h3 className={'header__info--color'}>AGNIESZKA</h3>
-        <h3>Frontend developer</h3>
-      </div>
+      <h1 className='headline'>
+        HI, I'M <span className='headline__name'>AGNIESZKA DRAGAŃCZYK</span>
+        <span className='headline__title'>FRONTEND DEVELOPER</span>
+      </h1>
     </header>
   );
 };

@@ -5,13 +5,9 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0%;
-  @include respond(tablet){
-      right: 5%;
-  } 
-
   .control {
     padding: 3px;
-    margin: 20px;
+    margin: 40px;
     background: linear-gradient(
       0deg,
       $color-contrast,
@@ -21,6 +17,7 @@
     cursor: pointer;
     @include flexAbsoluteCenter;
     font-size: 0.8rem;
+    clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 
     @include respond(tablet) {
       padding: 6px;
@@ -34,7 +31,6 @@
       }
       color: darken($color-font-dark, 10%);
       @include flexAbsoluteCenter;
-
     }
   }
 }

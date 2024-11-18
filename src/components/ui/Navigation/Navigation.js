@@ -23,6 +23,7 @@ export const Controlls = (props) => {
   }
 
   const handleElementClick = (elementName) => {
+    alert('handle')
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],
