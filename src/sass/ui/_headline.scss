@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   font-size: 35px;
-
+@include absCenter();
 
   color: $color-contrast2;
     &__name {
@@ -20,34 +20,5 @@
 
       text-shadow: $color-contrast2 1px 0 10px;
     }
-  @include respond(tablet) {
-   
  
-   
-    // transform: rotate(-90deg) translateY(calc(-100% + 5vw)) translateX(calc(20vh - 3vw));
-    transform-origin: bottom left;
-    white-space: nowrap;
-  
-
-    &-h2 {
-  
-      color: $color-font-light;
-      z-index: 5;
-      font-weight: 800;
-      transform: translateY(-10vh);
-      text-shadow: $color-contrast 1px 0 10px;
-    
-    }
-    
-    &-h3{
-   
-      color: $color-font-light;
-      z-index: 5;
-      font-weight: 800;
-      transform: translateY(-18vh);
-      text-shadow: $color-contrast 1px 0 10px;
-      color: $color-contrast2;
-      
-    }
-  }
 }

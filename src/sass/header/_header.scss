@@ -3,17 +3,6 @@
 @keyframes slideInLeft {
   0% {
     opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeftCenter {
-  0% {
-    opacity: 0;
     transform: translateX(-100%);
   }
   100% {
@@ -26,46 +15,15 @@
   width: 100%;
   height: 100%;
   position: relative;
-  &__dots {
-    & > * {
-      @include flexAbsoluteCenter();
-      width: 100%;
-      height: 100%;
-     
-    }
-    display: block;
-    .dot {
-      background-color: $color-contrast2;
-      width: 7px;
-      height: 7px;
-      animation: slideInLeft 0.75s ease both;
-      clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-     
-    }
-  }
   &__info {
-    @include absCenter();
     font-size: 18pt;
     line-height: 36pt;
-    animation: slideInLeftCenter 0.75s ease both;
+    animation: slideInLeft 0.75s ease both;
+    width: 100%;
     &--color {
       color: $color-contrast2;
     }
   }
 }
 
-@for $i from 2 through 6 {
-  .dot-container--#{$i} {
-    display: grid;
-    grid-template-columns: repeat($i, 1fr);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    height: 15%;
-    & > * {
-      grid-column: span 1;
-      padding: 20px;
-    }
-  }
-}
+

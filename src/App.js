@@ -7,7 +7,6 @@ import About from './components/layout/About/About.js';
 import Projects from './components/layout/Projects/Projects.js';
 import Contact from './components/layout/Contact/Contact.js';
 
-
 function App() {
 
     return (
@@ -23,6 +22,7 @@ function App() {
             </Routes>
         </Router>
     );
+    
 }
 
 export default App;
