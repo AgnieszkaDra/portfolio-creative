@@ -1,5 +1,6 @@
 export default class FieldListGenerator {
     #fieldsList = [];
+   
     breakpoints = [
       { width: 1200, rows: 10, cols: 10 },
       { width: 992, rows: 8, cols: 8 },
@@ -20,12 +21,12 @@ export default class FieldListGenerator {
       return this.breakpoints[this.breakpoints.length - 1]; 
     }
   
-    updateFieldsList = () => {
+    updateFieldsList = (breakpoint = 1) => {
       const windowWidth = window.innerWidth;
       const { rows, cols } = this.getBreakpoint(windowWidth);
   
-      this.#fieldsList = Array.from({ length: rows }, (_, rowIndex) =>
-        Array.from({ length: cols }, (_, colIndex) => {
+      this.#fieldsList = Array.from({ length: rows * breakpoint }, (_, rowIndex) =>
+        Array.from({ length: cols * breakpoint }, (_, colIndex) => {
           const baseValue = (rowIndex * cols) + (colIndex + 1)
           return baseValue
         })

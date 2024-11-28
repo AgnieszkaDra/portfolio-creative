@@ -48,8 +48,9 @@ body {
     }
   }
 }
+
 .dot {
-  background-color: $color-contrast2;
+  background-color: $color-contrast;
   width: 3px;
   height: 3px;
   clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
@@ -60,7 +61,7 @@ body {
     display: grid;
     grid-template-rows: repeat($i, 1fr);
     & > * {
-      padding: 20px;
+      padding: 2px;
     }
   }
 }

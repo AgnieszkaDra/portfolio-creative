@@ -4,29 +4,44 @@
   display: grid;
   grid-template-columns: 10fr 80fr 10fr;
   grid-template-areas: 'prev carousel next';
-  height: 100%;
-  &__title {
-    padding: 10px;
-  }
-
+  color: $color-font-dark;
+  @include absCenter();
   &-slider__nav {
     width: 100%;
 
-    @include flexAbsoluteCenter();
+   display: flex;
+   justify-content: center;
+   align-items: center;
     span {
+  
       display: block;
-      background: $color-contrast;
-      border-radius: 50%;
-      font-size: 20px;
-      width: 30px;
-      height: 30px;
-      @include flexAbsoluteCenter();
+     
+      
+      color: $color-font-dark;
+      // border-radius: 50%;
+      font-size: 40px;
+      
+      position: absolute;
+
       &:hover {
-        background-color: $color-background-light;
+        color: $color-background-light;
         cursor: pointer;
       }
     }
+
+    &--prev {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    }
+    &--next {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
   }
+   
+  
   &__element {
     width: 100%;
     grid-column: 2/3;
@@ -36,6 +51,7 @@
     justify-content: center;
     align-items: center;
     grid-area: carousel;
+    padding: 20px;
   }
 
   &--next {
@@ -43,11 +59,9 @@
     grid-row: 1/2;
     grid-area: next;
   }
-  &--prev {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    grid-area: prev;
-  }
+
+  
+ 
 
   &-slider__wrapper {
     width: 40%;

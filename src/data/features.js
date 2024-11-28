@@ -8,7 +8,7 @@ export const features = {
     {
       image: company,
       name: 'PORTFOLIO',
-      text: `Don't conceal your business; become visible within your network.`,
+      text: `An aspiring Frontend Developer passionate about learning new skills and applying them through projects showcased on my GitHub.`,
       start: 5,
       id: 0,
     },

@@ -3,25 +3,24 @@
 .controlls {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  right: 0%;
+  transform: translateY(-50%) translateX(50%);
+  margin-right: 5%;
+  right: 0;
   .control {
     padding: 3px;
-    margin: 40px;
     background: linear-gradient(
       0deg,
-      $color-contrast,
-      $color-contrast2
+      $color-font-light,
+      $color-contrast
     );
-    padding: 6px;
+    padding: 13px;
     cursor: pointer;
     @include flexAbsoluteCenter;
-    font-size: 0.8rem;
+    font-size: 1,2rem;
     clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    margin-bottom: 10px;
 
-    @include respond(tablet) {
-      padding: 6px;
-    }
+  
 
     &__icon {
       position: relative;

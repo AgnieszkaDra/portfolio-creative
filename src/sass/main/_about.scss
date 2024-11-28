@@ -1,20 +1,46 @@
 @import '../abstracts/index';
 
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300%) translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    @include absCenter()
+  }
+}
+
 .about {
   width: 100%;
   height: 100%;
   position: relative;
-  &__carousel {
+  
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%;
-    height: 50%;
+    width: 100vw;
+    height: 100vh;
+      background: radial-gradient(
+        circle, 
+        $color-contrast,
+        $color-background-light, 
+        
+      );
+        @include absCenter;
+      animation: slideInLeft 0.75s ease both;
     @include respond(tablet){
-      @include absCenter;
-      width: 60%;
+      width: 40vw;
+      height: 50vh;
     }
-    .h3 {
+    &__carousel {
+      width: 100%;
+      height: 100%;
+      
+    }
+    
+
+  &__title {
       font-size: 10px;
       @include respond(tablet){
           font-size: 20px;
@@ -38,4 +64,4 @@
   .carousel-description {
     width: 100%;
   }
-}
+

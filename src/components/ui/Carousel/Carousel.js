@@ -20,7 +20,7 @@ export const Carousel = (props) => {
   const renderedItems = value.map((item, i) => content(item, i))
  
   return (
-    <div className={`${className ? `${className} carousel` : 'carousel'}`}>
+    <div className={`${className ? `${className} carousel` : ''}`}>
       <div className={'carousel-slider__nav carousel-slider__nav--prev'}>
         <span onClick={handleSpanDecrease}>&lt;</span>
       </div>

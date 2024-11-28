@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
 
 import data from '../../../data'
 import PropTypes from 'prop-types'
-
-export const ControllsContext = React.createContext()
 
 export const Controlls = (props) => {
   const { className } = props
@@ -23,7 +20,6 @@ export const Controlls = (props) => {
   }
 
   const handleElementClick = (elementName) => {
-    alert('handle')
     setElementStates((prevState) => ({
       ...prevState,
       [elementName]: !prevState[elementName],
@@ -33,27 +29,20 @@ export const Controlls = (props) => {
   return (
     <nav className={`${className ? ` ${className}` : ''}`}>
       <ul>
-       {data.sections.map((element) => (
-        <li>
-  <NavLink className={'control'} 
+       { data.sections.map((element) => (
+          <li key={element}>
+            <NavLink className={'control'} 
               to={toPage(element.name)}  
               key={element.name}
               activeclassname={`${'active-btn'}`}
               onClick={() => handleElementClick(element.name)} 
             >
-            
-                 {
               <FontAwesomeIcon
                 icon={element.icon}
                 className="control__icon"
               ></FontAwesomeIcon>
-            }   
-            
-        
-          </NavLink>
-        </li>
-         
-     
+            </NavLink>
+          </li>
         ))}
       </ul>
     </nav>
