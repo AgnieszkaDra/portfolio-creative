@@ -54,7 +54,7 @@ export const Contact = (props) => {
   }
 
   return (
-    <section className={`${className ? ` ${className}` : ''}`}>
+    <section className={'section contact'}>
       <div className={'contact__box'}>
         <div className={'contact__contacts'}>
           <h4 className={'contact__name'}>AGNIESZKA DRAGAŃCZYK</h4>

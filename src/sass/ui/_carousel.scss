@@ -1,48 +1,39 @@
 @import '../abstracts/index';
 
 .carousel {
-  display: grid;
-  grid-template-columns: 10fr 80fr 10fr;
-  grid-template-areas: 'prev carousel next';
-  color: $color-font-dark;
-  @include absCenter();
+ 
   &-slider__nav {
-    width: 100%;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    span {
-  
+    display: none;
+    @include respond(tablet){
       display: block;
-     
-      
-      color: $color-font-dark;
-      // border-radius: 50%;
-      font-size: 40px;
-      
-      position: absolute;
-
+       @include flexAbsoluteCenter();
+    width: 100%;
+    span {
+      color: $color-contrast;
+      font-size: 30px;
+      @include respond(tablet){
+        font-size: 40px;
+      }
       &:hover {
-        color: $color-background-light;
+        color: $color-font-dark;
         cursor: pointer;
       }
     }
-
     &--prev {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: -7%;
     }
     &--next {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      right: -107%;
+    }
     }
   }
-   
-  
-  &__element {
+  &__wrapper {
     width: 100%;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -52,6 +43,10 @@
     align-items: center;
     grid-area: carousel;
     padding: 20px;
+  }
+
+  &__content {
+    text-align: justify;
   }
 
   &--next {

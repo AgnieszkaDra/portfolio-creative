@@ -43,9 +43,20 @@ const portfolioGreen = getComputedStyle(document.documentElement).getPropertyVal
   '--color-portfolio',
 )
 
+const colorContrast = getComputedStyle(document.documentElement).getPropertyValue(
+  '--color-contrast',
+)
 
+const colorBasicPageReact= getComputedStyle(document.documentElement).getPropertyValue(
+  '--color-basicPageReact-pink',
+)
+
+const colorBasicPageHTMLSCSS= getComputedStyle(document.documentElement).getPropertyValue(
+  '--color-basicPageHTMLSCSS',
+)
 
 export const projects = {
+  colorContrast: colorContrast,
   categories: [
     {
       name: 'Pharmacy Website',
@@ -53,12 +64,12 @@ export const projects = {
       imageUrl: drug,
       imageUrl2: order,
       description:
-        'This is a website, which has written two times.First time using pure JS(website in refactoring) and second time using React.',
+        'Unicate form to order drugs and medications',
       features: ['useful website', 'unicate form to order'],
       githubUrl: 'https://github.com/AgnieszkaDra/PharmacyWebsite-react',
       viewUrl1: 'https://luminous-dusk-95a487.netlify.app/',
-      mainColor: pharmacyRed,
-      background1: pharmacyPink,
+      mainColor: colorContrast,
+      background1: pharmacyRed,
       background2: 'white',
     },
     {
@@ -69,7 +80,7 @@ export const projects = {
       features: ['TypeScript + React', 'open categories'],
       githubUrl: 'https://github.com/AgnieszkaDra/SewPortfolioPage',
       viewUrl1: 'https://merry-bombolone-6f9da6.netlify.app/',
-      mainColor: sewNavy,
+      mainColor: colorContrast,
       background1: sewBeige,
       background2: 'white',
     },
@@ -81,37 +92,37 @@ export const projects = {
       features: ['working with API', 'Vue technology', 'Pinia'],
       githubUrl: 'https://github.com/AgnieszkaDra/OpeningPosts--Vue',
       viewUrl1: 'https://tubular-strudel-c363fe.netlify.app/#/',
-      mainColor: postsTurcoise,
-      background1: postsGrey,
+      mainColor: colorContrast,
+      background1: postsGreen,
       background2: postsGreen,
     },
-
     {
-      name: 'Calculator Task',
+      name: 'CV in React',
       id: '04',
-      imageUrl: calculator1,
-      imageUrl2: calculator2,
-      githubUrl: 'https://github.com/AgnieszkaDra/Calculator-task',
-      viewUrl1: 'https://lively-faun-5a14eb.netlify.app/',
-      description:
-        'Base calculator, which has written in Vanilla JS technology.',
-      features: ['useful calculator', 'visible previous operations'],
-      mainColor: 'rgb(66, 230, 219)',
+      imageUrl: CV1,
+      imageUrl2: CV2,
+      viewUrl1: '',
+      githubUrl: 'https://github.com/AgnieszkaDra/CV-React',
+      viewUrl1: 'https://profound-madeleine-0a5635.netlify.app/',
+      description: 'CV with function to download and save as PDF file',
+      features: ['nice and useful CV example'],
+      mainColor: colorContrast,
+      background1: portfolioGreen,
+      background2: 'white',
     },
     {
-      name: 'Calculator Game',
+      name: 'Portfolio',
       id: '05',
-      imageUrl: game1,
-      imageUrl2: game2,
-      githubUrl: 'https://github.com/AgnieszkaDra/Calculator-game',
-      viewUrl1: 'https://splendorous-creponne-6e9cb4.netlify.app/',
-      description: 'Simple game similar to  Sinal game',
-      features: [
-        'useful calculator',
-        'visible previous operations',
-        'still in writing',
-      ],
-      mainColor: ' rgb(159, 189, 189)',
+      imageUrl: portfolio1,
+      imageUrl2: '',
+      viewUrl1: '',
+      githubUrl: 'https://github.com/AgnieszkaDra/portfolio-creative',
+      viewUrl1: 'https://lucent-bublanina-ff1d8a.netlify.app/',
+      description: 'Portfolio',
+      features: ['React-routing'],
+      mainColor: colorContrast,
+      background1: colorContrast,
+      background2: 'white'
     },
     {
       name: 'Basic page in React',
@@ -125,11 +136,12 @@ export const projects = {
         'original dropdown menu',
         'No framework was used to create the slider.',
       ],
-      mainColor: '#e4007c',
+      mainColor: colorContrast,
+      background1: colorBasicPageReact,
     },
     {
       name: 'Basic page in HTML,SCSS,JS',
-      id: '07',
+      id: '05',
       imageUrl: basic3,
       imageUrl2: basic4,
       viewUrl1: 'https://timely-narwhal-bfa32d.netlify.app/',
@@ -137,25 +149,12 @@ export const projects = {
       description:
         'A basic webpage created using HTML for structure, SCSS for styling, and JavaScript for functionality.',
       features: ['basic code', 'Swiper JS library'],
-      mainColor: '#e4007c',
-    },
-    {
-      name: 'CV in React',
-      id: '08',
-      imageUrl: CV1,
-      imageUrl2: CV2,
-      viewUrl1: '',
-      githubUrl: 'https://github.com/AgnieszkaDra/CV-React',
-      viewUrl1: 'https://profound-madeleine-0a5635.netlify.app/',
-      description: 'CV with function to download and save as PDF file',
-      features: ['nice and useful CV example'],
-      mainColor: 'rgb(88, 196, 219)',
-      background1: portfolioGreen,
-      background2: 'white',
+      mainColor: colorContrast,
+      background1: colorBasicPageHTMLSCSS,
     },
     {
       name: 'Skills',
-      id: '09',
+      id: '06',
       imageUrl: skills,
       imageUrl2: '',
       viewUrl1: '',
@@ -163,21 +162,8 @@ export const projects = {
       viewUrl1: 'https://unrivaled-ganache-7814ff.netlify.app/',
       description: '',
       features: ['chartJS library'],
-      mainColor: '#e4007c',
-    },
-    {
-      name: 'Portfolio',
-      id: '10',
-      imageUrl: portfolio1,
-      imageUrl2: '',
-      viewUrl1: '',
-      githubUrl: 'https://github.com/AgnieszkaDra/portfolio-creative',
-      viewUrl1: 'https://lucent-bublanina-ff1d8a.netlify.app/',
-      description: 'Portfolio',
-      features: ['React-routing'],
-      mainColor: portfolioGreen,
-      background1: portfolioGreen,
-      background2: 'white'
+      mainColor: colorContrast,
+      background1: colorContrast,
     },
   ],
 }

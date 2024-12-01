@@ -27,19 +27,24 @@ const renderList = (item, i, color) => {
   )
 }
 
-const renderProjects = (element, i) => (
-  <div
+const renderProjects = (element, i) => {
+console.log(element)
+  return (
+ <div
     key={element.name}
     className={`project${element.id} project`}
+    // style={{
+    //   background: `radical-gradient(0deg, ${element.mainColor} 80%, ${element.background1} 20%)`,
+    // }}
     style={{
-      background: `linear-gradient(0deg, ${element.background1}, ${element.background2})`,
+      border: `5px solid ${element.mainColor}`,
     }}
     data-id={element.id}
   >
     <div className={`project__headline`}>
       <div
         className={`project__id`}
-        style={{ backgroundColor: element.mainColor }}
+        style={{ backgroundColor: element.background1}}
       >
         {element.id}.
       </div>
@@ -63,38 +68,35 @@ const renderProjects = (element, i) => (
       ''
     )}
     <div className={`project__links`}>
-      <div>
-        {
-          <NavLink
-            className={'links__element'}
-            to={element.githubUrl}
-            style={{ color: element.mainColor }}
-          >
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="control__icon"
-            ></FontAwesomeIcon>{' '}
-          </NavLink>
-        }
-
-        {
-          <NavLink
-            className={'links__element'}
-            to={element.viewUrl1}
-            style={{ color: element.mainColor }}
-          >
-            <FontAwesomeIcon
-              icon={faFirefox}
-              className="control__icon"
-            ></FontAwesomeIcon>{' '}
-          </NavLink>
-        }
-      </div>
+      {
+        <NavLink
+          className={'project__links--element'}
+          to={element.githubUrl}
+          style={{ color: element.background1 }}
+        >
+          <FontAwesomeIcon
+            icon={faGithub}
+            className="control__icon"
+          ></FontAwesomeIcon>
+        </NavLink>
+      }
+      {
+        <NavLink
+          className={'project__links--element'}
+          to={element.viewUrl1}
+          style={{ color: element.background1 }}
+        >
+          <FontAwesomeIcon
+            icon={faFirefox}
+            className="control__icon"
+          ></FontAwesomeIcon>{' '}
+        </NavLink>
+      }
       {element.githubUrl2 ? (
         <div>
           {
             <NavLink
-              className={'links__element'}
+              className={'project__links--element'}
               to={element.githubUrl2}
               style={{ color: element.mainColor }}
             >
@@ -107,7 +109,7 @@ const renderProjects = (element, i) => (
 
           {
             <NavLink
-              className={'links__element'}
+              className={'project__links--element'}
               to={element.viewUrl2}
               style={{ color: element.mainColor }}
             >
@@ -127,19 +129,21 @@ const renderProjects = (element, i) => (
       <ul className={'features'}>
         {element.features
           ? element.features.map((item, i) => {
-            const color = element.mainColor
+            const color = element.background1
             return renderList(item, i, color)
           })
           : ''}
       </ul>
     </div>
   </div>
-)
 
-export const Projects = (props) => {
-  const { className } = props
+  )
+}
+
+export const Projects = () => {
+  
   return (
-    <section className={`${className ? ` ${className}` : ''}`}>
+    <section className='section projects'>
       <Carousel
         value={data.categories}
         content={renderProjects}
@@ -148,6 +152,7 @@ export const Projects = (props) => {
     </section>
   )
 }
+
 Projects.propTypes = {
   className: PropTypes.string,
 }

@@ -7,21 +7,17 @@
   margin-right: 5%;
   right: 0;
   .control {
-    padding: 3px;
     background: linear-gradient(
       0deg,
       $color-font-light,
       $color-contrast
     );
-    padding: 13px;
+    padding: 15px;
     cursor: pointer;
     @include flexAbsoluteCenter;
     font-size: 1,2rem;
     clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-    margin-bottom: 10px;
-
-  
-
+    margin-bottom: 15px;
     &__icon {
       position: relative;
       @include flexAbsoluteCenter;
@@ -29,7 +25,6 @@
         padding: 6px;
       }
       color: darken($color-font-dark, 10%);
-      @include flexAbsoluteCenter;
     }
   }
 }

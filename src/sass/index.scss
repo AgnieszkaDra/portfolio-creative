@@ -49,6 +49,21 @@ body {
   }
 }
 
+.section {
+  width: 100%;
+  height: 100%;
+  @include respond(tablet){
+    width: 100vw;
+    height: 100vh;
+    @include absCenter;    
+  }
+  &.header, &.contact, &.projects{
+    width: 100vw;
+    height: 100vh;
+    @include absCenter;   
+  }
+}
+
 .dot {
   background-color: $color-contrast;
   width: 3px;

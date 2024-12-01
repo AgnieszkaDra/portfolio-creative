@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Header = ({ className }) => {
+export const Header = () => {
   return (
-    <header className={`${className ? ` ${className}` : ''}`}>
+    <header className='header section'>
       <div className='header__info'>
         <h1 className="headline">
           HI, I'M <span className="headline__name">AGNIESZKA DRAGAŃCZYK</span>

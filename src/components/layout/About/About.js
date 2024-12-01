@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 export const About = () => {
 
   const renderAboutElements = (item, i) => (
-    <div className="carousel__element" key={item.name}>
+    <div className="carousel__wrapper" key={item.name}>
       {/* <figure className="carousel-slider__wrapper">
         <img
           className="carousel-slider__image"
@@ -19,16 +19,15 @@ export const About = () => {
         />
         <figcaption className="js-slider__caption"></figcaption>
       </figure> */}
-      
-        <h5 className="carousel__title">{item.text}</h5>
+      <p className="carousel__content">{item.text}</p>
      
     </div>
   )
 
   return (
-    <section className={`about`}>
+    <section className={`section about`}>
         {/* <ContainerBoard breakpoint={2} dotSize={5}> */}
-        <h3 className={'about__title'}>ASPIRING FRONTEND DEVELOPER</h3>
+        {/* <h3 className={'about__title'}>ASPIRING FRONTEND DEVELOPER</h3> */}
         <Carousel
           className={'about__carousel'}
           value={data.list}
