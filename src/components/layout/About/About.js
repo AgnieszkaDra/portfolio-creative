@@ -9,20 +9,18 @@ import PropTypes from 'prop-types'
 
 export const About = () => {
 
-  const renderAboutElements = (item, i) => (
-    <div className="carousel__wrapper" key={item.name}>
-      {/* <figure className="carousel-slider__wrapper">
-        <img
-          className="carousel-slider__image"
-          src={item.image}
-          alt={item.altText}
-        />
-        <figcaption className="js-slider__caption"></figcaption>
-      </figure> */}
-      <p className="carousel__content">{item.text}</p>
-     
-    </div>
-  )
+  const renderAboutElements = (item, i) => {
+    const textWithLink = item.text.replace("LINK_PLACEHOLDER", item.linkEducation);
+
+    return (
+      <div className="carousel__wrapper" key={item.name || i}>
+        <p
+          className="carousel__content"
+          dangerouslySetInnerHTML={{ __html: textWithLink }}
+        ></p>
+      </div>
+    );
+  };
 
   return (
     <section className={`section about`}>

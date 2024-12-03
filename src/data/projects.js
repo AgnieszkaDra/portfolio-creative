@@ -2,12 +2,7 @@ import order from '../assets/projects/pharmacy/order.png'
 import drug from '../assets/projects/pharmacy/leki.png'
 import sew from '../assets/projects/sewPortfolio1.png'
 import posts1 from '../assets/projects/posts1.png'
-import calculator1 from '../assets/projects/calculator1.png'
-import calculator2 from '../assets/projects/calculator.png'
-import game1 from '../assets/projects/game1.png'
-import game2 from '../assets/projects/game2.png'
 import basicPage from '../assets/projects/basicpage.png'
-import basicPage2 from '../assets/projects/basicpage2.png'
 import basic2 from '../assets/projects/basic2.png'
 import basic3 from '../assets/projects/basic3.png'
 import basic4 from '../assets/projects/basic4.png'
@@ -141,7 +136,7 @@ export const projects = {
     },
     {
       name: 'Basic page in HTML,SCSS,JS',
-      id: '05',
+      id: '07',
       imageUrl: basic3,
       imageUrl2: basic4,
       viewUrl1: 'https://timely-narwhal-bfa32d.netlify.app/',
@@ -154,7 +149,7 @@ export const projects = {
     },
     {
       name: 'Skills',
-      id: '06',
+      id: '08',
       imageUrl: skills,
       imageUrl2: '',
       viewUrl1: '',

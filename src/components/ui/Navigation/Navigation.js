@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
-
-import data from '../../../data'
+import { sections } from '../../../data'
 import PropTypes from 'prop-types'
 
 export const Controlls = (props) => {
@@ -29,7 +28,7 @@ export const Controlls = (props) => {
   return (
     <nav className={`${className ? ` ${className}` : ''}`}>
       <ul>
-       { data.sections.map((element) => (
+       { sections.map((element) => (
           <li key={element}>
             <NavLink className={'control'} 
               to={toPage(element.name)}  

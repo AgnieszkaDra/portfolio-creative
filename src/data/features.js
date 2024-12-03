@@ -1,31 +1,20 @@
-import technology from '../assets/technology.png'
-import idea from '../assets/idea.png'
-import company from '../assets/company-logo.jpg'
-import chart from '../assets/chart.png'
 
 export const features = {
   list: [
     {
-      image: company,
-      name: 'PORTFOLIO',
       text: `An aspiring Frontend Developer passionate about learning new skills and applying them through projects showcased on my GitHub.`,
-      start: 5,
-      id: 0,
     },
     {
-      image: idea,
-      name: '',
-      text: `From concept to realization, sometimes only one decision separates the idea.`,
-      source: 'https://www.pexels.com/photo/white-bubble-illustration-1111372/',
-      id: 1,
+      text: `Learning alone with the main support of <a href="LINK_PLACEHOLDER" class="about__link" target="_blank" rel="noopener noreferrer">Akademia Samouka</a> courses`,
+      linkEducation: "https://www.akademiasamouka.pl",
     },
     {
-      image: technology,
-      name: '',
-      text: `IT technology makes anything possible.`,
-      source:
-        'https://pixabay.com/illustrations/technology-equipment-responsive-web-2468063/',
-      id: 2,
+      text: `In order to accelerate my learning of best practices, starting January 2025, I will be a mentee under the guidance of a <a href="LINK_PLACEHOLDER" class="about__link" target="_blank" rel="noopener noreferrer">Devmentor</a>. During this time, I will focus on mastering TypeScript and Next.js.`,
+      linkEducation: "https://devmentor.pl/"
+    },
+    {
+      text: `I am practicing English skills on <a href="LINK_PLACEHOLDER" class="about__link" target="_blank" rel="noopener noreferrer">Tutlo</a> platform`,
+      linkEducation: "https://tutlo.com/pl/o-tutlo/"
     },
   ],
 }

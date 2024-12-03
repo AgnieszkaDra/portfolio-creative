@@ -46,22 +46,37 @@
 }
 
 .about__carousel {
-  width: 50%;
-  height: 40%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(117, 113, 113);
 }
 
 @media only screen and (min-width: 768px) {
   .about__carousel {
-    border: 5px solid rgb(70, 153, 153);
+    background-color: rgb(70, 153, 153);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+  }
+}
+.about__link {
+  color: rgb(70, 153, 153);
+}
+
+@media only screen and (min-width: 768px) {
+  .about__link {
+    color: white;
+    font-weight: 600;
   }
 }
 .about__title {
@@ -103,7 +118,7 @@
   .projects__carousel {
     flex: auto;
     width: 50%;
-    height: 90%;
+    min-height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -126,13 +141,19 @@
   color: rgb(117, 113, 113);
   display: grid;
   grid-template-areas: "headline headline" "links links" "image1 image1" "image2 image2" "description description" "features features";
-  grid-template-rows: 5% 5% 30% 30% auto auto;
+  grid-template-rows: 8% 8% 20% 20% auto auto;
   grid-auto-columns: 50% 50%;
 }
 
 @media only screen and (min-width: 768px) {
   .project {
-    height: 90vh;
+    min-height: 90vh;
+    margin-top: 5vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .project {
+    grid-template-rows: 15% 30% 20% auto auto;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -175,6 +196,7 @@
 
 .project__description {
   grid-area: description;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -186,15 +208,18 @@
 }
 .project__image1 {
   grid-area: image1;
+  padding: 10px;
 }
 
 .project__image2 {
   grid-area: image2;
+  padding: 10px;
 }
 
 .project__image1, .project__image2 {
-  margin: 10px;
   box-shadow: 5px 5px 10px 0px rgb(70, 153, 153);
+  width: 100%;
+  height: 100%;
 }
 
 .project__image1 img, .project__image2 img {
@@ -214,6 +239,10 @@
   display: flex;
 }
 
+.project .features__headline {
+  margin-bottom: 10px;
+}
+
 .project .features__element {
   display: flex;
   margin-right: 10px;
@@ -225,6 +254,7 @@
   font-family: "Lexend-bold";
   font-size: 15px;
   font-weight: 600;
+  margin-right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,9 +487,6 @@
   grid-column: 2/3;
   grid-row: 1/2;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   grid-area: carousel;
   padding: 20px;
 }
@@ -528,15 +555,15 @@
   display: flex;
   flex-direction: column;
   font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: rgb(70, 153, 153);
 }
 
 @media only screen and (min-width: 768px) {
   .headline {
     font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .headline__name {
@@ -586,6 +613,10 @@ body {
   scroll-behavior: smooth;
 }
 
+a {
+  color: white;
+}
+
 .container {
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -619,20 +650,29 @@ body {
 @media only screen and (min-width: 768px) {
   .section {
     width: 100vw;
-    height: 100vh;
+    height: 900vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
-.section.header, .section.contact, .section.projects {
+.section.header, .section.about, .section.contact, .section.projects {
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  left: 0;
+  transform: translate(0%, -50%);
+  margin-right: 5vw;
+}
+@media only screen and (min-width: 768px) {
+  .section.header, .section.about, .section.contact, .section.projects {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .dot {

@@ -25,6 +25,10 @@ body {
   scroll-behavior: smooth;
 }
 
+a {
+  color: $color-font-light;
+}
+
 .container {
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -54,13 +58,20 @@ body {
   height: 100%;
   @include respond(tablet){
     width: 100vw;
-    height: 100vh;
+    height: 900vh;
     @include absCenter;    
   }
-  &.header, &.contact, &.projects{
+  &.header, &.about, &.contact, &.projects {
     width: 100vw;
     height: 100vh;
     @include absCenter;   
+    left: 0;
+    transform: translate(0%, -50%);
+    margin-right: 5vw;
+    @include respond(tablet) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

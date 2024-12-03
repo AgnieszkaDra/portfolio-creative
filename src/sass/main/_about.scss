@@ -14,18 +14,31 @@
 .about {
   animation: slideInLeft 0.75s ease both;
   &__carousel {
-    width: 50%;
-    height: 40%;
-    @include absCenter();
+    width: 80%;
+    height: 100%;
+    // @include absCenter();
+    display: flex;
+    flex-direction: column;
+    text-align: start;
     @include respond(tablet){
-      border: 5px solid $color-contrast;
+      background-color: $color-contrast;
+      color: $color-font-light;
+      @include absCenter();
+      width: 50%;
+      height: 30%;
     }
     position: relative;
     @include flexAbsoluteCenter();
-    color: $color-font-dark;
   }
-    
+  &__link {
+    color: $color-contrast;
+    @include respond(tablet) {
+      color: $color-font-light;
+      font-weight: 600;
+    }
+  }
 
+    
   &__title {
       font-size: 10px;
       @include respond(tablet){

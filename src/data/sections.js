@@ -3,7 +3,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
 
-export const sections = [
+const sections = [
   { name: 'home', icon: faHouse, text: 'home' },
   { name: 'about', icon: faUser, text: 'user' },
   { name: 'projects', icon: faBriefcase, text: 'envelope' },

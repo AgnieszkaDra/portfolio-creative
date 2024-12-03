@@ -6,8 +6,8 @@
   font-size: 18px;
   @include respond(tablet){
     font-size: 25px;
+    @include flexAbsoluteCenter();
   }
-  @include flexAbsoluteCenter();
   color: $color-contrast;
   &__name {
     text-shadow: $color-font-light 1px 0 10px;
