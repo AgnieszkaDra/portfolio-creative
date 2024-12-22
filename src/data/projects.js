@@ -1,6 +1,7 @@
 import order from '../assets/projects/pharmacy/order.png'
 import drug from '../assets/projects/pharmacy/leki.png'
 import sew from '../assets/projects/sewPortfolio1.png'
+import kanban from '../assets/projects/kanbanboard1.png'
 import posts1 from '../assets/projects/posts1.png'
 import basicPage from '../assets/projects/basicpage.png'
 import basic2 from '../assets/projects/basic2.png'
@@ -33,6 +34,10 @@ const postsGreen = getComputedStyle(document.documentElement).getPropertyValue(
 )
 const postsGrey = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-posts-grey',
+)
+
+const kanbanPink = getComputedStyle(document.documentElement).getPropertyValue(
+  '--color-kanban',
 )
 const portfolioGreen = getComputedStyle(document.documentElement).getPropertyValue(
   '--color-portfolio',
@@ -71,7 +76,7 @@ export const projects = {
       name: 'Sew Portfolio',
       id: '02',
       imageUrl: sew,
-      description: 'It will be first comercial project',
+      description: '',
       features: ['TypeScript + React', 'open categories'],
       githubUrl: 'https://github.com/AgnieszkaDra/SewPortfolioPage',
       viewUrl1: 'https://merry-bombolone-6f9da6.netlify.app/',
@@ -80,10 +85,22 @@ export const projects = {
       background2: 'white',
     },
     {
-      name: 'Opening Posts',
+      name: 'Kanban Board',
       id: '03',
+      imageUrl: kanban,
+      description: '',
+      features: ['TypeScript + React', 'React-Query'],
+      githubUrl: 'https://github.com/AgnieszkaDra/KanbanBoard-TypeScript',
+      viewUrl1: 'https://preeminent-toffee-35c43f.netlify.app/',
+      mainColor: kanbanPink,
+      background1: sewBeige,
+      background2: 'white',
+    },
+    {
+      name: 'Opening Posts',
+      id: '04',
       imageUrl: posts1,
-      description: 'It will be first comercial project',
+      description: '',
       features: ['working with API', 'Vue technology', 'Pinia'],
       githubUrl: 'https://github.com/AgnieszkaDra/OpeningPosts--Vue',
       viewUrl1: 'https://tubular-strudel-c363fe.netlify.app/#/',
@@ -93,7 +110,7 @@ export const projects = {
     },
     {
       name: 'CV in React',
-      id: '04',
+      id: '05',
       imageUrl: CV1,
       imageUrl2: CV2,
       viewUrl1: '',
@@ -107,7 +124,7 @@ export const projects = {
     },
     {
       name: 'Portfolio',
-      id: '05',
+      id: '06',
       imageUrl: portfolio1,
       imageUrl2: '',
       viewUrl1: '',
@@ -121,7 +138,7 @@ export const projects = {
     },
     {
       name: 'Basic page in React',
-      id: '06',
+      id: '07',
       imageUrl: basicPage,
       imageUrl2: basic2,
       viewUrl1: 'https://mellifluous-profiterole-46d3ae.netlify.app/',
@@ -136,7 +153,7 @@ export const projects = {
     },
     {
       name: 'Basic page in HTML,SCSS,JS',
-      id: '07',
+      id: '08',
       imageUrl: basic3,
       imageUrl2: basic4,
       viewUrl1: 'https://timely-narwhal-bfa32d.netlify.app/',
@@ -149,7 +166,7 @@ export const projects = {
     },
     {
       name: 'Skills',
-      id: '08',
+      id: '09',
       imageUrl: skills,
       imageUrl2: '',
       viewUrl1: '',
