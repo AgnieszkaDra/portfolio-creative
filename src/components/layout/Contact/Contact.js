@@ -32,14 +32,36 @@ export const Contact = (props) => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errors = validateForm(form)
-    errors.email.length > 0 ||
-    errors.username.length > 0 ||
-    errors.message.length > 0
-      ? setValidationErrors(errors)
-      : alert('Form is sent successfully')
+    
+
+    if (errors.email.length > 0 || errors.username.length > 0 || errors.message.length > 0) {
+      setValidationErrors(errors)
+    } else {
+      try {
+     
+        const webhookUrl = 'https://hook.eu1.make.com/ikj6b4rps7xrvetw13ehaiut4p8ebsgv' 
+  
+  
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(form), 
+        })
+  
+        if (response.ok) {
+          alert('Form is sent successfully')
+        } else {
+          alert('Something went wrong, please try again')
+        }
+      } catch (error) {
+        alert('Error sending form, please try again')
+      }
+    }
   }
 
   const renderListItem = (item, i) => {
