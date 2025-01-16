@@ -4,7 +4,7 @@ import FieldListGenerator from '../../ui/Board/FieldsGenerator';
 import ContainerBoard from '../../ui/Board/ContainerBoard';
 import Navigation from '../../ui/Navigation';
 
-const Home = () => {
+const SharedLayout = () => {
   const [fieldsList, setFieldsList] = useState([]);
   const fieldListGeneratorRef = useRef(new FieldListGenerator()); 
  
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SharedLayout
