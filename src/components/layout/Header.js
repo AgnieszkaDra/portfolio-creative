@@ -6,7 +6,8 @@ export const Header = () => {
     <header className='header section'>
       <div className='header__info'>
         <h1 className="headline">
-          HI, I'M <span className="headline__name">AGNIESZKA DRAGAŃCZYK</span>
+          HI, 
+          I'M <span className="headline__name">AGNIESZKA DRAGAŃCZYK</span>
           <span className="headline__title">FRONTEND DEVELOPER</span>
         </h1>
       </div>

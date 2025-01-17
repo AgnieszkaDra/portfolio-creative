@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 
-import { validateForm } from '../../../helpers/validator'
-import data from '../../../data/contacts'
-import Icon from '../../ui/Icon'
-import { Link } from '../../ui/Link'
-import Field from '../../ui/Field/Field'
-
+import { validateForm } from '../../helpers/validator'
+import data from '../../data/contacts'
+import { Icon, Link, Field }  from '../../components'
 
 import PropTypes from 'prop-types'
 

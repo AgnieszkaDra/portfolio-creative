@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import Error from '../Error/Error'
+import Error from './Error'
 
 export const Field = (props) => {
   const { value, type, label, onChange, error, name, placeholder } = props

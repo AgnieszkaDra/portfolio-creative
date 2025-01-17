@@ -1,9 +1,6 @@
 import React from 'react'
-
-import Carousel from '../../ui/Carousel'
-import Pagination from '../../ui/Pagination'
-// import ContainerBoard from '../../ui/Board/ContainerBoard'
-import data from '../../../data/features'
+import { Carousel } from '../../components'
+import data from '../../data/features'
 
 import PropTypes from 'prop-types'
 

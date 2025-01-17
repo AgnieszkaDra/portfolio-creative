@@ -1,4 +1,4 @@
-export default class FieldListGenerator {
+export default class FieldsGenerator {
     #fieldsList = [];
    
     breakpoints = [

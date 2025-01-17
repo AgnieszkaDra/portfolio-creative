@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { SharedLayout, Header, About, Projects, Contact } from './components/layout'; 
+import { SharedLayout, Header, About, Projects, Contact } from './components';
 
 function App() {
 

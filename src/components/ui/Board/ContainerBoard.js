@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import FieldListGenerator from '../../ui/Board/FieldsGenerator';
 
-const ContainerBoard = ({ children, breakpoint, dotSize }) => {
+export const ContainerBoard = ({ children, breakpoint, dotSize }) => {
   const [fieldsList, setFieldsList] = useState([]);
   const fieldListGeneratorRef = useRef(new FieldListGenerator());
 

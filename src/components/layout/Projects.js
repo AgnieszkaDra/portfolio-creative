@@ -1,13 +1,11 @@
 import React from 'react'
-import data from '../../../data/projects'
-import Carousel from '../../ui/Carousel'
+import data from '../../data/projects'
+import { Carousel, Image } from '../../components'
 
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFirefox } from '@fortawesome/free-brands-svg-icons'
-import Image from '../../ui/Image'
-
 import PropTypes from 'prop-types'
 
 const renderList = (item, i, color) => {

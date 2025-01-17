@@ -1,12 +1,11 @@
-import { Outlet } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
-import FieldListGenerator from '../../ui/Board/FieldsGenerator';
-import ContainerBoard from '../../ui/Board/ContainerBoard';
-import Navigation from '../../ui/Navigation';
+import { Outlet } from 'react-router-dom';
+import {Navigation} from '../../components';
+import { ContainerBoard, FieldsGenerator } from '../ui/Board';
 
 const SharedLayout = () => {
   const [fieldsList, setFieldsList] = useState([]);
-  const fieldListGeneratorRef = useRef(new FieldListGenerator()); 
+  const fieldListGeneratorRef = useRef(new FieldsGenerator()); 
  
   const updateFields = () => {
     fieldListGeneratorRef.current.updateFieldsList(); 

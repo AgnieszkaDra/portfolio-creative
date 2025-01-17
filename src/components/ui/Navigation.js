@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { NavLink } from 'react-router-dom'
-import { sections } from '../../../data'
+import { sections } from '../../data'
 import PropTypes from 'prop-types'
 
-export const Controlls = (props) => {
+export const Navigation = (props) => {
   const { className } = props
 
   const [elementStates, setElementStates] = useState({
@@ -48,8 +48,8 @@ export const Controlls = (props) => {
   )
 }
 
-Controlls.propTypes = {
+Navigation.propTypes = {
   className: PropTypes.string,
 }
 
-export default Controlls
+export default Navigation
