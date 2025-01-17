@@ -28,6 +28,7 @@ export const About = () => {
           value={data.list}
           content={renderAboutElements}
         />
+        
         {/* </ContainerBoard> */}
         {/* <Pagination
         totalPosts = {data.list.length}

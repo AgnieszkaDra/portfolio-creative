@@ -12,22 +12,38 @@
   }
 }
 .header {
-  width: 100%;
-  height: 100%;
   position: relative;
-}
-
-.header__info {
-  font-size: 18pt;
-  line-height: 36pt;
-  animation: slideInLeft 0.75s ease both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 1.5em 2px;
+  max-width: 1440px;
+  margin: 0px auto;
   width: 100%;
 }
 
-.header__info--color {
-  color: rgb(70, 153, 153);
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+  padding: 0.8em 1.5em;
+  background-color: var(--background);
 }
 
+.mobile-nav.with-border {
+  border-bottom: 1px solid var(--color-stone);
+}
+
+@media only screen and (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+}
 @keyframes slideInLeft {
   0% {
     opacity: 0;
