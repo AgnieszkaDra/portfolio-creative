@@ -12,6 +12,6 @@ export { default as Error } from './ui/Error';
 export { default as Field } from './ui/Field';
 export { default as Navigation } from './ui/Navigation';
 export { default as Pagination } from './ui/Pagination';
-export { default as BurgerMenu } from './ui/BurgerMenu';
+export { default as Hamburger } from './ui/Hamburger';
 
 
