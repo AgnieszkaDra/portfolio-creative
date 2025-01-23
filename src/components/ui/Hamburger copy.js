@@ -1,9 +1,6 @@
-
 import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { useAppContext } from '../../context/useAppContext';
-
-
 
 const Hamburger = () => {
     const { navbarOpen, openNavbar } = useAppContext();
@@ -23,4 +20,4 @@ const Hamburger = () => {
     );
 };
 
-export default Hamburger;
+export default Hamburger

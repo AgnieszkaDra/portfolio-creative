@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import useToggleNavbar from '../hooks/useToggleNavbar'; 
+import { lists }  from '../data'; 
 
 const AppContext = createContext();
 
@@ -10,7 +11,8 @@ const AppProvider = ({ children }) => {
         <AppContext.Provider
             value={{
                 openNavbar, 
-                navbarOpen, 
+                navbarOpen,
+                menu: lists.menu, 
             }}
         >
             {children}

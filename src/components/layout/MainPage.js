@@ -1,24 +1,22 @@
 import React from 'react';
-import { About, Hamburger } from '../../components';
+import { Hamburger, Menu } from '../../components';
+import { useAppContext } from '../../context/useAppContext';
+
 import PropTypes from 'prop-types';
 
 export const MainPage = () => {
+  const { navbarOpen, openNavbar } = useAppContext();
 
   return (
     <>
       <div className='mobile-nav'>
         <Hamburger />  
       </div>
-      <header className='section header'>
-          <div className='header__info'>
-            <h1 className="headline">
-              HI, 
-              I'M <span className="headline__name">AGNIESZKA DRAGAŃCZYK</span>
-              <span className="headline__title">FRONTEND DEVELOPER</span>
-            </h1>
-          </div>
-        </header>
-        <About />
+      <nav className={`${navbarOpen ? `nav open ` : 'nav'}`}>
+        <Menu navbarOpen={navbarOpen} navbarOpenFunc={openNavbar}></Menu> 
+      </nav>
+     
+      
       </>
    );
 };

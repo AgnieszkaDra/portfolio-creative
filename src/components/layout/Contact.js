@@ -65,7 +65,7 @@ export const Contact = (props) => {
     return (
       <li key={i} className={'list__element'}>
         <>
-          <Link className={'list__link'} values={item.data}></Link>
+          {/* <Link className={'list__link'} values={item.data}></Link> */}
           <Icon className={'list__icon'} icon={item.icon}></Icon>
         </>
       </li>
